@@ -1,0 +1,90 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://base nodes/XNOR.gd" type="Script" id=1]
+[ext_resource path="res://Assets/ANDHover.tres" type="StyleBox" id=2]
+[ext_resource path="res://Assets/OR_curve.tres" type="StyleBox" id=3]
+[ext_resource path="res://Assets/Not.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/AND.tres" type="StyleBox" id=5]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.313726, 0.313726, 0.313726, 0 )
+border_width_right = 4
+border_color = Color( 0.156863, 0.168627, 0.12549, 1 )
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_detail = 20
+anti_aliasing_size = 2
+
+[node name="Gate" type="Button"]
+margin_left = -40.0
+margin_top = -36.0
+margin_right = 40.0
+margin_bottom = 36.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 2 )
+custom_styles/pressed = ExtResource( 5 )
+custom_styles/normal = ExtResource( 5 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_bottom = 1.0
+margin_left = 3.0
+margin_top = 1.0
+margin_right = 24.0
+margin_bottom = -2.0
+custom_styles/panel = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+anchor_bottom = 1.0
+margin_left = -12.0
+margin_top = 1.0
+margin_right = 9.0
+margin_bottom = -2.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 21, 24 )
+points = PoolVector2Array( 0, 0, -40, 0 )
+width = 2.0
+default_color = Color( 0.156863, 0.168627, 0.12549, 1 )
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D2" type="Line2D" parent="."]
+position = Vector2( 21, 48 )
+points = PoolVector2Array( 0, 0, -40, 0 )
+width = 2.0
+default_color = Color( 0.156863, 0.168627, 0.12549, 1 )
+end_cap_mode = 2
+antialiased = true
+
+[node name="Label" type="Label" parent="."]
+margin_left = 8.0
+margin_right = 88.0
+margin_bottom = 72.0
+custom_colors/font_color = Color( 0.156863, 0.168627, 0.12549, 1 )
+text = "XNOR"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Not3" parent="." instance=ExtResource( 4 )]
+margin_left = 2.0
+margin_top = -8.0
+margin_right = 18.0
+margin_bottom = 8.0
+[connection signal="button_down" from="." to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="." to="." method="_on_Button_button_up"]

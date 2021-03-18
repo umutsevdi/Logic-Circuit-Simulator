@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://base nodes/output.tscn" type="PackedScene" id=1]
+[ext_resource path="res://base nodes/NOR.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gates/base_gate.gd" type="Script" id=3]
+
+
+[node name="NOR Gate" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Gate" parent="." instance=ExtResource( 2 )]
+
+[node name="Sockets" type="VBoxContainer" parent="."]
+margin_left = -64.0
+margin_top = -35.0
+margin_right = -39.0
+margin_bottom = 37.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 12, 36 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outputs" type="VBoxContainer" parent="."]
+margin_left = 54.0
+margin_top = -32.0
+margin_right = 86.0
+margin_bottom = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 16, 32 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Output" parent="Outputs" instance=ExtResource( 1 )]
+margin_left = 0.0
+margin_top = 19.0
+margin_right = 31.0
+margin_bottom = 44.0

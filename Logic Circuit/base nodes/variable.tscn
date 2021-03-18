@@ -1,0 +1,133 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://base nodes/output.tscn" type="PackedScene" id=1]
+[ext_resource path="res://base nodes/variable.gd" type="Script" id=2]
+[ext_resource path="res://Assets/AND.tres" type="StyleBox" id=3]
+[ext_resource path="res://Assets/Icons/GuiScrollArrowRight.svg" type="Texture" id=4]
+[ext_resource path="res://Assets/Icons/GuiScrollArrowLeft.svg" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 4.0
+bg_color = Color( 0.647059, 0.647059, 0.552941, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 4.0
+bg_color = Color( 0.270588, 0.290196, 0.215686, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 4.0
+bg_color = Color( 0.211765, 0.223529, 0.180392, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 12.0
+content_margin_right = 12.0
+content_margin_top = 4.0
+bg_color = Color( 0.156863, 0.168627, 0.12549, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+border_blend = true
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+corner_detail = 20
+
+[node name="Variable" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Gate" type="Button" parent="."]
+margin_left = -32.0
+margin_top = -16.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_styles/pressed = ExtResource( 3 )
+custom_styles/normal = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Gate"]
+visible = false
+margin_right = 102.0
+margin_bottom = 30.0
+text = "Variable"
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = -88.0
+margin_top = -20.0
+margin_right = -12.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 40, 40 )
+focus_mode = 0
+custom_icons/off = ExtResource( 5 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+enabled_focus_mode = 0
+align = 1
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Outputs" type="Control" parent="."]
+margin_left = 54.0
+margin_top = -16.0
+margin_right = 54.0
+margin_bottom = -16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Output" parent="Outputs" instance=ExtResource( 1 )]
+margin_left = -14.8364
+margin_top = 3.08677
+margin_right = 10.1636
+margin_bottom = 28.0868
+[connection signal="button_down" from="Gate" to="." method="_on_Gate_button_down"]
+[connection signal="button_up" from="Gate" to="." method="_on_Gate_button_up"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_CheckButton_toggled"]

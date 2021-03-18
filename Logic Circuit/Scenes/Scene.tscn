@@ -1,0 +1,1253 @@
+[gd_scene load_steps=58 format=2]
+
+[ext_resource path="res://UI/TabContainer.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/CreateScene.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/CreateBar.gd" type="Script" id=4]
+[ext_resource path="res://Scenes/Displayer.gd" type="Script" id=5]
+[ext_resource path="res://UI/Add_Node.gd" type="Script" id=6]
+[ext_resource path="res://Assets/Theme.tres" type="Theme" id=7]
+[ext_resource path="res://Scenes/DisplayerVariable.gd" type="Script" id=8]
+[ext_resource path="res://Scenes/Topbar.gd" type="Script" id=9]
+[ext_resource path="res://Scenes/FileDialog.gd" type="Script" id=10]
+[ext_resource path="res://Assets/Dialogue.tres" type="StyleBox" id=11]
+[ext_resource path="res://Assets/FrontTabNew.tres" type="StyleBox" id=12]
+[ext_resource path="res://Assets/TabPanelNew.tres" type="StyleBox" id=13]
+[ext_resource path="res://Assets/BackTabNew.tres" type="StyleBox" id=14]
+[ext_resource path="res://Assets/MenuButtonNormal.tres" type="StyleBox" id=15]
+[ext_resource path="res://Assets/MenuButtonDisabled.tres" type="StyleBox" id=16]
+[ext_resource path="res://Assets/MenuButtonPressed.tres" type="StyleBox" id=17]
+[ext_resource path="res://Assets/MenuButtonHover.tres" type="StyleBox" id=18]
+[ext_resource path="res://Assets/Icons/Reload.svg" type="Texture" id=19]
+[ext_resource path="res://Assets/Icons/Close.svg" type="Texture" id=20]
+[ext_resource path="res://Assets/Icons/GuiVisibilityVisible.svg" type="Texture" id=21]
+[ext_resource path="res://Assets/Icons/Load.svg" type="Texture" id=22]
+[ext_resource path="res://Assets/Icons/New.svg" type="Texture" id=23]
+[ext_resource path="res://Assets/Icons/Save.svg" type="Texture" id=24]
+[ext_resource path="res://Assets/Icons/CheckButton.svg" type="Texture" id=25]
+[ext_resource path="res://Assets/Icons/ActionCut.svg" type="Texture" id=26]
+[ext_resource path="res://Assets/Icons/Remove.svg" type="Texture" id=27]
+[ext_resource path="res://Assets/Icons/FileList.svg" type="Texture" id=28]
+[ext_resource path="res://Assets/Icons/Filesystem.svg" type="Texture" id=29]
+[ext_resource path="res://Assets/Icons/Shortcut.svg" type="Texture" id=30]
+[ext_resource path="res://Assets/Icons/Edit.svg" type="Texture" id=31]
+[ext_resource path="res://Assets/Icons/ActionCopy.svg" type="Texture" id=32]
+[ext_resource path="res://Assets/Icons/ActionPaste.svg" type="Texture" id=33]
+[ext_resource path="res://Assets/Icons/ListSelect.svg" type="Texture" id=34]
+[ext_resource path="res://Assets/Icons/HelpSearch.svg" type="Texture" id=35]
+[ext_resource path="res://Assets/Icons/SnapGrid.svg" type="Texture" id=36]
+[ext_resource path="res://Assets/Icons/Rotate90.svg" type="Texture" id=37]
+[ext_resource path="res://Scenes/PrefabBar.gd" type="Script" id=38]
+[ext_resource path="res://Assets/Icons/ArrowUp.svg" type="Texture" id=39]
+[ext_resource path="res://Assets/Icons/CreateNewSceneFrom.svg" type="Texture" id=40]
+[ext_resource path="res://Assets/Icons/DebugSkipBreakpointsOff.svg" type="Texture" id=41]
+[ext_resource path="res://Assets/Icons/TransitionSync.svg" type="Texture" id=42]
+[ext_resource path="res://Assets/Icons/TransitionSyncAuto.svg" type="Texture" id=43]
+[ext_resource path="res://Assets/Icons/TransitionImmediate.svg" type="Texture" id=44]
+[ext_resource path="res://Assets/Icons/TransitionEndAuto.svg" type="Texture" id=45]
+[ext_resource path="res://Assets/Icons/Timer.svg" type="Texture" id=46]
+[ext_resource path="res://Assets/Icons/TransitionImmediateAuto.svg" type="Texture" id=47]
+[ext_resource path="res://Assets/Icons/TransitionEnd.svg" type="Texture" id=48]
+
+[sub_resource type="InputEventAction" id=1]
+action = "ui_delete"
+pressed = true
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[sub_resource type="InputEventAction" id=3]
+action = "ui_rotate"
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[sub_resource type="InputEventAction" id=5]
+action = "ui_cancel"
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.156863, 0.168627, 0.12549, 1 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 15.0
+content_margin_right = 15.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.392157, 0.392157, 0.392157, 0 )
+border_width_top = 25
+border_color = Color( 0.211765, 0.223529, 0.180392, 1 )
+expand_margin_top = 25.0
+
+[node name="Scene" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 802, 453 )
+current = true
+limit_smoothed = true
+smoothing_enabled = true
+smoothing_speed = 10.0
+editor_draw_limits = true
+script = ExtResource( 2 )
+
+[node name="Tabs" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TopBar" type="TabContainer" parent="CanvasLayer"]
+anchor_right = 1.0
+margin_bottom = 73.0
+custom_styles/tab_fg = ExtResource( 12 )
+custom_styles/tab_bg = ExtResource( 14 )
+custom_styles/panel = ExtResource( 13 )
+tab_align = 0
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Files" type="Tabs" parent="CanvasLayer/TopBar"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 49.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/TopBar/Files"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -19.0
+margin_right = 16.0
+margin_bottom = -12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Scene" type="Button" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
+margin_right = 104.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "New Scene"
+icon = ExtResource( 40 )
+
+[node name="New Prefab" type="Button" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
+margin_left = 108.0
+margin_right = 214.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "New Prefab"
+icon = ExtResource( 23 )
+
+[node name="Open" type="Button" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
+margin_left = 218.0
+margin_right = 287.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Open"
+icon = ExtResource( 22 )
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
+margin_left = 291.0
+margin_right = 295.0
+margin_bottom = 31.0
+
+[node name="Save" type="Button" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
+margin_left = 299.0
+margin_right = 362.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Save"
+icon = ExtResource( 24 )
+
+[node name="Save As" type="Button" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
+margin_left = 366.0
+margin_right = 449.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Save As"
+icon = ExtResource( 24 )
+
+[node name="VSeparator2" type="VSeparator" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
+margin_left = 453.0
+margin_right = 457.0
+margin_bottom = 31.0
+
+[node name="Close" type="Button" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
+margin_left = 461.0
+margin_right = 530.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Close"
+icon = ExtResource( 20 )
+
+[node name="Edit" type="Tabs" parent="CanvasLayer/TopBar"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 49.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/TopBar/Edit"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -19.0
+margin_right = 16.0
+margin_bottom = -12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rename" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+margin_right = 135.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Rename Project"
+icon = ExtResource( 31 )
+
+[node name="Delete" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+margin_left = 139.0
+margin_right = 265.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Delete Project"
+icon = ExtResource( 27 )
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+margin_left = 269.0
+margin_right = 273.0
+margin_bottom = 31.0
+
+[node name="Cut" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+margin_left = 277.0
+margin_right = 332.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Cut"
+icon = ExtResource( 26 )
+
+[node name="Copy" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+margin_left = 336.0
+margin_right = 401.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Copy"
+icon = ExtResource( 32 )
+
+[node name="Paste" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+margin_left = 405.0
+margin_right = 474.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Paste"
+icon = ExtResource( 33 )
+
+[node name="VSeparator2" type="VSeparator" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+margin_left = 478.0
+margin_right = 482.0
+margin_bottom = 31.0
+
+[node name="Select All" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+margin_left = 486.0
+margin_right = 580.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Select All"
+icon = ExtResource( 34 )
+
+[node name="Simulator" type="Tabs" parent="CanvasLayer/TopBar"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 49.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/TopBar/Simulator"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -19.0
+margin_right = 16.0
+margin_bottom = -12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Analyze Circuit" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
+margin_right = 129.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Analyze Circuit"
+icon = ExtResource( 29 )
+
+[node name="Open Truth Table" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
+margin_left = 133.0
+margin_right = 277.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Open Truth Table"
+icon = ExtResource( 28 )
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
+margin_left = 281.0
+margin_right = 285.0
+margin_bottom = 31.0
+
+[node name="Circuit Toolbar" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
+margin_left = 289.0
+margin_right = 460.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Toggle Circuit Toolbar"
+icon = ExtResource( 21 )
+
+[node name="Help" type="Tabs" parent="CanvasLayer/TopBar"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 49.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/TopBar/Help"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -19.0
+margin_right = 16.0
+margin_bottom = -12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shortcuts" type="Button" parent="CanvasLayer/TopBar/Help/HBoxContainer"]
+margin_right = 94.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Shortcuts"
+icon = ExtResource( 30 )
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/TopBar/Help/HBoxContainer"]
+margin_left = 98.0
+margin_right = 102.0
+margin_bottom = 31.0
+
+[node name="About" type="Button" parent="CanvasLayer/TopBar/Help/HBoxContainer"]
+margin_left = 106.0
+margin_right = 178.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "About"
+icon = ExtResource( 35 )
+
+[node name="Displayer" type="Panel" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -239.0
+margin_top = -435.0
+custom_styles/panel = ExtResource( 11 )
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="LineEdit" parent="CanvasLayer/Displayer"]
+margin_left = 12.0
+margin_top = 16.4882
+margin_right = 232.0
+margin_bottom = 47.4882
+text = "Test"
+align = 1
+clear_button_enabled = true
+placeholder_text = "Node Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/Displayer"]
+margin_left = 12.0
+margin_top = 65.0
+margin_right = 231.0
+margin_bottom = 413.0
+rect_min_size = Vector2( 0, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_right = 219.0
+margin_bottom = 24.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Display Name as Label"
+align = 2
+
+[node name="Type" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 28.0
+margin_right = 219.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 0, 15 )
+text = "Type: AND"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 47.0
+margin_right = 219.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 219, 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/Displayer/VBoxContainer/HBoxContainer"]
+margin_top = 5.0
+margin_right = 80.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 80, 0 )
+text = "Input Legs: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Reduce" type="Button" parent="CanvasLayer/Displayer/VBoxContainer/HBoxContainer"]
+margin_left = 84.0
+margin_right = 114.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 30, 25 )
+text = "-"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/Displayer/VBoxContainer/HBoxContainer"]
+margin_left = 118.0
+margin_right = 170.0
+margin_bottom = 25.0
+text = "1"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Increase" type="Button" parent="CanvasLayer/Displayer/VBoxContainer/HBoxContainer"]
+margin_left = 174.0
+margin_right = 206.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 30, 25 )
+text = "+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 76.0
+margin_right = 219.0
+margin_bottom = 81.0
+custom_constants/separation = 5
+
+[node name="Input" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 85.0
+margin_right = 219.0
+margin_bottom = 99.0
+text = "Input:"
+
+[node name="InputTab" type="TabContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 103.0
+margin_right = 219.0
+margin_bottom = 159.0
+rect_min_size = Vector2( 0, 56 )
+theme = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Output" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 163.0
+margin_right = 219.0
+margin_bottom = 177.0
+text = "Output:"
+
+[node name="OutputTab" type="TabContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 181.0
+margin_right = 219.0
+margin_bottom = 237.0
+rect_min_size = Vector2( 0, 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Displayer"]
+margin_top = -20.0
+margin_right = 239.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="TextureButton" parent="CanvasLayer/Displayer/HBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 171.0
+margin_right = 191.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 0 )
+shortcut = SubResource( 2 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 3
+
+[node name="Rotate" type="TextureButton" parent="CanvasLayer/Displayer/HBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 195.0
+margin_right = 215.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+shortcut = SubResource( 4 )
+texture_normal = ExtResource( 37 )
+expand = true
+stretch_mode = 3
+
+[node name="Button" type="TextureButton" parent="CanvasLayer/Displayer/HBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 219.0
+margin_right = 239.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+shortcut = SubResource( 6 )
+texture_normal = ExtResource( 20 )
+expand = true
+stretch_mode = 3
+
+[node name="DisplayerVariable" type="Panel" parent="CanvasLayer"]
+visible = false
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -239.0
+margin_top = -433.0
+custom_styles/panel = ExtResource( 11 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="LineEdit" parent="CanvasLayer/DisplayerVariable"]
+margin_left = 11.0
+margin_top = 20.0
+margin_right = 231.0
+margin_bottom = 51.0
+text = "Test"
+align = 1
+clear_button_enabled = true
+placeholder_text = "Node Name"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/DisplayerVariable"]
+margin_left = 12.0
+margin_top = 60.0
+margin_right = 231.0
+margin_bottom = 273.0
+rect_min_size = Vector2( 0, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox" type="CheckBox" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
+margin_right = 219.0
+margin_bottom = 24.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Display Name as Label"
+align = 2
+
+[node name="Type" type="Label" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
+margin_top = 28.0
+margin_right = 219.0
+margin_bottom = 43.0
+rect_min_size = Vector2( 0, 15 )
+text = "Type: Variable"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
+margin_top = 47.0
+margin_right = 219.0
+margin_bottom = 52.0
+custom_constants/separation = 5
+
+[node name="Output" type="Label" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
+margin_top = 56.0
+margin_right = 219.0
+margin_bottom = 70.0
+text = "Output:"
+
+[node name="OutputTab" type="TabContainer" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
+margin_top = 74.0
+margin_right = 219.0
+margin_bottom = 130.0
+rect_min_size = Vector2( 0, 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DisplayerVariable"]
+margin_top = -20.0
+margin_right = 241.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Delete" type="TextureButton" parent="CanvasLayer/DisplayerVariable/HBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 173.0
+margin_right = 193.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+shortcut = SubResource( 2 )
+texture_normal = ExtResource( 27 )
+expand = true
+stretch_mode = 3
+
+[node name="Rotate" type="TextureButton" parent="CanvasLayer/DisplayerVariable/HBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 197.0
+margin_right = 217.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+shortcut = SubResource( 4 )
+texture_normal = ExtResource( 37 )
+expand = true
+stretch_mode = 3
+
+[node name="Button" type="TextureButton" parent="CanvasLayer/DisplayerVariable/HBoxContainer"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 221.0
+margin_right = 241.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+shortcut = SubResource( 6 )
+texture_normal = ExtResource( 20 )
+expand = true
+stretch_mode = 3
+
+[node name="CreateBar" type="Panel" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -257.0
+margin_right = 170.0
+custom_styles/panel = ExtResource( 11 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/CreateBar"]
+margin_top = -20.0
+margin_right = 170.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Base Circuits"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CreateBar"]
+margin_left = 16.0
+margin_top = 9.0
+margin_right = 149.0
+margin_bottom = 221.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Variable" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_right = 133.0
+margin_bottom = 22.0
+hint_tooltip = "Place a Variable.
+Variable is a module that has an adjustable output value."
+shortcut_in_tooltip = false
+text = "Variable"
+icon = ExtResource( 25 )
+script = ExtResource( 6 )
+
+[node name="Clock" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 26.0
+margin_right = 133.0
+margin_bottom = 48.0
+hint_tooltip = "Place a Clock.
+The clock returns a value that switches back and forth over time. The value written in the field defines the number of shifts per second."
+shortcut_in_tooltip = false
+text = "Clock"
+icon = ExtResource( 46 )
+script = ExtResource( 6 )
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 52.0
+margin_right = 133.0
+margin_bottom = 56.0
+
+[node name="AND" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 60.0
+margin_right = 133.0
+margin_bottom = 82.0
+hint_tooltip = "Place an AND Gate.
+AND Gate returns 1 when all inputs are 1, and 0 otherwise."
+shortcut_in_tooltip = false
+text = "AND Gate"
+icon = ExtResource( 44 )
+script = ExtResource( 6 )
+
+[node name="NAND" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 86.0
+margin_right = 133.0
+margin_bottom = 108.0
+hint_tooltip = "Place an NAND Gate.
+NAND Gate returns 0 when all inputs are 1, and 1 otherwise."
+shortcut_in_tooltip = false
+text = "NAND Gate"
+icon = ExtResource( 48 )
+script = ExtResource( 6 )
+
+[node name="NOT" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 112.0
+margin_right = 133.0
+margin_bottom = 135.0
+hint_tooltip = "Place an NOT Gate.
+NOT Gate returns 1 if input is 0 and returns 0 if input is 1."
+shortcut_in_tooltip = false
+text = "NOT Gate"
+icon = ExtResource( 41 )
+script = ExtResource( 6 )
+
+[node name="OR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 139.0
+margin_right = 133.0
+margin_bottom = 161.0
+hint_tooltip = "Place an OR Gate.
+OR Gate returns 1 if at least one input is 1, and 0 otherwise."
+shortcut_in_tooltip = false
+text = "OR Gate"
+icon = ExtResource( 47 )
+script = ExtResource( 6 )
+
+[node name="NOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 165.0
+margin_right = 133.0
+margin_bottom = 187.0
+hint_tooltip = "Place an NOR Gate.
+NOR Gate returns 0 if at least one input is 1, and 1 otherwise."
+shortcut_in_tooltip = false
+text = "NOR Gate"
+icon = ExtResource( 45 )
+script = ExtResource( 6 )
+
+[node name="XOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 191.0
+margin_right = 133.0
+margin_bottom = 213.0
+hint_tooltip = "Place an XOR Gate.
+XOR Gate returns 1 if both of the inputs are different, and 0 otherwise."
+shortcut_in_tooltip = false
+text = "XOR Gate"
+icon = ExtResource( 42 )
+script = ExtResource( 6 )
+
+[node name="XNOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 217.0
+margin_right = 133.0
+margin_bottom = 239.0
+hint_tooltip = "Place an XNOR Gate.
+XNOR Gate returns 1 if both of the inputs are equal, 0 otherwise."
+shortcut_in_tooltip = false
+text = "XNOR Gate"
+icon = ExtResource( 43 )
+script = ExtResource( 6 )
+
+[node name="PrefabBar" type="Panel" parent="CanvasLayer"]
+anchor_left = 0.25
+anchor_top = 0.8
+anchor_right = 0.75
+anchor_bottom = 1.0
+margin_top = 21.0
+custom_styles/panel = ExtResource( 11 )
+script = ExtResource( 38 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/PrefabBar"]
+margin_top = -18.0
+margin_right = 800.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Prefabs"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/PrefabBar"]
+margin_left = 16.0
+margin_top = 7.0
+margin_right = 779.0
+margin_bottom = 31.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Filepath" type="Label" parent="CanvasLayer/PrefabBar/HBoxContainer"]
+margin_top = 5.0
+margin_right = 76.0
+margin_bottom = 19.0
+text = "Prefab Path:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UpButton" type="TextureButton" parent="CanvasLayer/PrefabBar/HBoxContainer"]
+margin_left = 80.0
+margin_right = 96.0
+margin_bottom = 24.0
+texture_normal = ExtResource( 39 )
+
+[node name="Path" type="LineEdit" parent="CanvasLayer/PrefabBar/HBoxContainer"]
+margin_left = 100.0
+margin_right = 400.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 300, 0 )
+text = "user://"
+clear_button_enabled = true
+placeholder_text = "user://"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RefreshButton" type="TextureButton" parent="CanvasLayer/PrefabBar/HBoxContainer"]
+margin_left = 404.0
+margin_right = 428.0
+margin_bottom = 24.0
+rect_min_size = Vector2( 24, 24 )
+texture_normal = ExtResource( 19 )
+expand = true
+stretch_mode = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PrefabBar"]
+margin_left = 16.0
+margin_top = 36.0
+margin_right = 779.0
+margin_bottom = 138.0
+custom_styles/bg = SubResource( 7 )
+follow_focus = true
+scroll_vertical_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/PrefabBar/ScrollContainer"]
+
+[node name="GridSeperator" type="SpinBox" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -174.0
+margin_top = 30.0
+margin_right = -17.0
+margin_bottom = 66.0
+max_value = 250.0
+rounded = true
+align = 1
+prefix = "Grid: "
+suffix = "px"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/GridSeperator"]
+margin_right = 31.0
+margin_bottom = 36.0
+texture = ExtResource( 36 )
+stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 28.0
+margin_bottom = -304.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_styles/tab_fg = SubResource( 8 )
+custom_styles/panel = SubResource( 9 )
+tab_align = 0
+drag_to_rearrange_enabled = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Tab" type="Tabs" parent="CanvasLayer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 49.0
+
+[node name="+" type="Tabs" parent="CanvasLayer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 49.0
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.5
+margin_top = -37.5
+margin_right = 130.5
+margin_bottom = 37.5
+theme = ExtResource( 7 )
+popup_exclusive = true
+window_title = "Delete Request"
+dialog_text = "Are you sure that you want to permanently delete this circuit?"
+dialog_autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FileDialog" type="FileDialog" parent="CanvasLayer"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -249.5
+margin_top = -187.0
+margin_right = 249.5
+margin_bottom = 187.0
+theme = ExtResource( 7 )
+popup_exclusive = true
+access = 1
+filters = PoolStringArray( "*.json" )
+show_hidden_files = true
+current_dir = "user://"
+current_path = "user://"
+script = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CreateScene" type="AcceptDialog" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -124.0
+margin_top = -35.0
+margin_right = 133.0
+margin_bottom = 148.0
+theme = ExtResource( 7 )
+window_title = "Create Scene"
+dialog_text = "This is a test dialog to use as a nice shit"
+dialog_autowrap = true
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CreateScene"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -120.5
+margin_top = -52.5
+margin_right = 120.5
+margin_bottom = 55.5
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameContainer" type="HBoxContainer" parent="CanvasLayer/CreateScene/VBoxContainer"]
+margin_top = 11.0
+margin_right = 241.0
+margin_bottom = 29.0
+
+[node name="Label" type="Label" parent="CanvasLayer/CreateScene/VBoxContainer/NameContainer"]
+margin_top = 2.0
+margin_right = 92.0
+margin_bottom = 16.0
+text = "Scene Name  :"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/CreateScene/VBoxContainer/NameContainer"]
+margin_left = 96.0
+margin_right = 216.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 120, 0 )
+clear_button_enabled = true
+placeholder_text = "Scene Name"
+
+[node name="SceneTypeContainer" type="HBoxContainer" parent="CanvasLayer/CreateScene/VBoxContainer"]
+margin_top = 33.0
+margin_right = 241.0
+margin_bottom = 53.0
+
+[node name="Label" type="Label" parent="CanvasLayer/CreateScene/VBoxContainer/SceneTypeContainer"]
+margin_top = 3.0
+margin_right = 91.0
+margin_bottom = 17.0
+text = "Scene Format:"
+
+[node name="OptionButton" type="OptionButton" parent="CanvasLayer/CreateScene/VBoxContainer/SceneTypeContainer"]
+margin_left = 95.0
+margin_right = 171.0
+margin_bottom = 20.0
+text = "Scene"
+items = [ "Scene", null, false, 0, null, "Prefab", null, false, 1, null ]
+selected = 0
+
+[node name="InputCountContainer" type="HBoxContainer" parent="CanvasLayer/CreateScene/VBoxContainer"]
+margin_top = 57.0
+margin_right = 241.0
+margin_bottom = 75.0
+
+[node name="Label" type="Label" parent="CanvasLayer/CreateScene/VBoxContainer/InputCountContainer"]
+margin_top = 2.0
+margin_right = 91.0
+margin_bottom = 16.0
+text = "Input Count   :"
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/CreateScene/VBoxContainer/InputCountContainer"]
+margin_left = 95.0
+margin_right = 163.0
+margin_bottom = 18.0
+min_value = 1.0
+max_value = 20.0
+value = 1.0
+rounded = true
+align = 1
+
+[node name="OutputCountContainer" type="HBoxContainer" parent="CanvasLayer/CreateScene/VBoxContainer"]
+margin_top = 79.0
+margin_right = 241.0
+margin_bottom = 97.0
+custom_constants/separation = 0
+
+[node name="Label" type="Label" parent="CanvasLayer/CreateScene/VBoxContainer/OutputCountContainer"]
+margin_top = 2.0
+margin_right = 94.0
+margin_bottom = 16.0
+text = "Output Count: "
+valign = 1
+
+[node name="SpinBox" type="SpinBox" parent="CanvasLayer/CreateScene/VBoxContainer/OutputCountContainer"]
+margin_left = 94.0
+margin_right = 162.0
+margin_bottom = 18.0
+min_value = 1.0
+max_value = 20.0
+value = 1.0
+rounded = true
+align = 1
+
+[node name="RenameScene" type="AcceptDialog" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.5
+margin_top = -31.0
+margin_right = 128.5
+margin_bottom = 31.0
+theme = ExtResource( 7 )
+window_title = "Rename Scene"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Container" type="HBoxContainer" parent="CanvasLayer/RenameScene"]
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 249.0
+margin_bottom = 26.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/RenameScene/Container"]
+margin_top = 2.0
+margin_right = 74.0
+margin_bottom = 16.0
+text = "New Name:"
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer/RenameScene/Container"]
+margin_left = 78.0
+margin_right = 228.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 150, 0 )
+clear_button_enabled = true
+
+[node name="DeleteScene" type="ConfirmationDialog" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -107.5
+margin_top = -41.0
+margin_right = 107.5
+margin_bottom = 41.0
+theme = ExtResource( 7 )
+popup_exclusive = true
+window_title = "Delete Project"
+dialog_text = "Are you sure that you want to permanently delete this file?"
+dialog_autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/New Scene" to="CanvasLayer/TopBar" method="_on_New_Scene_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/New Prefab" to="CanvasLayer/TopBar" method="_on_New_Prefab_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/Open" to="CanvasLayer/TopBar" method="_on_Open_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/Save" to="CanvasLayer/TopBar" method="_on_Save_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/Save As" to="CanvasLayer/TopBar" method="_on_Save_As_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/Close" to="CanvasLayer/TopBar" method="_on_Close_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Edit/HBoxContainer/Rename" to="CanvasLayer/TopBar" method="_on_Rename_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Edit/HBoxContainer/Delete" to="CanvasLayer/TopBar" method="_on_Delete_pressed"]
+[connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Circuit Toolbar" to="CanvasLayer/TopBar" method="_on_Circuit_Toolbar_toggled"]
+[connection signal="text_changed" from="CanvasLayer/Displayer/Header" to="CanvasLayer/Displayer" method="_on_Header_text_changed"]
+[connection signal="pressed" from="CanvasLayer/Displayer/VBoxContainer/HBoxContainer/Reduce" to="CanvasLayer/Displayer" method="_on_Reduce_pressed"]
+[connection signal="text_entered" from="CanvasLayer/Displayer/VBoxContainer/HBoxContainer/LineEdit" to="CanvasLayer/Displayer" method="_on_LineEdit_text_entered"]
+[connection signal="pressed" from="CanvasLayer/Displayer/VBoxContainer/HBoxContainer/Increase" to="CanvasLayer/Displayer" method="_on_Increase_pressed"]
+[connection signal="pressed" from="CanvasLayer/Displayer/HBoxContainer/Delete" to="CanvasLayer/Displayer" method="_on_Delete_pressed"]
+[connection signal="pressed" from="CanvasLayer/Displayer/HBoxContainer/Button" to="CanvasLayer/Displayer" method="_on_Button_pressed"]
+[connection signal="text_changed" from="CanvasLayer/DisplayerVariable/Header" to="CanvasLayer/DisplayerVariable" method="_on_Header_text_changed"]
+[connection signal="pressed" from="CanvasLayer/DisplayerVariable/HBoxContainer/Delete" to="CanvasLayer/DisplayerVariable" method="_on_Delete_pressed"]
+[connection signal="pressed" from="CanvasLayer/DisplayerVariable/HBoxContainer/Button" to="CanvasLayer/DisplayerVariable" method="_on_Button_pressed"]
+[connection signal="pressed" from="CanvasLayer/PrefabBar/HBoxContainer/UpButton" to="CanvasLayer/PrefabBar" method="_on_UpButton_pressed"]
+[connection signal="text_entered" from="CanvasLayer/PrefabBar/HBoxContainer/Path" to="CanvasLayer/PrefabBar" method="_on_Path_text_entered"]
+[connection signal="pressed" from="CanvasLayer/PrefabBar/HBoxContainer/RefreshButton" to="CanvasLayer/PrefabBar" method="_on_RefreshButton_pressed"]
+[connection signal="value_changed" from="CanvasLayer/GridSeperator" to="CanvasLayer/Displayer" method="_on_GridSeperator_value_changed"]
+[connection signal="tab_changed" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_changed"]
+[connection signal="tab_selected" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_selected"]
+[connection signal="confirmed" from="CanvasLayer/ConfirmationDialog" to="CanvasLayer/Displayer" method="_on_ConfirmationDialog_confirmed"]
+[connection signal="file_selected" from="CanvasLayer/FileDialog" to="CanvasLayer/FileDialog" method="_on_FileDialog_file_selected"]
+[connection signal="confirmed" from="CanvasLayer/CreateScene" to="CanvasLayer/CreateScene" method="_on_CreateScene_confirmed"]
+[connection signal="item_selected" from="CanvasLayer/CreateScene/VBoxContainer/SceneTypeContainer/OptionButton" to="CanvasLayer/CreateScene" method="_on_OptionButton_item_selected"]
+[connection signal="confirmed" from="CanvasLayer/RenameScene" to="CanvasLayer/TopBar" method="_on_RenameScene_confirmed"]
+[connection signal="confirmed" from="CanvasLayer/DeleteScene" to="CanvasLayer/TopBar" method="_on_DeleteScene_confirmed"]
