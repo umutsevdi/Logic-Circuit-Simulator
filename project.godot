@@ -25,6 +25,7 @@ config/icon="res://icon.png"
 UIHandler="*res://Scenes/UIHandler.gd"
 Move="*res://Scenes/Move.gd"
 Database="*res://Scenes/Database.gd"
+BaseGateHandler="*res://Scenes/BaseGateHandler.gd"
 
 [display]
 

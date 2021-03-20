@@ -1,9 +1,8 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://UI/TabContainer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/CreateScene.gd" type="Script" id=3]
-[ext_resource path="res://Scenes/CreateBar.gd" type="Script" id=4]
 [ext_resource path="res://Scenes/Displayer.gd" type="Script" id=5]
 [ext_resource path="res://UI/Add_Node.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Theme.tres" type="Theme" id=7]
@@ -745,7 +744,6 @@ anchor_bottom = 1.0
 margin_top = -257.0
 margin_right = 170.0
 custom_styles/panel = ExtResource( 11 )
-script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

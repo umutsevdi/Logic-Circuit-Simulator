@@ -6,17 +6,6 @@ var input = preload("res://base nodes/input.tscn")
 var output = preload("res://base nodes/output.tscn")
 var prefab_item=preload("res://Scenes/PrefabItems.tscn")
 var Prefab=preload("res://gates/prefab_gate.tscn")
-var gates={
-	"Variable":preload("res://base nodes/variable.tscn"),
-	"Clock":preload("res://base nodes/clock.tscn"),
-	"AND":preload("res://gates/AND_gate.tscn"),
-	"NAND":preload("res://gates/NAND_gate.tscn"),
-	"NOT": preload("res://gates/NOT_gate.tscn"),
-	"OR": preload("res://gates/OR_gate.tscn"),
-	"NOR": preload("res://gates/NOR_gate.tscn"),
-	"XOR": preload("res://gates/XOR_gate.tscn"),
-	"XNOR": preload("res://gates/XNOR_gate.tscn")
-}
 var Prefabs={}
 var Scenes={}
 func SaveScene(tab,filepath):
@@ -31,7 +20,7 @@ func SaveScene(tab,filepath):
 			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Position":{"x":i.position.x,"y":i.position.y},"Cycle":1/i.get_node("Timer").wait_time,"Outputs":{}}
 			for out in i.get_node("Outputs").get_children():
 				TabData[i.name].Outputs[out.name]={"Connection":out.connection,"Value":out.value}		
-		elif i.get_node("Gate/Label").text in gates.keys():
+		elif i.get_node("Gate/Label").text in BaseGateHandler.gates.keys():
 			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Position":{"x":i.position.x,"y":i.position.y},"Inputs":{},"Outputs":{}}
 			for inp in i.get_node("Sockets").get_children():
 				if inp.connected:
@@ -88,7 +77,7 @@ func OpenFile(directory):
 		if Item.has("Format"):
 			if Item["Format"]=="Scene":
 				CreateScene(directory,Item["Items"])
-			else:
+			elif Item["Format"]=="Prefab":
 				var TabName=directory.get_file().left(directory.get_file().length()-5)
 				var tab=tab_container.CreateCustomTab(TabName)
 				CreatePrefab(directory,Item["Items"],Item["PrefabItems"],tab)
@@ -112,8 +101,9 @@ func CreateScene(Filepath,TabData):
 	if tab!=null:
 		for i in TabData.keys():
 			var unit=null
-			if TabData[i].Type in gates.keys():
-				unit=gates[TabData[i].Type].instance()
+			if TabData[i].Type in BaseGateHandler.gates.keys():
+				
+				unit=BaseGateHandler.SetupUnit(TabData[i].Type)
 				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock":
 					unit.from_file=true
 					unit.CreateLegsFromInstance(TabData[i])
@@ -156,8 +146,8 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 			tab.get_node("PrefabItems/Outputs").add_child(out)
 		for i in TabData.keys():
 			var unit=null
-			if TabData[i].Type in gates.keys():
-				unit=gates[TabData[i].Type].instance()
+			if TabData[i].Type in BaseGateHandler.gates.keys():
+				unit=BaseGateHandler.SetupUnit(TabData[i].Type)
 				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock":
 					unit.from_file=true
 					unit.CreateLegsFromInstance(TabData[i])
@@ -217,3 +207,4 @@ func ConnectLines(TabData,PrefabItems,tab):
 				source.SetValue(source.value)
 	
 	print("==",tab.get_parent().get_parent().name,"\t all units are added")
+
