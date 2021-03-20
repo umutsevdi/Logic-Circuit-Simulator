@@ -195,10 +195,10 @@ func start_connection(node):
 	line.add_point(Vector2(0,0))
 	from.add_child(line)
 func delete_node():
-	if selected_node.get_node("Gate/Label").text!="Variable" and selected_node.get_node("Gate/Label").text!="Clock":
+	if selected_node.TYPE=="Gate":
 		ResizeLegs(0)
+	elif selected_node.TYPE=="Prefab":
+		selected_node.DeleteNode()
 	selected_node.queue_free()
 	selected_node=null
 	displayer.visible=false
-
-

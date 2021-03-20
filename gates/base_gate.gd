@@ -3,12 +3,21 @@ const TYPE = "Gate"
 var socket=preload("res://base nodes/input.tscn")
 var value=-1
 var legs=0
+var from_file=false
 func _ready():
-	ResizeLegs(get_node("Gate").base_leg)
+	if from_file==false:
+		ResizeLegs(get_node("Gate").base_leg)
 func _physics_process(_delta):
 	value = $Gate.Calculate()
 	$Outputs/Output.SetValue(value)
-
+	
+func CreateLegsFromInstance(Info):
+	for i in Info.Inputs.keys():
+		legs+=1
+		var s = socket.instance()
+		s.name=i
+		$Sockets.add_child(s)
+		
 func ResizeLegs(leg_count):
 	legs=leg_count
 	if legs>$Sockets.get_child_count():

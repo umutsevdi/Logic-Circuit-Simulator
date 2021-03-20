@@ -72,12 +72,12 @@ func ConnectOutput(node,placeholderline):
 
 	source.connect("value_changed",self,"SetValue")
 	source.connection+=1
-	print("\t",self,"\tConnected to\t",node)
+	#print("\t",self,"\tConnected to\t",node)
 	
 func DisconnectOutput():
 	self.SetValue(-1)
 	source.connection-=1
-	print("\t",self,"\tdisconnected from\t",source)
+	#print("\t",self,"\tdisconnected from\t",source)
 	connected=false
 
 	get_node(source.name).queue_free()

@@ -31,16 +31,16 @@ func _on_CreateScene_confirmed():
 		new_scene.format=$VBoxContainer/SceneTypeContainer/OptionButton.text
 		if new_scene.format=="Prefab":
 			new_scene.add_child(prefab_item.instance())
-			for i in range (get_node("VBoxContainer/OutputCountContainer/SpinBox").value):
+			for _i in range (get_node("VBoxContainer/OutputCountContainer/SpinBox").value):
 				var inp=input.instance()
 				inp.name="I"+str(inp.get_instance_id())
 				new_scene.get_node("PrefabItems/Inputs").add_child(inp)
-			for i in range (get_node("VBoxContainer/InputCountContainer/SpinBox").value):
+			for _i in range (get_node("VBoxContainer/InputCountContainer/SpinBox").value):
 				var out=output.instance()
 				out.name="O"+str(out.get_instance_id())
 				new_scene.get_node("PrefabItems/Outputs").add_child(out)
 
-func _on_OptionButton_item_selected(index):
+func _on_OptionButton_item_selected(_index):
 	if $VBoxContainer/SceneTypeContainer/OptionButton.text=="Scene":
 		get_parent().get_node("CreateScene").window_title="Create Scene"
 		get_parent().get_node("CreateScene").dialog_text="Create a scene and use as a workplace"

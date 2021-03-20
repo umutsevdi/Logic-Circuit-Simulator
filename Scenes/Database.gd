@@ -5,6 +5,7 @@ onready var tab_container = get_tree().get_root().get_node("/root/Scene/CanvasLa
 var input = preload("res://base nodes/input.tscn")
 var output = preload("res://base nodes/output.tscn")
 var prefab_item=preload("res://Scenes/PrefabItems.tscn")
+var Prefab=preload("res://gates/prefab_gate.tscn")
 var gates={
 	"Variable":preload("res://base nodes/variable.tscn"),
 	"Clock":preload("res://base nodes/clock.tscn"),
@@ -113,6 +114,23 @@ func CreateScene(Filepath,TabData):
 			var unit=null
 			if TabData[i].Type in gates.keys():
 				unit=gates[TabData[i].Type].instance()
+				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock":
+					unit.from_file=true
+					unit.CreateLegsFromInstance(TabData[i])
+			elif TabData[i].Type=="Prefab":
+				print("\tCreating\t",i)
+				unit=Prefab.instance()
+				unit.path=TabData[i].Path
+				unit.Item=OpenDirectory(TabData[i].Path)
+				unit.Info=TabData[i]
+				if unit.Item.error!=0:
+					print("Error\tat opening file:\t",unit.Item.error,Filepath)
+				else:
+					unit.Item=unit.Item.result
+					if unit.Item.has("Format"):
+						if unit.Item["Format"]=="Prefab":
+							CreatePrefab(unit.path,unit.Item["Items"],unit.Item["PrefabItems"],unit.get_node("Gate/Tab"))
+							unit.ResizeLegs()
 			unit.position.x=TabData[i].Position.x
 			unit.position.y=TabData[i].Position.y
 			tab.add_child(unit)
@@ -122,46 +140,11 @@ func CreateScene(Filepath,TabData):
 			elif TabData[i].Type=="Variable":
 				if TabData[i].Value==1:	unit.get_node("CheckButton").pressed=true
 			print("\tCreating\t",i,"\tat\t",TabData[i].Position.x,",",TabData[i].Position.y)
-			if unit.has_node("Sockets"):
-				for j in unit.get_node("Sockets").get_children():
-					j.queue_free()
-			if TabData[i].has("Inputs"):
-				for j in TabData[i].Inputs.keys():
-					var socket = input.instance()
-					socket.name=j
-					unit.get_node("Sockets").add_child(socket)
-			if TabData[i].has("Outputs"):
-				unit.get_node("Outputs/Output").SetValue(TabData[i].Outputs["Output"].Value)
-				if TabData[i].Outputs.keys().size()>1:
-					for j in TabData[i].Outputs.keys():
-						var socket = output.instance()
-						socket.name=j
-						socket.SetValue(TabData[i].Outputs[j].Value)
-						unit.get_node("Outputs").add_child(socket)
-		for i in TabData.keys():
-			if TabData[i].has("Inputs"):
-				for j in TabData[i].Inputs.keys():
-					if TabData[i].Inputs[j].Source["Parent"]!="null":
-						print("\t=",TabName,"\t",i,"\t",j)
-						var target=tabs_node.get_node(TabName+"/"+i+"/Sockets/"+j)
-						var source=tabs_node.get_node(TabName+"/"+TabData[i].Inputs[j].Source.Parent+"/Outputs/"+TabData[i].Inputs[j].Source.Socket)
-						print("\t=",str(TabName+"/"+TabData[i].Inputs[j].Source.Parent+"/Outputs/"+TabData[i].Inputs[j].Source.Socket))
-						var line= Line2D.new()
-						for l in TabData[i].Inputs[j].Source.Line:
-							line.add_point(Vector2(TabData[i].Inputs[j].Source.Line[l].x,TabData[i].Inputs[j].Source.Line[l].y))
-						#line.points=TabData[i].Inputs[j].Source.Line
-						target.ConnectOutput(source,line)
-						line.queue_free()
-						source.SetValue(source.value)
-#PREFAB OF PREFAB: NEEDS TO BE ADDED FROM THE FILE IT REQUESTS!
+		ConnectLines(TabData,null,tab)
 func CreatePrefab(Filepath,TabData,PrefabItems,tab):
-	var TabName=tab.name
-
 	tab.format="Prefab"
 	tab.path=Filepath
 	tab.add_child(prefab_item.instance())
-	
-
 	if tab!=null:
 		for i in PrefabItems.Inputs.keys():
 			var inp=input.instance()
@@ -175,6 +158,24 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 			var unit=null
 			if TabData[i].Type in gates.keys():
 				unit=gates[TabData[i].Type].instance()
+				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock":
+					unit.from_file=true
+					unit.CreateLegsFromInstance(TabData[i])
+			elif TabData[i].Type=="Prefab":
+				print("\tCreating\t",i)
+				unit=Prefab.instance()
+				unit.name=i+" "+str(unit.get_instance_id())
+				unit.path=TabData[i].Path
+				unit.Item=OpenDirectory(TabData[i].Path)
+				unit.Info=TabData[i]
+				if unit.Item.error!=0:
+					print("Error\tat opening file:\t",unit.Item.error,Filepath)
+				else:
+					unit.Item=unit.Item.result
+					if unit.Item.has("Format"):
+						if unit.Item["Format"]=="Prefab":
+							CreatePrefab(unit.path,unit.Item["Items"],unit.Item["PrefabItems"],unit.get_node("Gate/Tab"))
+							unit.ResizeLegs()
 			unit.position.x=TabData[i].Position.x
 			unit.position.y=TabData[i].Position.y
 			tab.add_child(unit)
@@ -184,40 +185,28 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 			elif TabData[i].Type=="Variable":
 				if TabData[i].Value==1:	unit.get_node("CheckButton").pressed=true
 			print("\tCreating\t",i,"\tat\t",TabData[i].Position.x,",",TabData[i].Position.y)
-			if unit.has_node("Sockets"):
-				for j in unit.get_node("Sockets").get_children():
-					j.queue_free()
-			if TabData[i].has("Inputs"):
-				for j in TabData[i].Inputs.keys():
-					var socket = input.instance()
-					socket.name=j
-					unit.get_node("Sockets").add_child(socket)
-			if TabData[i].has("Outputs"):
-				unit.get_node("Outputs/Output").SetValue(TabData[i].Outputs["Output"].Value)
-				if TabData[i].Outputs.keys().size()>1:
-					for j in TabData[i].Outputs.keys():
-						var socket = output.instance()
-						socket.name=j
-						socket.SetValue(TabData[i].Outputs[j].Value)
-						unit.get_node("Outputs").add_child(socket)
-		for i in TabData.keys():
-			if TabData[i].has("Inputs"):
-				for j in TabData[i].Inputs.keys():
-					if TabData[i].Inputs[j].Source["Parent"]!="null":
-						print("\t=",TabName,"\t",i,"\t",j)
-						var target=tab.get_node(i+"/Sockets/"+j)
-						var source=tab.get_node(TabData[i].Inputs[j].Source.Parent+"/Outputs/"+TabData[i].Inputs[j].Source.Socket)
-						print("\t=",str(TabName+"/"+TabData[i].Inputs[j].Source.Parent+"/Outputs/"+TabData[i].Inputs[j].Source.Socket))
-						var line= Line2D.new()
-						for l in TabData[i].Inputs[j].Source.Line:
-							line.add_point(Vector2(TabData[i].Inputs[j].Source.Line[l].x,TabData[i].Inputs[j].Source.Line[l].y))
-						#line.points=TabData[i].Inputs[j].Source.Line
-						target.ConnectOutput(source,line)
-						line.queue_free()
-						source.SetValue(source.value)
+		ConnectLines(TabData,PrefabItems,tab)
+
+func ConnectLines(TabData,PrefabItems,tab):
+	yield(get_tree().create_timer(1), "timeout")
+	print("==",tab.get_parent().get_parent().name,"\t requested to connect lines. Starting...")
+	for i in TabData.keys():
+		if TabData[i].has("Inputs"):
+			for j in TabData[i].Inputs.keys():
+				if TabData[i].Inputs[j].Source["Parent"]!="null":
+					var target
+					target=tab.get_node(i+"/Sockets/"+j)
+					var source=tab.get_node(TabData[i].Inputs[j].Source.Parent+"/Outputs/"+TabData[i].Inputs[j].Source.Socket)
+					print("\t=",target.get_parent().get_parent().name,".",target.name,"\t",source.get_parent().get_parent().name,".",source.name)
+					var line= Line2D.new()
+					for l in TabData[i].Inputs[j].Source.Line:
+						line.add_point(Vector2(TabData[i].Inputs[j].Source.Line[l].x,TabData[i].Inputs[j].Source.Line[l].y))
+					target.ConnectOutput(source,line)
+					line.queue_free()
+					source.SetValue(source.value)
+	if tab.format=="Prefab":
 		for i in PrefabItems.Inputs.keys():
 			if PrefabItems.Inputs[i].Source["Parent"]!="null":
-				print("\tPrefabItem=",i,"\tto",PrefabItems.Inputs[i].Source["Parent"])
 				var target=tab.get_node("PrefabItems/Inputs/"+i)
 				var source=tab.get_node(PrefabItems.Inputs[i].Source.Parent+"/Outputs/"+PrefabItems.Inputs[i].Source.Socket)
 				var line= Line2D.new()
@@ -226,3 +215,5 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 				target.ConnectOutput(source,line)
 				line.queue_free()
 				source.SetValue(source.value)
+	
+	print("==",tab.get_parent().get_parent().name,"\t all units are added")

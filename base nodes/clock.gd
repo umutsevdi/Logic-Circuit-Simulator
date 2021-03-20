@@ -1,4 +1,5 @@
 extends Node2D
+const TYPE = "Variable"
 var value=0
 func _ready():
 	_on_CheckButton_toggled(false)
