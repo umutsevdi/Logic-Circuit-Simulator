@@ -1,5 +1,4 @@
 extends Node
-
 var node
 var hold=false
 var time=0
@@ -23,8 +22,7 @@ func _process(delta):
 				MoveEnd(old_position)
 		else:
 			MoveEnd(node.global_position)
-		
-		
+				
 func MoveStart(order):
 	create=order
 	hold=true
@@ -39,12 +37,10 @@ func MoveStart(order):
 	set_process(true)
 	
 func MoveEnd(_position):
-	
 	set_process(false)
 	node.modulate.a=1
 	node.global_position=_position
 	node.get_node("Gate").rect_rotation=old_rotation
-
 	if old_position==_position and create:
 		node.queue_free()
 		UIHandler.selected_node=null

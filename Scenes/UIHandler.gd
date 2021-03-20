@@ -25,10 +25,8 @@ func _process(delta):
 		if Input.is_action_just_pressed("left_click"):
 			if displayer.grid_value!=0:
 				line.add_point(Vector2(int((UIHandler.mouse_position.x-from.rect_global_position.x)/displayer.grid_value)*displayer.grid_value,int((UIHandler.mouse_position.y-from.rect_global_position.y)/displayer.grid_value)*displayer.grid_value))
-				#line.add_point(Vector2(int(UIHandler.mouse_position.x/displayer.grid_value)*displayer.grid_value,int(UIHandler.mouse_position.y/displayer.grid_value)*displayer.grid_value))
 			else:
 				line.add_point(UIHandler.mouse_position-from.rect_global_position)
-				#line.add_point(UIHandler.mouse_position)
 		if Input.is_action_just_pressed("right_click"):
 			connecting=false
 			from=null
@@ -113,8 +111,6 @@ func CreateUI(node):
 			displayer.get_node("VBoxContainer/OutputTab").add_child(tab)
 func UpdateUI(node):
 	selected_node=node
-	
-	#displayer.get_node("VBoxContainer/HBoxContainer/LineEdit").text=str(node.get_node("Sockets").get_child_count())
 	if node.get_node("Gate/Label").text!="Variable" and node.get_node("Gate/Label").text!="Clock" :
 		displayer.visible=true
 		for tab in displayer.get_node("VBoxContainer/InputTab").get_children():

@@ -5,7 +5,6 @@ var old_rotation=0
 var time=0
 var grid_value=0
 
-
 func _on_Button_pressed():
 	$Header.editable=false
 	$Header.text=""
@@ -20,7 +19,6 @@ func _on_Button_pressed():
 	UIHandler.selected_node=null
 	self.visible=false
 
-
 func _on_Reduce_pressed():
 	if ($VBoxContainer/HBoxContainer/LineEdit.text.to_int())>1:
 		$VBoxContainer/HBoxContainer/LineEdit.text=str($VBoxContainer/HBoxContainer/LineEdit.text.to_int()-1)
@@ -34,20 +32,15 @@ func _on_Increase_pressed():
 func _on_ConfirmationDialog_confirmed():
 	UIHandler.delete_node()
 
-
 func _on_Delete_pressed():
 	get_node("../ConfirmationDialog").popup_centered()
-
-
 
 func _on_Header_text_changed(new_text):
 	UIHandler.selected_node.name=new_text
 
-
 func _on_GridSeperator_value_changed(value):
 	grid_value=value
 	Move.grid_value=value
-
 
 func _on_LineEdit_text_entered(new_text):
 	if !new_text.is_valid_integer():

@@ -13,4 +13,3 @@ func _on_Button_down():
 			break
 	selected_tab.add_child(node)
 	node.CreateNode()
-

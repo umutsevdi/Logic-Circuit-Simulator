@@ -1,8 +1,9 @@
-[gd_scene load_steps=57 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://UI/TabContainer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=2]
 [ext_resource path="res://Scenes/CreateScene.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Icons/ClassList.svg" type="Texture" id=4]
 [ext_resource path="res://Scenes/Displayer.gd" type="Script" id=5]
 [ext_resource path="res://UI/Add_Node.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Theme.tres" type="Theme" id=7]
@@ -442,6 +443,7 @@ text = "About"
 icon = ExtResource( 35 )
 
 [node name="Displayer" type="Panel" parent="CanvasLayer"]
+visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -924,7 +926,7 @@ margin_left = 100.0
 margin_right = 400.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 300, 0 )
-text = "user://"
+text = "C:/"
 clear_button_enabled = true
 placeholder_text = "user://"
 __meta__ = {
@@ -943,11 +945,22 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button" type="Button" parent="CanvasLayer/PrefabBar/HBoxContainer"]
+margin_left = 432.0
+margin_right = 549.0
+margin_bottom = 24.0
+hint_tooltip = "Toggles between User data and Filesystem. Storing prefabs and scenes in userdata makes it easier to find."
+focus_mode = 0
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Toggle Files"
+icon = ExtResource( 4 )
+
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/PrefabBar"]
 margin_left = 16.0
 margin_top = 36.0
 margin_right = 779.0
-margin_bottom = 138.0
+margin_bottom = 150.0
 custom_styles/bg = SubResource( 7 )
 follow_focus = true
 scroll_vertical_enabled = false
@@ -1240,6 +1253,7 @@ __meta__ = {
 [connection signal="pressed" from="CanvasLayer/PrefabBar/HBoxContainer/UpButton" to="CanvasLayer/PrefabBar" method="_on_UpButton_pressed"]
 [connection signal="text_entered" from="CanvasLayer/PrefabBar/HBoxContainer/Path" to="CanvasLayer/PrefabBar" method="_on_Path_text_entered"]
 [connection signal="pressed" from="CanvasLayer/PrefabBar/HBoxContainer/RefreshButton" to="CanvasLayer/PrefabBar" method="_on_RefreshButton_pressed"]
+[connection signal="toggled" from="CanvasLayer/PrefabBar/HBoxContainer/Button" to="CanvasLayer/PrefabBar" method="_on_Button_toggled"]
 [connection signal="value_changed" from="CanvasLayer/GridSeperator" to="CanvasLayer/Displayer" method="_on_GridSeperator_value_changed"]
 [connection signal="tab_changed" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_changed"]
 [connection signal="tab_selected" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_selected"]

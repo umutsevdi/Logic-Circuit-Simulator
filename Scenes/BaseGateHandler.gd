@@ -1,6 +1,4 @@
 extends Node
-
-
 var base_gate=preload("res://gates/base_gate.tscn")
 var gates={
 	"Variable":preload("res://base nodes/variable.tscn"),

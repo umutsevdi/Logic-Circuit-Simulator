@@ -1,6 +1,5 @@
 extends FileDialog
 
-
 func _on_FileDialog_file_selected(path):
 	var visible_scene
 	if self.mode==0:
@@ -19,4 +18,3 @@ func _on_FileDialog_file_selected(path):
 			print(get_node("/root/Scene/CanvasLayer/TabContainer").get_tab_control(get_node("/root/Scene/CanvasLayer/TabContainer").current_tab).name)
 			print("Saving",visible_scene.name,"to ",path)
 			Database.SaveScene(visible_scene,path)
-		

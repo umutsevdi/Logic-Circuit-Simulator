@@ -20,9 +20,7 @@ func EmptyBox(format):
 	$VBoxContainer/NameContainer/LineEdit.text=""
 	$VBoxContainer/InputCountContainer/SpinBox.value=1
 	$VBoxContainer/OutputCountContainer/SpinBox.value=1
-	#self.get_close_button().disabled=true
-	
-	
+		
 func _on_CreateScene_confirmed():
 	if $VBoxContainer/NameContainer/LineEdit.text=="":
 		$VBoxContainer/NameContainer/LineEdit.text="New Tab"

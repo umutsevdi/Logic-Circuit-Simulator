@@ -50,6 +50,5 @@ func DeleteNode():
 		$Sockets.get_child(i).queue_free()
 	if $Gate/Label.text!="NOT":
 		$Sockets.rect_size.y=36*$Sockets.get_child_count()
-		#$Outputs.rect_size.y=25*$Outputs.get_child_count()
 		$Gate.rect_size.y=36*$Sockets.get_child_count()
 		$Gate/Label.rect_size.y=36*$Sockets.get_child_count()

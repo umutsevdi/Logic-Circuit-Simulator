@@ -3,7 +3,6 @@ const TYPE = "Output"
 var value = -1
 var mouse=false
 
-
 signal value_changed
 var connection=0
 func _ready():

@@ -10,7 +10,6 @@ func _ready():
 			tabs_node.add_child(t)
 	_on_TabContainer_tab_changed(0)
 
-
 func _on_TabContainer_tab_changed(tab):
 	if tab!=0:
 		print("Switching tab to ",get_tab_control(tab).name)

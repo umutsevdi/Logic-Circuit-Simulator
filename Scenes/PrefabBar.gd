@@ -3,6 +3,7 @@ var folder=preload("res://UI/FolderButton.tscn")
 var file=preload("res://UI/FileButton.tscn")
 func _ready():
 	_on_RefreshButton_pressed()
+	$HBoxContainer/Button.pressed=true
 func _on_Path_text_entered(new_text):
 	if new_text=="res://":
 		get_node("HBoxContainer/Path").text="user://"
@@ -47,11 +48,13 @@ func dir_contents(path):
 	else:
 		print("An error occurred when trying to access the path.")
 
-
-
-
-
 func _on_UpButton_pressed():
 	get_node("HBoxContainer/Path").text=get_node("HBoxContainer/Path").text.replace("/"+get_node("HBoxContainer/Path").text.get_file(),"")
-	
+	_on_RefreshButton_pressed()
+
+func _on_Button_toggled(button_pressed):
+	if button_pressed:
+		$HBoxContainer/Path.text="user://"
+	else:
+		$HBoxContainer/Path.text="C:/"
 	_on_RefreshButton_pressed()

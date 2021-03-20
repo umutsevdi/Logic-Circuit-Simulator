@@ -12,12 +12,9 @@ func Calculate():
 		output=-1
 	return output
 	
-
-
 func _on_Button_button_down():
 	UIHandler.CreateUI(get_parent())
 	Move.MoveStart(false)
-
 
 func _on_Button_button_up():
 	Move.hold=false

@@ -24,7 +24,5 @@ func _on_ConfirmationDialog_confirmed():
 func _on_Delete_pressed():
 	get_node("../ConfirmationDialog").popup_centered()
 
-
-
 func _on_Header_text_changed(new_text):
 	UIHandler.selected_node.name=new_text

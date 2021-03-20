@@ -83,7 +83,6 @@ func OpenFile(directory):
 				CreatePrefab(directory,Item["Items"],Item["PrefabItems"],tab)
 		else:
 			return "Error"
-
 	
 func OpenDirectory(directory):
 	var Item={}
@@ -178,7 +177,7 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 		ConnectLines(TabData,PrefabItems,tab)
 
 func ConnectLines(TabData,PrefabItems,tab):
-	yield(get_tree().create_timer(1), "timeout")
+	yield(get_tree().create_timer(0.2), "timeout")
 	print("==",tab.get_parent().get_parent().name,"\t requested to connect lines. Starting...")
 	for i in TabData.keys():
 		if TabData[i].has("Inputs"):
@@ -205,6 +204,4 @@ func ConnectLines(TabData,PrefabItems,tab):
 				target.ConnectOutput(source,line)
 				line.queue_free()
 				source.SetValue(source.value)
-	
 	print("==",tab.get_parent().get_parent().name,"\t all units are added")
-

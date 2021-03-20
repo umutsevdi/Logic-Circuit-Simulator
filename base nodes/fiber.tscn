@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=2 format=2]
 
 [ext_resource path="res://base nodes/fiber.gd" type="Script" id=2]
-[ext_resource path="res://icon.png" type="Texture" id=3]
 
 [node name="Line" type="Line2D"]
 z_index = 1
@@ -23,12 +22,3 @@ begin_cap_mode = 2
 end_cap_mode = 2
 round_precision = 64
 antialiased = true
-
-[node name="TextureButton" type="TextureButton" parent="."]
-visible = false
-texture_normal = ExtResource( 3 )
-expand = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]

@@ -8,7 +8,6 @@ func _input(event):
 	if event.is_action_pressed("Save"):
 		_on_Save_pressed()
 
-
 func _on_Save_pressed():
 	for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
 		if i.visible:
@@ -30,7 +29,6 @@ func _on_New_Prefab_pressed():
 	get_parent().get_node("CreateScene").EmptyBox("Prefab")
 	get_parent().get_node("CreateScene").popup()
 
-
 func _on_Open_pressed():
 	dialog.current_file=""
 	dialog.mode=0
@@ -42,12 +40,10 @@ func _on_Save_As_pressed():
 	dialog.popup()
 
 func _on_Close_pressed():
-	pass # Replace with function body.
-
+	pass
 
 func _on_Rename_pressed():
 	dialog.get_parent().get_node("RenameScene").popup()
-
 
 func _on_RenameScene_confirmed():
 		if get_parent().get_node("RenameScene/Container/LineEdit").text!="":
@@ -66,12 +62,8 @@ func _on_RenameScene_confirmed():
 				get_parent().get_node("TabContainer/"+str(visible_scene.name)).name=get_parent().get_node("RenameScene/Container/LineEdit").text
 				visible_scene.name=get_parent().get_node("RenameScene/Container/LineEdit").text
 
-
 func _on_Delete_pressed():
 	get_node("../DeleteScene").popup()
-
-
-
 
 func _on_DeleteScene_confirmed():
 	for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
@@ -85,7 +77,6 @@ func _on_DeleteScene_confirmed():
 	get_node("../TabContainer/"+visible_scene.name).queue_free()
 	
 	visible_scene.queue_free()
-
 
 func _on_Circuit_Toolbar_toggled(button_pressed):
 	if button_pressed:
