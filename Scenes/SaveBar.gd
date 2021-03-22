@@ -9,5 +9,5 @@ func _process(delta):
 		self.visible=false
 		set_process(false)
 func Save():
-	
+	pass
 	

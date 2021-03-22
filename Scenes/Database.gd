@@ -8,6 +8,11 @@ var prefab_item=preload("res://Scenes/PrefabItems.tscn")
 var Prefab=preload("res://gates/prefab_gate.tscn")
 var Prefabs={}
 var Scenes={}
+func _ready():
+	var dir = Directory.new()
+	if dir.open("user://") == OK:
+		dir.make_dir("user://Scenes")
+		dir.make_dir("user://Prefabs")
 func SaveScene(tab,filepath):
 	print("Saving Tab:\t",tab)
 	var TabData={}
@@ -73,7 +78,7 @@ func SaveScene(tab,filepath):
 				FileSetup["PrefabItems"].Inputs[i.name]={"Source":{"Parent":"null","Socket":"null","Line":"null"},"Value":i.value}
 	var save_file=File.new()
 	if filepath=="":
-		save_file.open("user://scenes/"+tab.name+".json",File.WRITE)
+		save_file.open("user://Scenes/"+tab.name+".json",File.WRITE)
 	else:
 		save_file.open(filepath,File.WRITE)
 	save_file.store_line(to_json(FileSetup))
@@ -224,3 +229,10 @@ func ConnectLines(TabData,PrefabItems,tab):
 				line.queue_free()
 				source.SetValue(source.value)
 	print("==",tab.get_parent().get_parent().name,"\t all units are added")
+func GetCurrentTab():
+	var visible_scene
+	for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
+		if i.visible:
+			visible_scene=i
+			break
+	return visible_scene

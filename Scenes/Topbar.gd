@@ -47,21 +47,21 @@ func _on_Rename_pressed():
 	dialog.get_parent().get_node("RenameScene").popup()
 
 func _on_RenameScene_confirmed():
-		if get_parent().get_node("RenameScene/Container/LineEdit").text!="":
-			var is_unique=true
-			for i in get_parent().get_node("TabContainer").get_children():
-				if i.name==get_parent().get_node("RenameScene/Container/LineEdit").text:
-					is_unique=false
+	if get_parent().get_node("RenameScene/Container/LineEdit").text!="":
+		var is_unique=true
+		for i in get_parent().get_node("TabContainer").get_children():
+			if i.name==get_parent().get_node("RenameScene/Container/LineEdit").text:
+				is_unique=false
+				break
+				
+		if is_unique:
+			for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
+				if i.visible:
+					visible_scene=i
 					break
 					
-			if is_unique:
-				for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
-					if i.visible:
-						visible_scene=i
-						break
-						
-				get_parent().get_node("TabContainer/"+str(visible_scene.name)).name=get_parent().get_node("RenameScene/Container/LineEdit").text
-				visible_scene.name=get_parent().get_node("RenameScene/Container/LineEdit").text
+			get_parent().get_node("TabContainer/"+str(visible_scene.name)).name=get_parent().get_node("RenameScene/Container/LineEdit").text
+			visible_scene.name=get_parent().get_node("RenameScene/Container/LineEdit").text
 
 func _on_Delete_pressed():
 	get_node("../DeleteScene").popup()
@@ -95,3 +95,11 @@ func _on_Prefab_Toolbar_toggled(button_pressed):
 
 func _on_Open_Truth_Table_pressed():
 	get_node("../Truth Table").popup()
+
+
+func _on_Sync_Clocks_pressed():
+	visible_scene=Database.GetCurrentTab()
+	for i in visible_scene.get_children():
+		if i.TYPE=="Clock":
+			i.get_node("Timer").start()
+			#i.get_node("Timer").time_left=i.get_node("Timer").wait_time

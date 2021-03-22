@@ -113,7 +113,7 @@ func CreateUI(node):
 			displayer.get_node("VBoxContainer/OutputTab").add_child(tab)
 func UpdateUI(node):
 	selected_node=node
-	if node.TYPE!="Variable" and node.TYPE!="Label" and node.TYPE!="Output":
+	if node.TYPE!="Variable" and node.TYPE!="Label" and node.TYPE!="Output" and node.TYPE!="Clock":
 		displayer.visible=true
 		for tab in displayer.get_node("VBoxContainer/InputTab").get_children():
 			if selected_node.get_node("Sockets").has_node(tab.socket):
@@ -159,10 +159,6 @@ func UpdateUI(node):
 				tab.get_node("VBoxContainer/Value").text="Value : null"
 				tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
 		
-func ResizeLegs(legs):
-	selected_node.ResizeLegs(legs)
-	CreateUI(selected_node)
-
 func connect_nodes(to):
 	var source=null
 	var target=null
@@ -199,6 +195,7 @@ func start_connection(node):
 	line.position=Vector2(0,0)
 	line.add_point(Vector2(0,0))
 	from.add_child(line)
+	
 func delete_node():
 	if selected_node.TYPE=="Gate":
 		ResizeLegs(0)
@@ -207,3 +204,9 @@ func delete_node():
 	selected_node.queue_free()
 	selected_node=null
 	displayer.visible=false
+	timer=0
+
+func ResizeLegs(legs):
+	selected_node.ResizeLegs(legs)
+	CreateUI(selected_node)
+

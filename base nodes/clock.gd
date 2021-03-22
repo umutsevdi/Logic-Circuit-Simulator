@@ -28,4 +28,6 @@ func _on_Timer_timeout():
 func _on_SpinBox_value_changed(cycle):
 	if cycle!=0:
 		get_node("Timer").wait_time=1/cycle
-	else:	$SpinBox.cycle=1
+	else:
+		$SpinBox.value=1
+		get_node("Timer").wait_time=1

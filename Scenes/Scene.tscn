@@ -147,6 +147,7 @@ __meta__ = {
 }
 
 [node name="Files" type="Tabs" parent="CanvasLayer/TopBar"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 49.0
@@ -374,7 +375,6 @@ text = "Select All"
 icon = ExtResource( 34 )
 
 [node name="Simulator" type="Tabs" parent="CanvasLayer/TopBar"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 49.0
@@ -418,14 +418,29 @@ keep_pressed_outside = true
 text = "Open Truth Table"
 icon = ExtResource( 28 )
 
-[node name="VSeparator" type="VSeparator" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
+[node name="Sync Clocks" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
 margin_left = 281.0
-margin_right = 285.0
+margin_right = 437.0
+margin_bottom = 31.0
+hint_tooltip = "Restarts existing clocks, synchronizes their timers."
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+enabled_focus_mode = 0
+keep_pressed_outside = true
+text = "Synchronize Clocks"
+icon = ExtResource( 46 )
+
+[node name="VSeparator" type="VSeparator" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
+margin_left = 441.0
+margin_right = 445.0
 margin_bottom = 31.0
 
 [node name="Circuit Toolbar" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
-margin_left = 289.0
-margin_right = 460.0
+margin_left = 449.0
+margin_right = 620.0
 margin_bottom = 31.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
@@ -438,8 +453,8 @@ text = "Toggle Circuit Toolbar"
 icon = ExtResource( 21 )
 
 [node name="Prefab Toolbar" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
-margin_left = 464.0
-margin_right = 634.0
+margin_left = 624.0
+margin_right = 794.0
 margin_bottom = 31.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
@@ -1295,6 +1310,7 @@ __meta__ = {
 }
 
 [node name="History" type="Panel" parent="CanvasLayer"]
+visible = false
 anchor_left = 1.0
 anchor_right = 1.0
 margin_left = -232.0
@@ -1387,6 +1403,7 @@ columns = 3
 [connection signal="pressed" from="CanvasLayer/TopBar/Edit/HBoxContainer/Rename" to="CanvasLayer/TopBar" method="_on_Rename_pressed"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Edit/HBoxContainer/Delete" to="CanvasLayer/TopBar" method="_on_Delete_pressed"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Open Truth Table" to="CanvasLayer/TopBar" method="_on_Open_Truth_Table_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Sync Clocks" to="CanvasLayer/TopBar" method="_on_Sync_Clocks_pressed"]
 [connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Circuit Toolbar" to="CanvasLayer/TopBar" method="_on_Circuit_Toolbar_toggled"]
 [connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Prefab Toolbar" to="CanvasLayer/TopBar" method="_on_Prefab_Toolbar_toggled"]
 [connection signal="text_changed" from="CanvasLayer/Displayer/Header" to="CanvasLayer/Displayer" method="_on_Header_text_changed"]
@@ -1410,3 +1427,4 @@ columns = 3
 [connection signal="confirmed" from="CanvasLayer/RenameScene" to="CanvasLayer/TopBar" method="_on_RenameScene_confirmed"]
 [connection signal="confirmed" from="CanvasLayer/DeleteScene" to="CanvasLayer/TopBar" method="_on_DeleteScene_confirmed"]
 [connection signal="about_to_show" from="CanvasLayer/Truth Table" to="CanvasLayer/Truth Table" method="_on_Truth_Table_about_to_show"]
+[connection signal="popup_hide" from="CanvasLayer/Truth Table" to="CanvasLayer/Truth Table" method="_on_Truth_Table_popup_hide"]

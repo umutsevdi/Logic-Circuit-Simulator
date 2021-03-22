@@ -14,11 +14,7 @@ func _ready():
 func _on_Button_down():
 	var node=Prefab.instance()
 	node.name=self.name+" "+str(node.get_instance_id())
-	var selected_tab=null
-	for i in tabs_node.get_children():
-		if i.visible:	
-			selected_tab=i
-			break
+	var selected_tab=Database.GetCurrentTab()
 	selected_tab.add_child(node)
 	node.get_node("Gate/Label").text=path.get_file().left(path.get_file().length()-5)
 	node.path=path

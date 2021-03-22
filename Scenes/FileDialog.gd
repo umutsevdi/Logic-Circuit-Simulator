@@ -6,10 +6,7 @@ func _on_FileDialog_file_selected(path):
 			print("Opening ",path)
 			Database.OpenFile(path)
 	elif self.mode==4:
-			for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
-				if i.visible:
-					visible_scene=i
-					break
+			visible_scene=Database.GetCurrentTab()
 			visible_scene.name=current_file.get_file().left(current_file.get_file().length()-5)
 			visible_scene.path=path
 			print(get_node("/root/Scene/CanvasLayer/TabContainer").current_tab)

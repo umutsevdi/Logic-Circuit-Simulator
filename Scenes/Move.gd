@@ -42,8 +42,7 @@ func MoveEnd(_position):
 	node.global_position=_position
 	node.get_node("Gate").rect_rotation=old_rotation
 	if old_position==_position and create:
-		node.queue_free()
-		UIHandler.selected_node=null
+		UIHandler.delete_node()
 	else:
 		if UIHandler.selected_node.TYPE=="Variable" or UIHandler.selected_node.TYPE=="Clock" or UIHandler.selected_node.TYPE=="Label" or UIHandler.selected_node.TYPE=="Output":
 			UIHandler.CreateUI_variable(UIHandler.selected_node)
