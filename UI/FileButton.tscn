@@ -23,9 +23,9 @@ custom_styles/hover = ExtResource( 5 )
 custom_styles/pressed = ExtResource( 4 )
 custom_styles/disabled = ExtResource( 2 )
 custom_styles/normal = ExtResource( 2 )
-disabled = true
 enabled_focus_mode = 0
 icon = ExtResource( 1 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

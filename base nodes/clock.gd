@@ -21,7 +21,7 @@ func _on_Gate_button_down():
 
 func _on_Gate_button_up():
 	Move.hold=false
-
+	
 func _on_Timer_timeout():
 	 _on_CheckButton_toggled(1-value)
 	

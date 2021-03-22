@@ -3,6 +3,7 @@ onready var dialog=get_parent().get_node("FileDialog")
 var visible_scene
 func _ready():
 	get_node("Simulator/HBoxContainer/Circuit Toolbar").pressed=true
+	get_node("Simulator/HBoxContainer/Prefab Toolbar").pressed=true
 
 func _input(event):
 	if event.is_action_pressed("Save"):
@@ -83,3 +84,10 @@ func _on_Circuit_Toolbar_toggled(button_pressed):
 		get_node("../CreateBar").visible=true
 	else:
 		get_node("../CreateBar").visible=false
+
+
+func _on_Prefab_Toolbar_toggled(button_pressed):
+	if button_pressed:
+		get_node("../PrefabBar").visible=true
+	else:
+		get_node("../PrefabBar").visible=false

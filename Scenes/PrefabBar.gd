@@ -31,19 +31,19 @@ func dir_contents(path):
 				var unit=file.instance()
 				unit.name=file_name
 				unit.get_node("Label").text=file_name
-				get_node("ScrollContainer/VBoxContainer").add_child(unit)
 				var item=Database.OpenDirectory(path+"/"+file_name)
 				if item.error!=0:
 					print("Error\tat opening file:\t",item.error,path+"/"+file_name)
 				else:
 					item=item.result
 					if item.has("Format"):
-						unit.get_node("Button").disabled=item["Format"]!="Prefab"
-						if item["Format"]!="Prefab":
-							unit.get_node("Label").modulate=Color("#5b5d54")
-						else:
+						if item["Format"]=="Prefab" or item["Format"]=="Scene":
 							unit.path=path+"/"+file_name
 							unit.Item=item
+						else:
+							unit.get_node("Button").disabled=true
+							unit.get_node("Label").modulate=Color("#5b5d54")
+						get_node("ScrollContainer/VBoxContainer").add_child(unit)
 			file_name = dir.get_next()
 	else:
 		print("An error occurred when trying to access the path.")

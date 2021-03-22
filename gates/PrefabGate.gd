@@ -1,6 +1,7 @@
 extends Button
 var output
 var base_leg = 2
+
 func Calculate():
 	for i in range(get_node("Tab/PrefabItems/Outputs").get_child_count()):
 		get_node("Tab/PrefabItems/Outputs").get_child(i).SetValue(get_node("../Sockets").get_child(i).value)

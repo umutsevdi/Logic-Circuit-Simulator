@@ -1,4 +1,4 @@
-[gd_resource type="Theme" load_steps=16 format=2]
+[gd_resource type="Theme" load_steps=17 format=2]
 
 [ext_resource path="res://Assets/ButtonPressed.tres" type="StyleBox" id=1]
 [ext_resource path="res://Assets/ButtonNormal.tres" type="StyleBox" id=2]
@@ -35,6 +35,16 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.647059, 0.647059, 0.552941, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.392157, 0.392157, 0.392157, 1 )
+border_blend = true
+corner_radius_bottom_right = 8
+
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.156863, 0.168627, 0.12549, 1 )
 
 [resource]
@@ -107,6 +117,12 @@ TabContainer/styles/tab_bg = ExtResource( 10 )
 TabContainer/styles/tab_disabled = ExtResource( 11 )
 TabContainer/styles/tab_fg = ExtResource( 9 )
 TextEdit/styles/normal = ExtResource( 5 )
+TooltipLabel/colors/font_color = Color( 0, 0, 0, 1 )
+TooltipLabel/colors/font_color_shadow = Color( 0, 0, 0, 0.1 )
+TooltipLabel/constants/shadow_offset_x = 1
+TooltipLabel/constants/shadow_offset_y = 1
+TooltipLabel/fonts/font = null
+TooltipPanel/styles/panel = SubResource( 4 )
 Tree/colors/custom_button_font_highlight = Color( 1, 1, 1, 1 )
 Tree/colors/drop_position_color = Color( 1, 0.380392, 0.294118, 1 )
 Tree/colors/font_color = Color( 0.69, 0.69, 0.69, 1 )
@@ -130,7 +146,7 @@ Tree/icons/checked = null
 Tree/icons/select_arrow = null
 Tree/icons/unchecked = null
 Tree/icons/updown = null
-Tree/styles/bg = SubResource( 4 )
+Tree/styles/bg = SubResource( 5 )
 Tree/styles/bg_focus = null
 Tree/styles/button_pressed = null
 Tree/styles/cursor = null

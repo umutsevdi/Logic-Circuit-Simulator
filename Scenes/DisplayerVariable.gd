@@ -9,12 +9,10 @@ func _ready():
 	_on_Button_pressed()
 
 func _on_Button_pressed():
-	$Header.editable=false
 	$Header.text=""
-	for i in $VBoxContainer/OutputTab.get_children():
-		i.queue_free()
-	for i in $HBoxContainer.get_children():
-		i.disabled=true
+	$VBoxContainer/Type.text="Type : "
+	for i in $VBoxContainer.get_children():
+		i.visible=true
 	UIHandler.selected_node=null
 	self.visible=false
 
@@ -25,4 +23,7 @@ func _on_Delete_pressed():
 	get_node("../ConfirmationDialog").popup_centered()
 
 func _on_Header_text_changed(new_text):
-	UIHandler.selected_node.name=new_text
+	if UIHandler.selected_node.TYPE!="Label":
+		UIHandler.selected_node.name=new_text
+	else:
+		UIHandler.selected_node.get_node("Gate/Label").text=new_text

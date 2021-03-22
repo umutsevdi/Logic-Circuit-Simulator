@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://base nodes/output.tscn" type="PackedScene" id=1]
 [ext_resource path="res://base nodes/variable.gd" type="Script" id=2]
 [ext_resource path="res://Assets/AND.tres" type="StyleBox" id=3]
 [ext_resource path="res://Assets/Icons/GuiScrollArrowRight.svg" type="Texture" id=4]
 [ext_resource path="res://Assets/Icons/GuiScrollArrowLeft.svg" type="Texture" id=5]
+[ext_resource path="res://Assets/ANDHover.tres" type="StyleBox" id=6]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 12.0
@@ -81,6 +82,7 @@ margin_left = -32.0
 margin_top = -16.0
 margin_right = 40.0
 margin_bottom = 14.0
+custom_styles/hover = ExtResource( 6 )
 custom_styles/pressed = ExtResource( 3 )
 custom_styles/normal = ExtResource( 3 )
 __meta__ = {

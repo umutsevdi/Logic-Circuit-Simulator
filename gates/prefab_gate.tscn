@@ -12,7 +12,7 @@ border_width_right = 4
 border_width_bottom = 4
 border_color = Color( 0.211765, 0.223529, 0.180392, 1 )
 corner_radius_top_left = 12
-corner_radius_top_right = 2
+corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
@@ -63,7 +63,8 @@ __meta__ = {
 }
 
 [node name="Label" type="Label" parent="Gate"]
-margin_right = 80.0
+margin_left = 8.0
+margin_right = 72.0
 margin_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -72,6 +73,9 @@ custom_colors/font_color = Color( 0.156863, 0.168627, 0.12549, 1 )
 text = "PREFAB"
 align = 1
 valign = 1
+autowrap = true
+clip_text = true
+uppercase = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -1,4 +1,4 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://UI/TabContainer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=2]
@@ -28,8 +28,8 @@
 [ext_resource path="res://Assets/Icons/ActionCut.svg" type="Texture" id=26]
 [ext_resource path="res://Assets/Icons/Remove.svg" type="Texture" id=27]
 [ext_resource path="res://Assets/Icons/FileList.svg" type="Texture" id=28]
-[ext_resource path="res://Assets/Icons/Filesystem.svg" type="Texture" id=29]
-[ext_resource path="res://Assets/Icons/Shortcut.svg" type="Texture" id=30]
+[ext_resource path="res://Assets/Icons/AtlasTexture.svg" type="Texture" id=29]
+[ext_resource path="res://Assets/Icons/KeyboardPhysical.svg" type="Texture" id=30]
 [ext_resource path="res://Assets/Icons/Edit.svg" type="Texture" id=31]
 [ext_resource path="res://Assets/Icons/ActionCopy.svg" type="Texture" id=32]
 [ext_resource path="res://Assets/Icons/ActionPaste.svg" type="Texture" id=33]
@@ -48,41 +48,44 @@
 [ext_resource path="res://Assets/Icons/Timer.svg" type="Texture" id=46]
 [ext_resource path="res://Assets/Icons/TransitionImmediateAuto.svg" type="Texture" id=47]
 [ext_resource path="res://Assets/Icons/TransitionEnd.svg" type="Texture" id=48]
+[ext_resource path="res://Scenes/Tab.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Assets/Icons/Label.svg" type="Texture" id=50]
+[ext_resource path="res://UI/InputLeg.tscn" type="PackedScene" id=51]
 
-[sub_resource type="InputEventAction" id=1]
-action = "ui_delete"
-pressed = true
-
-[sub_resource type="ShortCut" id=2]
-shortcut = SubResource( 1 )
-
-[sub_resource type="InputEventAction" id=3]
-action = "ui_rotate"
-
-[sub_resource type="ShortCut" id=4]
-shortcut = SubResource( 3 )
-
-[sub_resource type="InputEventAction" id=5]
-action = "ui_cancel"
-
-[sub_resource type="ShortCut" id=6]
-shortcut = SubResource( 5 )
-
-[sub_resource type="StyleBoxFlat" id=7]
-bg_color = Color( 0.156863, 0.168627, 0.12549, 1 )
-
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 15.0
 content_margin_right = 15.0
 content_margin_top = 5.0
 content_margin_bottom = 5.0
 bg_color = Color( 0.392157, 0.392157, 0.392157, 1 )
 
-[sub_resource type="StyleBoxFlat" id=9]
+[sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0.392157, 0.392157, 0.392157, 0 )
 border_width_top = 25
 border_color = Color( 0.211765, 0.223529, 0.180392, 1 )
 expand_margin_top = 25.0
+
+[sub_resource type="InputEventAction" id=3]
+action = "ui_delete"
+pressed = true
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[sub_resource type="InputEventAction" id=5]
+action = "ui_rotate"
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 5 )
+
+[sub_resource type="InputEventAction" id=7]
+action = "ui_cancel"
+
+[sub_resource type="ShortCut" id=8]
+shortcut = SubResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.156863, 0.168627, 0.12549, 1 )
 
 [node name="Scene" type="Node2D"]
 
@@ -97,7 +100,37 @@ script = ExtResource( 2 )
 
 [node name="Tabs" type="Node2D" parent="."]
 
+[node name="New Tab" parent="Tabs" instance=ExtResource( 49 )]
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
+anchor_top = 0.05
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = 29.0
+margin_bottom = -303.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_styles/tab_fg = SubResource( 1 )
+custom_styles/panel = SubResource( 2 )
+tab_align = 0
+drag_to_rearrange_enabled = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="New Tab" type="Tabs" parent="CanvasLayer/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 49.0
+
+[node name="+" type="Tabs" parent="CanvasLayer/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 49.0
 
 [node name="TopBar" type="TabContainer" parent="CanvasLayer"]
 anchor_right = 1.0
@@ -130,6 +163,7 @@ __meta__ = {
 [node name="New Scene" type="Button" parent="CanvasLayer/TopBar/Files/HBoxContainer"]
 margin_right = 104.0
 margin_bottom = 31.0
+hint_tooltip = "Create a new scene"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -144,6 +178,7 @@ icon = ExtResource( 40 )
 margin_left = 108.0
 margin_right = 214.0
 margin_bottom = 31.0
+hint_tooltip = "Create a new prefab to place on other scenes"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -158,6 +193,7 @@ icon = ExtResource( 23 )
 margin_left = 218.0
 margin_right = 287.0
 margin_bottom = 31.0
+hint_tooltip = "Open a saved file"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -177,6 +213,7 @@ margin_bottom = 31.0
 margin_left = 299.0
 margin_right = 362.0
 margin_bottom = 31.0
+hint_tooltip = "Save a file"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -191,6 +228,7 @@ icon = ExtResource( 24 )
 margin_left = 366.0
 margin_right = 449.0
 margin_bottom = 31.0
+hint_tooltip = "Save a file as"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -210,6 +248,7 @@ margin_bottom = 31.0
 margin_left = 461.0
 margin_right = 530.0
 margin_bottom = 31.0
+hint_tooltip = "Close a tab"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -240,6 +279,7 @@ __meta__ = {
 [node name="Rename" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
 margin_right = 135.0
 margin_bottom = 31.0
+hint_tooltip = "Rename a scene or prefab"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -254,6 +294,7 @@ icon = ExtResource( 31 )
 margin_left = 139.0
 margin_right = 265.0
 margin_bottom = 31.0
+hint_tooltip = "Delete a scene, prefab from filesystem"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -364,6 +405,7 @@ icon = ExtResource( 29 )
 margin_left = 133.0
 margin_right = 277.0
 margin_bottom = 31.0
+hint_tooltip = "Creates a truth table based on the current input and outputs."
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -393,6 +435,20 @@ enabled_focus_mode = 0
 text = "Toggle Circuit Toolbar"
 icon = ExtResource( 21 )
 
+[node name="Prefab Toolbar" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
+margin_left = 464.0
+margin_right = 634.0
+margin_bottom = 31.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+toggle_mode = true
+enabled_focus_mode = 0
+text = "Toggle Prefab Toolbar"
+icon = ExtResource( 21 )
+
 [node name="Help" type="Tabs" parent="CanvasLayer/TopBar"]
 visible = false
 anchor_right = 1.0
@@ -413,6 +469,7 @@ __meta__ = {
 [node name="Shortcuts" type="Button" parent="CanvasLayer/TopBar/Help/HBoxContainer"]
 margin_right = 94.0
 margin_bottom = 31.0
+hint_tooltip = "Displays shortcuts of this simulator"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -432,6 +489,7 @@ margin_bottom = 31.0
 margin_left = 106.0
 margin_right = 178.0
 margin_bottom = 31.0
+hint_tooltip = "Displays information about the project"
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
 custom_styles/pressed = ExtResource( 17 )
@@ -479,18 +537,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox" type="CheckBox" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_right = 219.0
-margin_bottom = 24.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Display Name as Label"
-align = 2
-
 [node name="Type" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 28.0
 margin_right = 219.0
-margin_bottom = 43.0
+margin_bottom = 15.0
 rect_min_size = Vector2( 0, 15 )
 text = "Type: AND"
 valign = 1
@@ -499,9 +548,9 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 47.0
+margin_top = 19.0
 margin_right = 219.0
-margin_bottom = 72.0
+margin_bottom = 44.0
 rect_min_size = Vector2( 219, 25 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -545,21 +594,21 @@ __meta__ = {
 }
 
 [node name="HSeparator" type="HSeparator" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 76.0
+margin_top = 48.0
 margin_right = 219.0
-margin_bottom = 81.0
+margin_bottom = 53.0
 custom_constants/separation = 5
 
 [node name="Input" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 85.0
+margin_top = 57.0
 margin_right = 219.0
-margin_bottom = 99.0
+margin_bottom = 71.0
 text = "Input:"
 
 [node name="InputTab" type="TabContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 103.0
+margin_top = 75.0
 margin_right = 219.0
-margin_bottom = 159.0
+margin_bottom = 131.0
 rect_min_size = Vector2( 0, 56 )
 theme = ExtResource( 7 )
 __meta__ = {
@@ -567,19 +616,28 @@ __meta__ = {
 }
 
 [node name="Output" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 163.0
+margin_top = 135.0
 margin_right = 219.0
-margin_bottom = 177.0
+margin_bottom = 149.0
 text = "Output:"
 
 [node name="OutputTab" type="TabContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 181.0
+margin_top = 153.0
 margin_right = 219.0
-margin_bottom = 237.0
+margin_bottom = 209.0
 rect_min_size = Vector2( 0, 56 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CheckBox" type="CheckBox" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 213.0
+margin_right = 219.0
+margin_bottom = 237.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Display Name as Label"
+align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Displayer"]
 margin_top = -20.0
@@ -595,7 +653,7 @@ margin_left = 171.0
 margin_right = 191.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 0 )
-shortcut = SubResource( 2 )
+shortcut = SubResource( 4 )
 texture_normal = ExtResource( 27 )
 expand = true
 stretch_mode = 3
@@ -606,7 +664,7 @@ margin_left = 195.0
 margin_right = 215.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-shortcut = SubResource( 4 )
+shortcut = SubResource( 6 )
 texture_normal = ExtResource( 37 )
 expand = true
 stretch_mode = 3
@@ -617,13 +675,12 @@ margin_left = 219.0
 margin_right = 239.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-shortcut = SubResource( 6 )
+shortcut = SubResource( 8 )
 texture_normal = ExtResource( 20 )
 expand = true
 stretch_mode = 3
 
 [node name="DisplayerVariable" type="Panel" parent="CanvasLayer"]
-visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -659,18 +716,9 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox" type="CheckBox" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_right = 219.0
-margin_bottom = 24.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Display Name as Label"
-align = 2
-
 [node name="Type" type="Label" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 28.0
 margin_right = 219.0
-margin_bottom = 43.0
+margin_bottom = 15.0
 rect_min_size = Vector2( 0, 15 )
 text = "Type: Variable"
 valign = 1
@@ -679,25 +727,39 @@ __meta__ = {
 }
 
 [node name="HSeparator" type="HSeparator" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 47.0
+margin_top = 19.0
 margin_right = 219.0
-margin_bottom = 52.0
+margin_bottom = 24.0
 custom_constants/separation = 5
 
 [node name="Output" type="Label" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 56.0
+margin_top = 28.0
 margin_right = 219.0
-margin_bottom = 70.0
+margin_bottom = 42.0
 text = "Output:"
 
 [node name="OutputTab" type="TabContainer" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 74.0
+margin_top = 46.0
 margin_right = 219.0
-margin_bottom = 130.0
+margin_bottom = 155.0
 rect_min_size = Vector2( 0, 56 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Output" parent="CanvasLayer/DisplayerVariable/VBoxContainer/OutputTab" instance=ExtResource( 51 )]
+margin_top = 49.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="CheckBox" type="CheckBox" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
+margin_top = 159.0
+margin_right = 219.0
+margin_bottom = 183.0
+focus_mode = 0
+enabled_focus_mode = 0
+text = "Display Name as Label"
+align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DisplayerVariable"]
 margin_top = -20.0
@@ -713,7 +775,7 @@ margin_left = 173.0
 margin_right = 193.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-shortcut = SubResource( 2 )
+shortcut = SubResource( 4 )
 texture_normal = ExtResource( 27 )
 expand = true
 stretch_mode = 3
@@ -724,7 +786,7 @@ margin_left = 197.0
 margin_right = 217.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-shortcut = SubResource( 4 )
+shortcut = SubResource( 6 )
 texture_normal = ExtResource( 37 )
 expand = true
 stretch_mode = 3
@@ -735,143 +797,10 @@ margin_left = 221.0
 margin_right = 241.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
-shortcut = SubResource( 6 )
+shortcut = SubResource( 8 )
 texture_normal = ExtResource( 20 )
 expand = true
 stretch_mode = 3
-
-[node name="CreateBar" type="Panel" parent="CanvasLayer"]
-anchor_top = 1.0
-anchor_bottom = 1.0
-margin_top = -257.0
-margin_right = 170.0
-custom_styles/panel = ExtResource( 11 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="CanvasLayer/CreateBar"]
-margin_top = -20.0
-margin_right = 170.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Base Circuits"
-align = 1
-valign = 1
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CreateBar"]
-margin_left = 16.0
-margin_top = 9.0
-margin_right = 149.0
-margin_bottom = 221.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Variable" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_right = 133.0
-margin_bottom = 22.0
-hint_tooltip = "Place a Variable.
-Variable is a module that has an adjustable output value."
-shortcut_in_tooltip = false
-text = "Variable"
-icon = ExtResource( 25 )
-script = ExtResource( 6 )
-
-[node name="Clock" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 26.0
-margin_right = 133.0
-margin_bottom = 48.0
-hint_tooltip = "Place a Clock.
-The clock returns a value that switches back and forth over time. The value written in the field defines the number of shifts per second."
-shortcut_in_tooltip = false
-text = "Clock"
-icon = ExtResource( 46 )
-script = ExtResource( 6 )
-
-[node name="HSeparator" type="HSeparator" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 52.0
-margin_right = 133.0
-margin_bottom = 56.0
-
-[node name="AND" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 60.0
-margin_right = 133.0
-margin_bottom = 82.0
-hint_tooltip = "Place an AND Gate.
-AND Gate returns 1 when all inputs are 1, and 0 otherwise."
-shortcut_in_tooltip = false
-text = "AND Gate"
-icon = ExtResource( 44 )
-script = ExtResource( 6 )
-
-[node name="NAND" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 86.0
-margin_right = 133.0
-margin_bottom = 108.0
-hint_tooltip = "Place an NAND Gate.
-NAND Gate returns 0 when all inputs are 1, and 1 otherwise."
-shortcut_in_tooltip = false
-text = "NAND Gate"
-icon = ExtResource( 48 )
-script = ExtResource( 6 )
-
-[node name="NOT" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 112.0
-margin_right = 133.0
-margin_bottom = 135.0
-hint_tooltip = "Place an NOT Gate.
-NOT Gate returns 1 if input is 0 and returns 0 if input is 1."
-shortcut_in_tooltip = false
-text = "NOT Gate"
-icon = ExtResource( 41 )
-script = ExtResource( 6 )
-
-[node name="OR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 139.0
-margin_right = 133.0
-margin_bottom = 161.0
-hint_tooltip = "Place an OR Gate.
-OR Gate returns 1 if at least one input is 1, and 0 otherwise."
-shortcut_in_tooltip = false
-text = "OR Gate"
-icon = ExtResource( 47 )
-script = ExtResource( 6 )
-
-[node name="NOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 165.0
-margin_right = 133.0
-margin_bottom = 187.0
-hint_tooltip = "Place an NOR Gate.
-NOR Gate returns 0 if at least one input is 1, and 1 otherwise."
-shortcut_in_tooltip = false
-text = "NOR Gate"
-icon = ExtResource( 45 )
-script = ExtResource( 6 )
-
-[node name="XOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 191.0
-margin_right = 133.0
-margin_bottom = 213.0
-hint_tooltip = "Place an XOR Gate.
-XOR Gate returns 1 if both of the inputs are different, and 0 otherwise."
-shortcut_in_tooltip = false
-text = "XOR Gate"
-icon = ExtResource( 42 )
-script = ExtResource( 6 )
-
-[node name="XNOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 217.0
-margin_right = 133.0
-margin_bottom = 239.0
-hint_tooltip = "Place an XNOR Gate.
-XNOR Gate returns 1 if both of the inputs are equal, 0 otherwise."
-shortcut_in_tooltip = false
-text = "XNOR Gate"
-icon = ExtResource( 43 )
-script = ExtResource( 6 )
 
 [node name="PrefabBar" type="Panel" parent="CanvasLayer"]
 anchor_left = 0.25
@@ -919,6 +848,7 @@ __meta__ = {
 margin_left = 80.0
 margin_right = 96.0
 margin_bottom = 24.0
+hint_tooltip = "Up to parent directory"
 texture_normal = ExtResource( 39 )
 
 [node name="Path" type="LineEdit" parent="CanvasLayer/PrefabBar/HBoxContainer"]
@@ -926,6 +856,7 @@ margin_left = 100.0
 margin_right = 400.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 300, 0 )
+hint_tooltip = "Current directory"
 text = "C:/"
 clear_button_enabled = true
 placeholder_text = "user://"
@@ -938,6 +869,7 @@ margin_left = 404.0
 margin_right = 428.0
 margin_bottom = 24.0
 rect_min_size = Vector2( 24, 24 )
+hint_tooltip = "Refresh current directory"
 texture_normal = ExtResource( 19 )
 expand = true
 stretch_mode = 3
@@ -949,7 +881,9 @@ __meta__ = {
 margin_left = 432.0
 margin_right = 549.0
 margin_bottom = 24.0
-hint_tooltip = "Toggles between User data and Filesystem. Storing prefabs and scenes in userdata makes it easier to find."
+hint_tooltip = "Toggles between User data and Filesystem.
+Storing prefabs and scenes in userdata makes
+it easier to find."
 focus_mode = 0
 toggle_mode = true
 enabled_focus_mode = 0
@@ -961,7 +895,7 @@ margin_left = 16.0
 margin_top = 36.0
 margin_right = 779.0
 margin_bottom = 150.0
-custom_styles/bg = SubResource( 7 )
+custom_styles/bg = SubResource( 9 )
 follow_focus = true
 scroll_vertical_enabled = false
 __meta__ = {
@@ -969,6 +903,163 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="HBoxContainer" parent="CanvasLayer/PrefabBar/ScrollContainer"]
+
+[node name="CreateBar" type="Panel" parent="CanvasLayer"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -294.0
+margin_right = 170.0
+custom_styles/panel = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/CreateBar"]
+margin_top = -20.0
+margin_right = 170.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Base Circuits"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CreateBar"]
+margin_left = 16.0
+margin_right = 149.0
+margin_bottom = 294.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 10.0
+margin_right = 133.0
+margin_bottom = 32.0
+hint_tooltip = "Place a Label.
+Label displays text on screen."
+shortcut_in_tooltip = false
+text = "Label"
+icon = ExtResource( 50 )
+script = ExtResource( 6 )
+
+[node name="HSeparator2" type="HSeparator" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 36.0
+margin_right = 133.0
+margin_bottom = 40.0
+
+[node name="Variable" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 44.0
+margin_right = 133.0
+margin_bottom = 66.0
+hint_tooltip = "Place a Variable.
+Variable is a module that has an adjustable output value."
+shortcut_in_tooltip = false
+text = "Variable"
+icon = ExtResource( 25 )
+script = ExtResource( 6 )
+
+[node name="Clock" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 70.0
+margin_right = 133.0
+margin_bottom = 92.0
+hint_tooltip = "Place a Clock.
+The clock returns a value that switches back and
+forth over time. The value written in the field defines 
+the number of shifts per second."
+shortcut_in_tooltip = false
+text = "Clock"
+icon = ExtResource( 46 )
+script = ExtResource( 6 )
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 96.0
+margin_right = 133.0
+margin_bottom = 100.0
+
+[node name="AND" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 104.0
+margin_right = 133.0
+margin_bottom = 126.0
+hint_tooltip = "Place an AND Gate.
+AND Gate returns 1 when all inputs are 1, and 0 otherwise."
+shortcut_in_tooltip = false
+text = "AND Gate"
+icon = ExtResource( 44 )
+script = ExtResource( 6 )
+
+[node name="NAND" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 130.0
+margin_right = 133.0
+margin_bottom = 152.0
+hint_tooltip = "Place an NAND Gate.
+NAND Gate returns 0 when all inputs are 1, and 1
+otherwise."
+shortcut_in_tooltip = false
+text = "NAND Gate"
+icon = ExtResource( 48 )
+script = ExtResource( 6 )
+
+[node name="NOT" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 156.0
+margin_right = 133.0
+margin_bottom = 179.0
+hint_tooltip = "Place an NOT Gate.
+NOT Gate returns 1 if input is 0 and returns 0 if input is 1."
+shortcut_in_tooltip = false
+text = "NOT Gate"
+icon = ExtResource( 41 )
+script = ExtResource( 6 )
+
+[node name="OR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 183.0
+margin_right = 133.0
+margin_bottom = 205.0
+hint_tooltip = "Place an OR Gate.
+OR Gate returns 1 if at least one input is 1, and 0 
+otherwise."
+shortcut_in_tooltip = false
+text = "OR Gate"
+icon = ExtResource( 47 )
+script = ExtResource( 6 )
+
+[node name="NOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 209.0
+margin_right = 133.0
+margin_bottom = 231.0
+hint_tooltip = "Place an NOR Gate.
+NOR Gate returns 0 if at least one input is 1, and 1
+otherwise."
+shortcut_in_tooltip = false
+text = "NOR Gate"
+icon = ExtResource( 45 )
+script = ExtResource( 6 )
+
+[node name="XOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 235.0
+margin_right = 133.0
+margin_bottom = 257.0
+hint_tooltip = "Place an XOR Gate.
+XOR Gate returns 1 if both of the inputs are different, and
+0 otherwise."
+shortcut_in_tooltip = false
+text = "XOR Gate"
+icon = ExtResource( 42 )
+script = ExtResource( 6 )
+
+[node name="XNOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 261.0
+margin_right = 133.0
+margin_bottom = 283.0
+hint_tooltip = "Place an XNOR Gate.
+XNOR Gate returns 1 if both of the inputs are equal,
+0 otherwise."
+shortcut_in_tooltip = false
+text = "XNOR Gate"
+icon = ExtResource( 43 )
+script = ExtResource( 6 )
 
 [node name="GridSeperator" type="SpinBox" parent="CanvasLayer"]
 anchor_left = 1.0
@@ -995,34 +1086,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
-anchor_top = 0.05
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_top = 28.0
-margin_bottom = -304.0
-grow_horizontal = 2
-grow_vertical = 2
-custom_styles/tab_fg = SubResource( 8 )
-custom_styles/panel = SubResource( 9 )
-tab_align = 0
-drag_to_rearrange_enabled = true
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="New Tab" type="Tabs" parent="CanvasLayer/TabContainer"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 49.0
-
-[node name="+" type="Tabs" parent="CanvasLayer/TabContainer"]
-visible = false
-anchor_right = 1.0
-anchor_bottom = 1.0
-margin_top = 49.0
-
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="CanvasLayer"]
 anchor_left = 0.5
 anchor_top = 0.5
@@ -1042,7 +1105,6 @@ __meta__ = {
 }
 
 [node name="FileDialog" type="FileDialog" parent="CanvasLayer"]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -1232,6 +1294,8 @@ dialog_autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="tab_changed" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_changed"]
+[connection signal="tab_selected" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_selected"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/New Scene" to="CanvasLayer/TopBar" method="_on_New_Scene_pressed"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/New Prefab" to="CanvasLayer/TopBar" method="_on_New_Prefab_pressed"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/Open" to="CanvasLayer/TopBar" method="_on_Open_pressed"]
@@ -1241,6 +1305,7 @@ __meta__ = {
 [connection signal="pressed" from="CanvasLayer/TopBar/Edit/HBoxContainer/Rename" to="CanvasLayer/TopBar" method="_on_Rename_pressed"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Edit/HBoxContainer/Delete" to="CanvasLayer/TopBar" method="_on_Delete_pressed"]
 [connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Circuit Toolbar" to="CanvasLayer/TopBar" method="_on_Circuit_Toolbar_toggled"]
+[connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Prefab Toolbar" to="CanvasLayer/TopBar" method="_on_Prefab_Toolbar_toggled"]
 [connection signal="text_changed" from="CanvasLayer/Displayer/Header" to="CanvasLayer/Displayer" method="_on_Header_text_changed"]
 [connection signal="pressed" from="CanvasLayer/Displayer/VBoxContainer/HBoxContainer/Reduce" to="CanvasLayer/Displayer" method="_on_Reduce_pressed"]
 [connection signal="text_entered" from="CanvasLayer/Displayer/VBoxContainer/HBoxContainer/LineEdit" to="CanvasLayer/Displayer" method="_on_LineEdit_text_entered"]
@@ -1255,8 +1320,6 @@ __meta__ = {
 [connection signal="pressed" from="CanvasLayer/PrefabBar/HBoxContainer/RefreshButton" to="CanvasLayer/PrefabBar" method="_on_RefreshButton_pressed"]
 [connection signal="toggled" from="CanvasLayer/PrefabBar/HBoxContainer/Button" to="CanvasLayer/PrefabBar" method="_on_Button_toggled"]
 [connection signal="value_changed" from="CanvasLayer/GridSeperator" to="CanvasLayer/Displayer" method="_on_GridSeperator_value_changed"]
-[connection signal="tab_changed" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_changed"]
-[connection signal="tab_selected" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_selected"]
 [connection signal="confirmed" from="CanvasLayer/ConfirmationDialog" to="CanvasLayer/Displayer" method="_on_ConfirmationDialog_confirmed"]
 [connection signal="file_selected" from="CanvasLayer/FileDialog" to="CanvasLayer/FileDialog" method="_on_FileDialog_file_selected"]
 [connection signal="confirmed" from="CanvasLayer/CreateScene" to="CanvasLayer/CreateScene" method="_on_CreateScene_confirmed"]

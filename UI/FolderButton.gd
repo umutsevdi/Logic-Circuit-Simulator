@@ -1,5 +1,6 @@
 extends Control
 var once=false
+var iconpack=["res://Assets/Icons/PackedScene.svg","res://Assets/Icons/Object.svg","res://Assets/Icons/File.svg"]
 func _on_Button_pressed():
 	if once==false:
 		$Timer.start()

@@ -44,3 +44,11 @@ func MoveEnd(_position):
 	if old_position==_position and create:
 		node.queue_free()
 		UIHandler.selected_node=null
+	else:
+		if UIHandler.selected_node.TYPE=="Variable" or UIHandler.selected_node.TYPE=="Label":
+			UIHandler.CreateUI_variable(UIHandler.selected_node)
+		else:
+			UIHandler.CreateUI(UIHandler.selected_node)
+		
+		
+		

@@ -8,7 +8,7 @@ var Info=null
 var path=null
 var Item=null
 var time=0
-func _physics_process(delta):
+func _physics_process(_delta):
 	$Gate.Calculate()
 
 func CreateNode():

@@ -19,7 +19,9 @@ func SaveScene(tab,filepath):
 		elif i.get_node("Gate/Label").text=="Clock":
 			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Position":{"x":i.position.x,"y":i.position.y},"Cycle":1/i.get_node("Timer").wait_time,"Outputs":{}}
 			for out in i.get_node("Outputs").get_children():
-				TabData[i.name].Outputs[out.name]={"Connection":out.connection,"Value":out.value}		
+				TabData[i.name].Outputs[out.name]={"Connection":out.connection,"Value":out.value}
+		elif i.TYPE=="Label":
+			TabData[i.name]={"Type":i.TYPE,"Position":{"x":i.position.x,"y":i.position.y},"Text":i.get_node("Gate/Label").text}	
 		elif i.get_node("Gate/Label").text in BaseGateHandler.gates.keys():
 			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Position":{"x":i.position.x,"y":i.position.y},"Inputs":{},"Outputs":{}}
 			for inp in i.get_node("Sockets").get_children():
@@ -103,13 +105,14 @@ func CreateScene(Filepath,TabData):
 			if TabData[i].Type in BaseGateHandler.gates.keys():
 				
 				unit=BaseGateHandler.SetupUnit(TabData[i].Type)
-				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock":
+				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock" and TabData[i].Type!="Label":
 					unit.from_file=true
 					unit.CreateLegsFromInstance(TabData[i])
 			elif TabData[i].Type=="Prefab":
 				print("\tCreating\t",i)
 				unit=Prefab.instance()
 				unit.path=TabData[i].Path
+				unit.get_node("Gate/Label").text=TabData[i].Path.get_file().left(TabData[i].Path.get_file().length()-5)
 				unit.Item=OpenDirectory(TabData[i].Path)
 				unit.Info=TabData[i]
 				if unit.Item.error!=0:
@@ -128,6 +131,8 @@ func CreateScene(Filepath,TabData):
 				unit.get_node("SpinBox").value=TabData[i].Cycle
 			elif TabData[i].Type=="Variable":
 				if TabData[i].Value==1:	unit.get_node("CheckButton").pressed=true
+			elif TabData[i].Type=="Label":
+				unit.get_node("Gate/Label").text=TabData[i].Text
 			print("\tCreating\t",i,"\tat\t",TabData[i].Position.x,",",TabData[i].Position.y)
 		ConnectLines(TabData,null,tab)
 func CreatePrefab(Filepath,TabData,PrefabItems,tab):
@@ -147,13 +152,14 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 			var unit=null
 			if TabData[i].Type in BaseGateHandler.gates.keys():
 				unit=BaseGateHandler.SetupUnit(TabData[i].Type)
-				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock":
+				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock" and TabData[i].Type!="Label":
 					unit.from_file=true
 					unit.CreateLegsFromInstance(TabData[i])
 			elif TabData[i].Type=="Prefab":
 				print("\tCreating\t",i)
 				unit=Prefab.instance()
 				unit.name=i+" "+str(unit.get_instance_id())
+				unit.get_node("Gate/Label").text=TabData[i].Path.get_file().left(TabData[i].Path.get_file().length()-5)
 				unit.path=TabData[i].Path
 				unit.Item=OpenDirectory(TabData[i].Path)
 				unit.Info=TabData[i]
@@ -165,6 +171,7 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 						if unit.Item["Format"]=="Prefab":
 							CreatePrefab(unit.path,unit.Item["Items"],unit.Item["PrefabItems"],unit.get_node("Gate/Tab"))
 							unit.ResizeLegs()
+				
 			unit.position.x=TabData[i].Position.x
 			unit.position.y=TabData[i].Position.y
 			tab.add_child(unit)
@@ -173,6 +180,8 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 				unit.get_node("SpinBox").value=TabData[i].Cycle
 			elif TabData[i].Type=="Variable":
 				if TabData[i].Value==1:	unit.get_node("CheckButton").pressed=true
+			elif TabData[i].Type=="Label":
+				unit.get_node("Gate/Label").text=TabData[i].Text
 			print("\tCreating\t",i,"\tat\t",TabData[i].Position.x,",",TabData[i].Position.y)
 		ConnectLines(TabData,PrefabItems,tab)
 

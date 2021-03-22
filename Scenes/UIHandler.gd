@@ -12,8 +12,11 @@ var timer=0
 func _process(delta):
 	if timer>0.25:
 		timer=0
-		if selected_node!=null:	UpdateUI(selected_node)
-		else:	return
+		if selected_node!=null:
+			UpdateUI(selected_node)
+		elif displayer.visible or displayer.get_node("../DisplayerVariable").visible:
+			displayer.visible=false
+			displayer.get_node("../DisplayerVariable").visible=false
 	else:	timer+=delta
 	
 	if connecting and from!=null:
@@ -32,41 +35,32 @@ func _process(delta):
 			from=null
 			line.queue_free()
 func CreateUI_variable(node):
+	displayer.get_node("../DisplayerVariable")._on_Button_pressed()
 	displayer.get_node("../DisplayerVariable").visible=true
 	displayer.visible=false	
 	selected_node=node
 	displayer.get_node("../DisplayerVariable").get_node("Header").text=node.name
-	for i in displayer.get_node("../DisplayerVariable/HBoxContainer").get_children():
-		i.disabled=false
-	displayer.get_node("../DisplayerVariable/Header").editable=true	
-	for tab in displayer.get_node("VBoxContainer/Output").get_children():
-		if !selected_node.get_node("Outputs").has_node(tab.socket):
-			tab.queue_free()
-	
-	for i in node.get_node("Outputs").get_children():
-		if not displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab").has_node(i.name):
-			var tab=input_leg.instance()
-			tab.name=i.name
-			tab.socket=i.name
-			if i.connection:
-				tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
-				tab.get_node("VBoxContainer/Connection").text="Connection : "+str(i.connection)
-			else:
-				tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
-				tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
-			displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab").add_child(tab)
-
+	displayer.get_node("../DisplayerVariable/VBoxContainer/Type").text="Type : "+selected_node.TYPE
+	if selected_node.TYPE!="Label":
+		var i = node.get_node("Outputs").get_child(0)
+		var tab=displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab/Output")
+		if i.connection:
+			tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
+			tab.get_node("VBoxContainer/Connection").text="Connection : "+str(i.connection)
+		else:
+			tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
+			tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
+	else:
+		displayer.get_node("../DisplayerVariable/VBoxContainer/Output").visible=false
+		displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab").visible=false
+		displayer.get_node("../DisplayerVariable/VBoxContainer/CheckBox").visible=false
 func CreateUI(node):
+	selected_node=node
 	displayer.visible=true	
 	displayer.get_node("../DisplayerVariable").visible=false
-	displayer.get_node("Header").editable=true
-	for i in displayer.get_node("HBoxContainer").get_children():
-		i.disabled=false
-	selected_node=node
 	displayer.get_node("Header").text=node.name
-	displayer.get_node("VBoxContainer/HBoxContainer").visible=true
 	displayer.get_node("VBoxContainer/Type").text="Type : "+node.get_node("Gate/Label").text
-	if node.get_node("Gate/Label").text=="NOT" or node.get_node("Gate/Label").text=="XOR" or node.get_node("Gate/Label").text=="XNOR":
+	if node.get_node("Gate/Label").text=="NOT" or node.get_node("Gate/Label").text=="XOR" or node.get_node("Gate/Label").text=="XNOR" or node.TYPE=="Prefab":
 		displayer.get_node("VBoxContainer/HBoxContainer/LineEdit").editable=false
 		displayer.get_node("VBoxContainer/HBoxContainer/Reduce").disabled=true
 		displayer.get_node("VBoxContainer/HBoxContainer/Increase").disabled=true
@@ -111,7 +105,7 @@ func CreateUI(node):
 			displayer.get_node("VBoxContainer/OutputTab").add_child(tab)
 func UpdateUI(node):
 	selected_node=node
-	if node.get_node("Gate/Label").text!="Variable" and node.get_node("Gate/Label").text!="Clock" :
+	if node.TYPE!="Variable" and node.TYPE!="Label" :
 		displayer.visible=true
 		for tab in displayer.get_node("VBoxContainer/InputTab").get_children():
 			if selected_node.get_node("Sockets").has_node(tab.socket):
@@ -138,17 +132,15 @@ func UpdateUI(node):
 				tab.queue_free()
 	else:
 		displayer.get_node("../DisplayerVariable").visible=true
-		for tab in displayer.get_node("../DisplayerVariable").get_node("VBoxContainer/OutputTab").get_children():
-			if selected_node.get_node("Outputs").has_node(tab.socket):
-				var found_node=selected_node.get_node("Outputs").get_node(tab.socket)
-				if found_node.connection:
-					tab.get_node("VBoxContainer/Value").text="Value : "+str(found_node.value)
-					tab.get_node("VBoxContainer/Connection").text="Connection : "+str(found_node.connection)
-				else:
-					tab.get_node("VBoxContainer/Value").text="Value : "+str(found_node.value)
-					tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
+		if selected_node.TYPE!="Label":
+			var i = node.get_node("Outputs").get_child(0)
+			var tab=displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab/Output")
+			if i.connection:
+				tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
+				tab.get_node("VBoxContainer/Connection").text="Connection : "+str(i.connection)
 			else:
-				tab.queue_free()
+				tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
+				tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
 		
 func ResizeLegs(legs):
 	selected_node.ResizeLegs(legs)

@@ -19,3 +19,5 @@ func _on_Button_button_down():
 
 func _on_Button_button_up():
 	Move.hold=false
+	
+	
