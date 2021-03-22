@@ -1,5 +1,5 @@
 extends Node2D
-const TYPE = "Variable"
+const TYPE = "Clock"
 var value=0
 func _ready():
 	_on_CheckButton_toggled(false)

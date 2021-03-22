@@ -1,6 +1,7 @@
 extends Node
 var base_gate=preload("res://gates/base_gate.tscn")
 var gates={
+	"Output":preload("res://base nodes/output_gate.tscn"),
 	"Label":preload("res://base nodes/Label.tscn"),
 	"Variable":preload("res://base nodes/variable.tscn"),
 	"Clock":preload("res://base nodes/clock.tscn"),
@@ -15,9 +16,11 @@ var gates={
 
 func SetupUnit(gatetype):
 	var node
-	if gatetype=="Variable" or gatetype=="Clock" or gatetype=="Label":
+	if gatetype=="Variable" or gatetype=="Clock" or gatetype=="Label" or gatetype=="Output":
 		node=gates[gatetype].instance()
 	else:
 		node=base_gate.instance()
-		node.add_child(gates[gatetype].instance())
+		var gate=gates[gatetype].instance()
+		node.add_child(gate)
+		node.move_child(gate,0)
 	return node

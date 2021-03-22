@@ -20,6 +20,16 @@ func SaveScene(tab,filepath):
 			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Position":{"x":i.position.x,"y":i.position.y},"Cycle":1/i.get_node("Timer").wait_time,"Outputs":{}}
 			for out in i.get_node("Outputs").get_children():
 				TabData[i.name].Outputs[out.name]={"Connection":out.connection,"Value":out.value}
+		elif i.TYPE=="Output":
+			var inp=i.get_node("Sockets/Input")
+			TabData[i.name]={"Type":i.TYPE,"Position":{"x":i.position.x,"y":i.position.y},"Inputs":{}}
+			if inp.connected:
+				var line={}
+				for l in range (inp.get_node(inp.source.name).points.size()):
+					line[l]={"x":inp.get_node(inp.source.name).points[l].x,"y":inp.get_node(inp.source.name).points[l].y}
+				TabData[i.name].Inputs["Input"]={"Source":{"Parent":inp.source.get_parent().get_parent().name,"Socket":inp.source.name,"Line":line},"Value":inp.value}
+			else:
+				TabData[i.name].Inputs["Input"]={"Source":{"Parent":"null","Socket":"null","Line":"null"},"Value":inp.value}
 		elif i.TYPE=="Label":
 			TabData[i.name]={"Type":i.TYPE,"Position":{"x":i.position.x,"y":i.position.y},"Text":i.get_node("Gate/Label").text}	
 		elif i.get_node("Gate/Label").text in BaseGateHandler.gates.keys():
@@ -81,7 +91,7 @@ func OpenFile(directory):
 				CreateScene(directory,Item["Items"])
 			elif Item["Format"]=="Prefab":
 				var TabName=directory.get_file().left(directory.get_file().length()-5)
-				var tab=tab_container.CreateCustomTab(TabName)
+				var tab=tab_container.CreateCustomTab(TabName,"Prefab")
 				CreatePrefab(directory,Item["Items"],Item["PrefabItems"],tab)
 		else:
 			return "Error"
@@ -96,7 +106,7 @@ func OpenDirectory(directory):
 	
 func CreateScene(Filepath,TabData):
 	var TabName=Filepath.get_file().left(Filepath.get_file().length()-5)
-	var tab=tab_container.CreateCustomTab(TabName)
+	var tab=tab_container.CreateCustomTab(TabName,"Scene")
 	tab.format="Scene"
 	tab.path=Filepath
 	if tab!=null:
@@ -105,7 +115,7 @@ func CreateScene(Filepath,TabData):
 			if TabData[i].Type in BaseGateHandler.gates.keys():
 				
 				unit=BaseGateHandler.SetupUnit(TabData[i].Type)
-				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock" and TabData[i].Type!="Label":
+				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock" and TabData[i].Type!="Label" and TabData[i].Type!="Output":
 					unit.from_file=true
 					unit.CreateLegsFromInstance(TabData[i])
 			elif TabData[i].Type=="Prefab":
@@ -152,7 +162,7 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 			var unit=null
 			if TabData[i].Type in BaseGateHandler.gates.keys():
 				unit=BaseGateHandler.SetupUnit(TabData[i].Type)
-				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock" and TabData[i].Type!="Label":
+				if TabData[i].Type!="Variable" and TabData[i].Type!="Clock" and TabData[i].Type!="Label" and TabData[i].Type!="Output":
 					unit.from_file=true
 					unit.CreateLegsFromInstance(TabData[i])
 			elif TabData[i].Type=="Prefab":

@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=63 format=2]
 
 [ext_resource path="res://UI/TabContainer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=2]
@@ -51,6 +51,8 @@
 [ext_resource path="res://Scenes/Tab.tscn" type="PackedScene" id=49]
 [ext_resource path="res://Assets/Icons/Label.svg" type="Texture" id=50]
 [ext_resource path="res://UI/InputLeg.tscn" type="PackedScene" id=51]
+[ext_resource path="res://Assets/Icons/Control.svg" type="Texture" id=52]
+[ext_resource path="res://UI/Truth Table.gd" type="Script" id=53]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 15.0
@@ -630,15 +632,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CheckBox" type="CheckBox" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 213.0
-margin_right = 219.0
-margin_bottom = 237.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Display Name as Label"
-align = 1
-
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Displayer"]
 margin_top = -20.0
 margin_right = 239.0
@@ -751,15 +744,6 @@ __meta__ = {
 margin_top = 49.0
 margin_right = 0.0
 margin_bottom = 0.0
-
-[node name="CheckBox" type="CheckBox" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 159.0
-margin_right = 219.0
-margin_bottom = 183.0
-focus_mode = 0
-enabled_focus_mode = 0
-text = "Display Name as Label"
-align = 1
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/DisplayerVariable"]
 margin_top = -20.0
@@ -907,7 +891,7 @@ __meta__ = {
 [node name="CreateBar" type="Panel" parent="CanvasLayer"]
 anchor_top = 1.0
 anchor_bottom = 1.0
-margin_top = -294.0
+margin_top = -310.0
 margin_right = 170.0
 custom_styles/panel = ExtResource( 11 )
 __meta__ = {
@@ -928,16 +912,16 @@ __meta__ = {
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CreateBar"]
 margin_left = 16.0
 margin_right = 149.0
-margin_bottom = 294.0
+margin_bottom = 310.0
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 10.0
+margin_top = 5.0
 margin_right = 133.0
-margin_bottom = 32.0
+margin_bottom = 27.0
 hint_tooltip = "Place a Label.
 Label displays text on screen."
 shortcut_in_tooltip = false
@@ -946,14 +930,14 @@ icon = ExtResource( 50 )
 script = ExtResource( 6 )
 
 [node name="HSeparator2" type="HSeparator" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 36.0
+margin_top = 31.0
 margin_right = 133.0
-margin_bottom = 40.0
+margin_bottom = 35.0
 
 [node name="Variable" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 44.0
+margin_top = 39.0
 margin_right = 133.0
-margin_bottom = 66.0
+margin_bottom = 61.0
 hint_tooltip = "Place a Variable.
 Variable is a module that has an adjustable output value."
 shortcut_in_tooltip = false
@@ -962,9 +946,9 @@ icon = ExtResource( 25 )
 script = ExtResource( 6 )
 
 [node name="Clock" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 70.0
+margin_top = 65.0
 margin_right = 133.0
-margin_bottom = 92.0
+margin_bottom = 87.0
 hint_tooltip = "Place a Clock.
 The clock returns a value that switches back and
 forth over time. The value written in the field defines 
@@ -974,15 +958,30 @@ text = "Clock"
 icon = ExtResource( 46 )
 script = ExtResource( 6 )
 
-[node name="HSeparator" type="HSeparator" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 96.0
+[node name="Output" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 91.0
 margin_right = 133.0
-margin_bottom = 100.0
+margin_bottom = 113.0
+hint_tooltip = "Place an Output.
+Outputs close the circuit. Scenes
+require Outputs for Circuit Analyzes.
+The Output is disabled in Prefabs
+since they already have built-in 
+Input-Output units."
+shortcut_in_tooltip = false
+text = "Output"
+icon = ExtResource( 52 )
+script = ExtResource( 6 )
+
+[node name="HSeparator" type="HSeparator" parent="CanvasLayer/CreateBar/VBoxContainer"]
+margin_top = 117.0
+margin_right = 133.0
+margin_bottom = 121.0
 
 [node name="AND" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 104.0
+margin_top = 125.0
 margin_right = 133.0
-margin_bottom = 126.0
+margin_bottom = 147.0
 hint_tooltip = "Place an AND Gate.
 AND Gate returns 1 when all inputs are 1, and 0 otherwise."
 shortcut_in_tooltip = false
@@ -991,9 +990,9 @@ icon = ExtResource( 44 )
 script = ExtResource( 6 )
 
 [node name="NAND" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 130.0
+margin_top = 151.0
 margin_right = 133.0
-margin_bottom = 152.0
+margin_bottom = 173.0
 hint_tooltip = "Place an NAND Gate.
 NAND Gate returns 0 when all inputs are 1, and 1
 otherwise."
@@ -1003,9 +1002,9 @@ icon = ExtResource( 48 )
 script = ExtResource( 6 )
 
 [node name="NOT" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 156.0
+margin_top = 177.0
 margin_right = 133.0
-margin_bottom = 179.0
+margin_bottom = 200.0
 hint_tooltip = "Place an NOT Gate.
 NOT Gate returns 1 if input is 0 and returns 0 if input is 1."
 shortcut_in_tooltip = false
@@ -1014,9 +1013,9 @@ icon = ExtResource( 41 )
 script = ExtResource( 6 )
 
 [node name="OR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 183.0
+margin_top = 204.0
 margin_right = 133.0
-margin_bottom = 205.0
+margin_bottom = 226.0
 hint_tooltip = "Place an OR Gate.
 OR Gate returns 1 if at least one input is 1, and 0 
 otherwise."
@@ -1026,9 +1025,9 @@ icon = ExtResource( 47 )
 script = ExtResource( 6 )
 
 [node name="NOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 209.0
+margin_top = 230.0
 margin_right = 133.0
-margin_bottom = 231.0
+margin_bottom = 252.0
 hint_tooltip = "Place an NOR Gate.
 NOR Gate returns 0 if at least one input is 1, and 1
 otherwise."
@@ -1038,9 +1037,9 @@ icon = ExtResource( 45 )
 script = ExtResource( 6 )
 
 [node name="XOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 235.0
+margin_top = 256.0
 margin_right = 133.0
-margin_bottom = 257.0
+margin_bottom = 278.0
 hint_tooltip = "Place an XOR Gate.
 XOR Gate returns 1 if both of the inputs are different, and
 0 otherwise."
@@ -1050,9 +1049,9 @@ icon = ExtResource( 42 )
 script = ExtResource( 6 )
 
 [node name="XNOR" type="Button" parent="CanvasLayer/CreateBar/VBoxContainer"]
-margin_top = 261.0
+margin_top = 282.0
 margin_right = 133.0
-margin_bottom = 283.0
+margin_bottom = 304.0
 hint_tooltip = "Place an XNOR Gate.
 XNOR Gate returns 1 if both of the inputs are equal,
 0 otherwise."
@@ -1294,6 +1293,89 @@ dialog_autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="History" type="Panel" parent="CanvasLayer"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -232.0
+margin_top = 118.0
+margin_right = -2.0
+margin_bottom = 368.0
+rect_min_size = Vector2( 0, 250 )
+custom_styles/panel = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/History"]
+margin_top = -20.0
+margin_right = 238.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "History"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/History"]
+margin_right = 230.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 225, 0 )
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/History/ScrollContainer"]
+margin_right = 220.0
+margin_bottom = 250.0
+rect_min_size = Vector2( 220, 250 )
+
+[node name="Button" type="Button" parent="CanvasLayer/History/ScrollContainer/VBoxContainer"]
+margin_right = 220.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 220, 0 )
+custom_styles/hover = ExtResource( 18 )
+custom_styles/pressed = ExtResource( 17 )
+custom_styles/disabled = ExtResource( 16 )
+custom_styles/normal = ExtResource( 15 )
+text = "Added Bla Bla"
+
+[node name="Truth Table" type="AcceptDialog" parent="CanvasLayer"]
+visible = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -220.5
+margin_top = -178.0
+margin_right = 220.5
+margin_bottom = 178.0
+theme = ExtResource( 7 )
+popup_exclusive = true
+window_title = "Truth Table"
+dialog_text = "Current Tab:
+Format:"
+script = ExtResource( 53 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/Truth Table"]
+margin_left = 8.0
+margin_top = 39.0
+margin_right = 433.0
+margin_bottom = 320.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/Truth Table/ScrollContainer"]
+margin_right = 425.0
+margin_bottom = 290.0
+rect_min_size = Vector2( 425, 290 )
+columns = 3
 [connection signal="tab_changed" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_changed"]
 [connection signal="tab_selected" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_selected"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/New Scene" to="CanvasLayer/TopBar" method="_on_New_Scene_pressed"]
@@ -1304,6 +1386,7 @@ __meta__ = {
 [connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/Close" to="CanvasLayer/TopBar" method="_on_Close_pressed"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Edit/HBoxContainer/Rename" to="CanvasLayer/TopBar" method="_on_Rename_pressed"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Edit/HBoxContainer/Delete" to="CanvasLayer/TopBar" method="_on_Delete_pressed"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Open Truth Table" to="CanvasLayer/TopBar" method="_on_Open_Truth_Table_pressed"]
 [connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Circuit Toolbar" to="CanvasLayer/TopBar" method="_on_Circuit_Toolbar_toggled"]
 [connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Prefab Toolbar" to="CanvasLayer/TopBar" method="_on_Prefab_Toolbar_toggled"]
 [connection signal="text_changed" from="CanvasLayer/Displayer/Header" to="CanvasLayer/Displayer" method="_on_Header_text_changed"]
@@ -1326,3 +1409,4 @@ __meta__ = {
 [connection signal="item_selected" from="CanvasLayer/CreateScene/VBoxContainer/SceneTypeContainer/OptionButton" to="CanvasLayer/CreateScene" method="_on_OptionButton_item_selected"]
 [connection signal="confirmed" from="CanvasLayer/RenameScene" to="CanvasLayer/TopBar" method="_on_RenameScene_confirmed"]
 [connection signal="confirmed" from="CanvasLayer/DeleteScene" to="CanvasLayer/TopBar" method="_on_DeleteScene_confirmed"]
+[connection signal="about_to_show" from="CanvasLayer/Truth Table" to="CanvasLayer/Truth Table" method="_on_Truth_Table_about_to_show"]

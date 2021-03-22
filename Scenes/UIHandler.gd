@@ -41,7 +41,7 @@ func CreateUI_variable(node):
 	selected_node=node
 	displayer.get_node("../DisplayerVariable").get_node("Header").text=node.name
 	displayer.get_node("../DisplayerVariable/VBoxContainer/Type").text="Type : "+selected_node.TYPE
-	if selected_node.TYPE!="Label":
+	if selected_node.TYPE!="Label" and selected_node.TYPE!="Output":
 		var i = node.get_node("Outputs").get_child(0)
 		var tab=displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab/Output")
 		if i.connection:
@@ -50,10 +50,18 @@ func CreateUI_variable(node):
 		else:
 			tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
 			tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
+	elif selected_node.TYPE=="Output":
+		var i = selected_node.get_node("Sockets/Input")
+		var tab=displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab/Output")
+		if i.connected:
+			tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
+			tab.get_node("VBoxContainer/Connection").text="Connection : "+str(i.source.get_node("../..").name)
+		else:
+			tab.get_node("VBoxContainer/Value").text="Value : null"
+			tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
 	else:
 		displayer.get_node("../DisplayerVariable/VBoxContainer/Output").visible=false
 		displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab").visible=false
-		displayer.get_node("../DisplayerVariable/VBoxContainer/CheckBox").visible=false
 func CreateUI(node):
 	selected_node=node
 	displayer.visible=true	
@@ -105,7 +113,7 @@ func CreateUI(node):
 			displayer.get_node("VBoxContainer/OutputTab").add_child(tab)
 func UpdateUI(node):
 	selected_node=node
-	if node.TYPE!="Variable" and node.TYPE!="Label" :
+	if node.TYPE!="Variable" and node.TYPE!="Label" and node.TYPE!="Output":
 		displayer.visible=true
 		for tab in displayer.get_node("VBoxContainer/InputTab").get_children():
 			if selected_node.get_node("Sockets").has_node(tab.socket):
@@ -132,7 +140,7 @@ func UpdateUI(node):
 				tab.queue_free()
 	else:
 		displayer.get_node("../DisplayerVariable").visible=true
-		if selected_node.TYPE!="Label":
+		if selected_node.TYPE=="Variable":
 			var i = node.get_node("Outputs").get_child(0)
 			var tab=displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab/Output")
 			if i.connection:
@@ -140,6 +148,15 @@ func UpdateUI(node):
 				tab.get_node("VBoxContainer/Connection").text="Connection : "+str(i.connection)
 			else:
 				tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
+				tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
+		elif selected_node.TYPE=="Output":
+			var i = selected_node.get_node("Sockets/Input")
+			var tab=displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab/Output")
+			if i.connected:
+				tab.get_node("VBoxContainer/Value").text="Value : "+str(i.value)
+				tab.get_node("VBoxContainer/Connection").text="Connection : "+str(i.source.get_node("../..").name)
+			else:
+				tab.get_node("VBoxContainer/Value").text="Value : null"
 				tab.get_node("VBoxContainer/Connection").text="Connection : disconnected"
 		
 func ResizeLegs(legs):

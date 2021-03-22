@@ -14,15 +14,13 @@ func _on_TabContainer_tab_changed(tab):
 	if tab!=0:
 		print("Switching tab to ",get_tab_control(tab).name)
 	if tabs_node.has_node(get_tab_control(tab).name):
-		for i in tabs_node.get_children():
-			i.visible=false
-		tabs_node.get_node(get_tab_control(tab).name).visible=true
+		SwitchTab(get_tab_control(tab).name)
 
 func _on_TabContainer_tab_selected(tab):
 	if self.get_tab_control(tab).name=="+":
 		get_node("../CreateScene").EmptyBox("Scene")
 		get_node("../CreateScene").popup()
-func CreateCustomTab(tabname):
+func CreateCustomTab(tabname,format):
 	var is_existing=false
 	for i in self.get_children():
 		if i.name==tabname:
@@ -39,13 +37,13 @@ func CreateCustomTab(tabname):
 		tab_ui.name=tabname
 		self.add_child_below_node(get_node("+"),tab_ui,true)
 		self.move_child(get_node("+"),get_tab_count()-1)
+		tab_node.format=format
 		SwitchTab(tabname)
 		return tab_node
 		
 func SwitchTab(tabname):
 	for tab in tabs_node.get_children():
-		if tab.name==tabname:
-			tab.visible=true
-		else:
-			tab.visible=false
+		tab.visible=tab.name==tabname
 	self.current_tab=self.get_node(tabname).get_index()
+	get_node("../CreateBar/VBoxContainer/Output").visible=tabs_node.get_node(tabname).format=="Scene"
+

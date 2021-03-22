@@ -91,3 +91,7 @@ func _on_Prefab_Toolbar_toggled(button_pressed):
 		get_node("../PrefabBar").visible=true
 	else:
 		get_node("../PrefabBar").visible=false
+
+
+func _on_Open_Truth_Table_pressed():
+	get_node("../Truth Table").popup()

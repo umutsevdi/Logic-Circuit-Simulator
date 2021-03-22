@@ -24,9 +24,8 @@ func EmptyBox(format):
 func _on_CreateScene_confirmed():
 	if $VBoxContainer/NameContainer/LineEdit.text=="":
 		$VBoxContainer/NameContainer/LineEdit.text="New Tab"
-	var new_scene=tab_container.CreateCustomTab($VBoxContainer/NameContainer/LineEdit.text)
+	var new_scene=tab_container.CreateCustomTab($VBoxContainer/NameContainer/LineEdit.text,$VBoxContainer/SceneTypeContainer/OptionButton.text)
 	if new_scene!=null:
-		new_scene.format=$VBoxContainer/SceneTypeContainer/OptionButton.text
 		if new_scene.format=="Prefab":
 			new_scene.add_child(prefab_item.instance())
 			for _i in range (get_node("VBoxContainer/OutputCountContainer/SpinBox").value):
