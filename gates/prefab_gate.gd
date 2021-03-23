@@ -14,7 +14,7 @@ func _physics_process(_delta):
 func CreateNode():
 	Database.CreatePrefab(path,Item["Items"],Item["PrefabItems"],get_node("Gate/Tab"))
 	UIHandler.CreateUI(self)
-	Move.MoveStart(true)
+	Move.MoveStart(true,self)
 	ResizeLegs()
 	
 func ResizeLegs():

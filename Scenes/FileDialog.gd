@@ -4,6 +4,7 @@ func _on_FileDialog_file_selected(path):
 	var visible_scene
 	if self.mode==0:
 			print("Opening ",path)
+			Database.opening_error=false
 			Database.OpenFile(path)
 	elif self.mode==4:
 			visible_scene=Database.GetCurrentTab()

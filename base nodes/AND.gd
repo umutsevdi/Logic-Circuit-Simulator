@@ -1,6 +1,10 @@
 extends Button
 var output
 var base_leg = 2
+func _ready():
+	self.connect("button_down",get_parent(),"_on_Button_button_down")
+	self.connect("button_up",get_parent(),"_on_Button_button_up")
+	
 func Calculate():
 	if get_node("../Sockets").get_child_count()>0:
 		output=1
@@ -13,11 +17,4 @@ func Calculate():
 		output=-1
 	return output
 	
-func _on_Button_button_down():
-	UIHandler.CreateUI(get_parent())
-	Move.MoveStart(false)
 
-func _on_Button_button_up():
-	Move.hold=false
-	
-	

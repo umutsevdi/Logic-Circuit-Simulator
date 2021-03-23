@@ -47,3 +47,9 @@ func SwitchTab(tabname):
 	self.current_tab=self.get_node(tabname).get_index()
 	get_node("../CreateBar/VBoxContainer/Output").visible=tabs_node.get_node(tabname).format=="Scene"
 
+
+
+func _on_OpeningError_popup_hide():
+	tabs_node.get_node(get_tab_control(current_tab).name).queue_free()
+	get_tab_control(current_tab).queue_free()
+	SwitchTab(get_tab_control(0).name)

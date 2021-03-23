@@ -10,13 +10,11 @@ func _input(event):
 		_on_Save_pressed()
 
 func _on_Save_pressed():
-	for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
-		if i.visible:
-			visible_scene=i
-			break
+	visible_scene=Database.GetCurrentTab()
 	print("Saving ", visible_scene.name)
 	dialog.current_file=visible_scene.name
 	if visible_scene.path!=null:
+		visible_scene.history.clear()
 		Database.SaveScene(visible_scene,visible_scene.path)
 	else:
 		print("Filepath is not found: Switching to Save As ")
@@ -55,10 +53,7 @@ func _on_RenameScene_confirmed():
 				break
 				
 		if is_unique:
-			for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
-				if i.visible:
-					visible_scene=i
-					break
+			visible_scene=Database.GetCurrentTab()
 					
 			get_parent().get_node("TabContainer/"+str(visible_scene.name)).name=get_parent().get_node("RenameScene/Container/LineEdit").text
 			visible_scene.name=get_parent().get_node("RenameScene/Container/LineEdit").text
@@ -67,10 +62,7 @@ func _on_Delete_pressed():
 	get_node("../DeleteScene").popup()
 
 func _on_DeleteScene_confirmed():
-	for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
-		if i.visible:
-			visible_scene=i
-			break
+	visible_scene=Database.GetCurrentTab()
 	get_node("../TabContainer").current_tab=0
 	if visible_scene.path!=null:
 		var dir = Directory.new()
@@ -103,3 +95,7 @@ func _on_Sync_Clocks_pressed():
 		if i.TYPE=="Clock":
 			i.get_node("Timer").start()
 			#i.get_node("Timer").time_left=i.get_node("Timer").wait_time
+
+
+func _on_About_pressed():
+	get_node("../About").popup()

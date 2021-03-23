@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=2]
+[gd_scene load_steps=68 format=2]
 
 [ext_resource path="res://UI/TabContainer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=2]
@@ -53,6 +53,11 @@
 [ext_resource path="res://UI/InputLeg.tscn" type="PackedScene" id=51]
 [ext_resource path="res://Assets/Icons/Control.svg" type="Texture" id=52]
 [ext_resource path="res://UI/Truth Table.gd" type="Script" id=53]
+[ext_resource path="res://Assets/Icons/github.png" type="Texture" id=54]
+[ext_resource path="res://Scenes/About.gd" type="Script" id=55]
+[ext_resource path="res://Assets/Icons/linkedin.png" type="Texture" id=56]
+[ext_resource path="res://Assets/Icons/itch.png" type="Texture" id=57]
+[ext_resource path="res://Scenes/History.gd" type="Script" id=58]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 15.0
@@ -147,7 +152,6 @@ __meta__ = {
 }
 
 [node name="Files" type="Tabs" parent="CanvasLayer/TopBar"]
-visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 49.0
@@ -314,6 +318,7 @@ margin_right = 273.0
 margin_bottom = 31.0
 
 [node name="Cut" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+visible = false
 margin_left = 277.0
 margin_right = 332.0
 margin_bottom = 31.0
@@ -328,6 +333,7 @@ text = "Cut"
 icon = ExtResource( 26 )
 
 [node name="Copy" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+visible = false
 margin_left = 336.0
 margin_right = 401.0
 margin_bottom = 31.0
@@ -342,6 +348,7 @@ text = "Copy"
 icon = ExtResource( 32 )
 
 [node name="Paste" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+visible = false
 margin_left = 405.0
 margin_right = 474.0
 margin_bottom = 31.0
@@ -356,11 +363,13 @@ text = "Paste"
 icon = ExtResource( 33 )
 
 [node name="VSeparator2" type="VSeparator" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+visible = false
 margin_left = 478.0
 margin_right = 482.0
 margin_bottom = 31.0
 
 [node name="Select All" type="Button" parent="CanvasLayer/TopBar/Edit/HBoxContainer"]
+visible = false
 margin_left = 486.0
 margin_right = 580.0
 margin_bottom = 31.0
@@ -375,6 +384,7 @@ text = "Select All"
 icon = ExtResource( 34 )
 
 [node name="Simulator" type="Tabs" parent="CanvasLayer/TopBar"]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_top = 49.0
@@ -391,6 +401,7 @@ __meta__ = {
 }
 
 [node name="Analyze Circuit" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
+visible = false
 margin_right = 129.0
 margin_bottom = 31.0
 focus_mode = 0
@@ -404,8 +415,7 @@ text = "Analyze Circuit"
 icon = ExtResource( 29 )
 
 [node name="Open Truth Table" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
-margin_left = 133.0
-margin_right = 277.0
+margin_right = 144.0
 margin_bottom = 31.0
 hint_tooltip = "Creates a truth table based on the current input and outputs."
 focus_mode = 0
@@ -419,8 +429,8 @@ text = "Open Truth Table"
 icon = ExtResource( 28 )
 
 [node name="Sync Clocks" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
-margin_left = 281.0
-margin_right = 437.0
+margin_left = 148.0
+margin_right = 304.0
 margin_bottom = 31.0
 hint_tooltip = "Restarts existing clocks, synchronizes their timers."
 focus_mode = 0
@@ -434,13 +444,13 @@ text = "Synchronize Clocks"
 icon = ExtResource( 46 )
 
 [node name="VSeparator" type="VSeparator" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
-margin_left = 441.0
-margin_right = 445.0
+margin_left = 308.0
+margin_right = 312.0
 margin_bottom = 31.0
 
 [node name="Circuit Toolbar" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
-margin_left = 449.0
-margin_right = 620.0
+margin_left = 316.0
+margin_right = 487.0
 margin_bottom = 31.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
@@ -453,8 +463,8 @@ text = "Toggle Circuit Toolbar"
 icon = ExtResource( 21 )
 
 [node name="Prefab Toolbar" type="Button" parent="CanvasLayer/TopBar/Simulator/HBoxContainer"]
-margin_left = 624.0
-margin_right = 794.0
+margin_left = 491.0
+margin_right = 661.0
 margin_bottom = 31.0
 focus_mode = 0
 custom_styles/hover = ExtResource( 18 )
@@ -484,6 +494,7 @@ __meta__ = {
 }
 
 [node name="Shortcuts" type="Button" parent="CanvasLayer/TopBar/Help/HBoxContainer"]
+visible = false
 margin_right = 94.0
 margin_bottom = 31.0
 hint_tooltip = "Displays shortcuts of this simulator"
@@ -498,13 +509,12 @@ text = "Shortcuts"
 icon = ExtResource( 30 )
 
 [node name="VSeparator" type="VSeparator" parent="CanvasLayer/TopBar/Help/HBoxContainer"]
-margin_left = 98.0
-margin_right = 102.0
+margin_right = 4.0
 margin_bottom = 31.0
 
 [node name="About" type="Button" parent="CanvasLayer/TopBar/Help/HBoxContainer"]
-margin_left = 106.0
-margin_right = 178.0
+margin_left = 8.0
+margin_right = 80.0
 margin_bottom = 31.0
 hint_tooltip = "Displays information about the project"
 focus_mode = 0
@@ -1310,22 +1320,21 @@ __meta__ = {
 }
 
 [node name="History" type="Panel" parent="CanvasLayer"]
-visible = false
 anchor_left = 1.0
 anchor_right = 1.0
-margin_left = -232.0
+margin_left = -280.0
 margin_top = 118.0
-margin_right = -2.0
-margin_bottom = 368.0
-rect_min_size = Vector2( 0, 250 )
+margin_bottom = 352.0
+rect_min_size = Vector2( 0, 220 )
 custom_styles/panel = ExtResource( 11 )
+script = ExtResource( 58 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="CanvasLayer/History"]
 margin_top = -20.0
-margin_right = 238.0
+margin_right = 302.0
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "History"
 align = 1
@@ -1335,31 +1344,30 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer/History"]
-margin_right = 230.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 225, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -130.0
+margin_top = -216.0
+margin_right = 130.0
+margin_bottom = -16.0
+rect_min_size = Vector2( 260, 200 )
 scroll_horizontal_enabled = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/History/ScrollContainer"]
-margin_right = 220.0
-margin_bottom = 250.0
-rect_min_size = Vector2( 220, 250 )
-
-[node name="Button" type="Button" parent="CanvasLayer/History/ScrollContainer/VBoxContainer"]
-margin_right = 220.0
-margin_bottom = 16.0
-rect_min_size = Vector2( 220, 0 )
-custom_styles/hover = ExtResource( 18 )
-custom_styles/pressed = ExtResource( 17 )
-custom_styles/disabled = ExtResource( 16 )
-custom_styles/normal = ExtResource( 15 )
-text = "Added Bla Bla"
+[node name="Itemlist" type="ItemList" parent="CanvasLayer/History/ScrollContainer"]
+margin_right = 260.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 260, 200 )
+icon_scale = 0.75
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Truth Table" type="AcceptDialog" parent="CanvasLayer"]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -1392,6 +1400,107 @@ margin_right = 425.0
 margin_bottom = 290.0
 rect_min_size = Vector2( 425, 290 )
 columns = 3
+
+[node name="About" type="WindowDialog" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -160.0
+margin_top = -148.0
+margin_right = 136.0
+margin_bottom = 148.0
+script = ExtResource( 55 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="CanvasLayer/About"]
+margin_top = -18.0
+margin_right = 296.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "About"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/About"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -144.0
+margin_top = -140.0
+margin_right = 136.0
+margin_bottom = 96.0
+text = "Hi, I'm Umutcan Sevdi.
+I study Computer Engineering at Yildiz Technical University.
+
+ Logic Simulator is a project that I started to develop after completing the Logic Circuits lecture.
+
+Thank you for using my Logic Simulator. 
+If you have found any bugs or if you have any ideas to make this Simulator better, please contact me from the following addresses: "
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/About"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -148.0
+margin_top = -46.0
+margin_right = 148.0
+margin_bottom = -10.0
+custom_constants/separation = 25
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Github" type="TextureButton" parent="CanvasLayer/About/HBoxContainer"]
+margin_left = 55.0
+margin_right = 91.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 36, 36 )
+texture_normal = ExtResource( 54 )
+expand = true
+
+[node name="Linkedin" type="TextureButton" parent="CanvasLayer/About/HBoxContainer"]
+margin_left = 116.0
+margin_right = 152.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 36, 36 )
+texture_normal = ExtResource( 56 )
+expand = true
+
+[node name="itch" type="TextureButton" parent="CanvasLayer/About/HBoxContainer"]
+margin_left = 177.0
+margin_right = 241.0
+margin_bottom = 36.0
+rect_min_size = Vector2( 64, 36 )
+texture_normal = ExtResource( 57 )
+expand = true
+
+[node name="OpeningError" type="ConfirmationDialog" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -117.0
+margin_top = -43.0
+margin_right = 117.0
+margin_bottom = 43.0
+theme = ExtResource( 7 )
+window_title = "Opening Error:"
+dialog_text = "Error while opening filepath. File is missing, corrupted or not supported."
+dialog_autowrap = true
 [connection signal="tab_changed" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_changed"]
 [connection signal="tab_selected" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_selected"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/New Scene" to="CanvasLayer/TopBar" method="_on_New_Scene_pressed"]
@@ -1406,6 +1515,7 @@ columns = 3
 [connection signal="pressed" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Sync Clocks" to="CanvasLayer/TopBar" method="_on_Sync_Clocks_pressed"]
 [connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Circuit Toolbar" to="CanvasLayer/TopBar" method="_on_Circuit_Toolbar_toggled"]
 [connection signal="toggled" from="CanvasLayer/TopBar/Simulator/HBoxContainer/Prefab Toolbar" to="CanvasLayer/TopBar" method="_on_Prefab_Toolbar_toggled"]
+[connection signal="pressed" from="CanvasLayer/TopBar/Help/HBoxContainer/About" to="CanvasLayer/TopBar" method="_on_About_pressed"]
 [connection signal="text_changed" from="CanvasLayer/Displayer/Header" to="CanvasLayer/Displayer" method="_on_Header_text_changed"]
 [connection signal="pressed" from="CanvasLayer/Displayer/VBoxContainer/HBoxContainer/Reduce" to="CanvasLayer/Displayer" method="_on_Reduce_pressed"]
 [connection signal="text_entered" from="CanvasLayer/Displayer/VBoxContainer/HBoxContainer/LineEdit" to="CanvasLayer/Displayer" method="_on_LineEdit_text_entered"]
@@ -1428,3 +1538,7 @@ columns = 3
 [connection signal="confirmed" from="CanvasLayer/DeleteScene" to="CanvasLayer/TopBar" method="_on_DeleteScene_confirmed"]
 [connection signal="about_to_show" from="CanvasLayer/Truth Table" to="CanvasLayer/Truth Table" method="_on_Truth_Table_about_to_show"]
 [connection signal="popup_hide" from="CanvasLayer/Truth Table" to="CanvasLayer/Truth Table" method="_on_Truth_Table_popup_hide"]
+[connection signal="pressed" from="CanvasLayer/About/HBoxContainer/Github" to="CanvasLayer/About" method="_on_TextureButton_pressed"]
+[connection signal="pressed" from="CanvasLayer/About/HBoxContainer/Linkedin" to="CanvasLayer/About" method="_on_Linkedin_pressed"]
+[connection signal="pressed" from="CanvasLayer/About/HBoxContainer/itch" to="CanvasLayer/About" method="_on_itch_pressed"]
+[connection signal="popup_hide" from="CanvasLayer/OpeningError" to="CanvasLayer/TabContainer" method="_on_OpeningError_popup_hide"]

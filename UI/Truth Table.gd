@@ -48,7 +48,7 @@ func _on_Truth_Table_about_to_show():
 func DectoBin(number):
 	number=int(number)
 	var arr=[]
-	for j in range(array.Variables.size()):arr.append(0)
+	for _j in range(array.Variables.size()):arr.append(0)
 	var i =0
 	while number>0:
 		arr[i]=number%2

@@ -13,11 +13,13 @@ func _on_CheckButton_toggled(button_pressed):
 		
 func CreateNode():
 	UIHandler.CreateUI_variable(self)
-	Move.MoveStart(true)
+	Move.MoveStart(true,self)
 
 func _on_Gate_button_down():
-	UIHandler.CreateUI_variable(self)
-	Move.MoveStart(false)
+	if Move.create:
+		Move.hold=false
+	else:
+		Move.MoveStart(false,self)
 
 func _on_Gate_button_up():
 	Move.hold=false

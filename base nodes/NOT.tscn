@@ -68,5 +68,3 @@ margin_top = -5.73166
 margin_right = 7.22241
 margin_bottom = 6.26834
 rect_min_size = Vector2( 12, 12 )
-[connection signal="button_down" from="." to="." method="_on_Button_button_down"]
-[connection signal="button_up" from="." to="." method="_on_Button_button_up"]

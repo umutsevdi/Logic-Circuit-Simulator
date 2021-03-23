@@ -197,16 +197,19 @@ func start_connection(node):
 	from.add_child(line)
 	
 func delete_node():
+	
 	if selected_node.TYPE=="Gate":
 		ResizeLegs(0)
 	elif selected_node.TYPE=="Prefab":
 		selected_node.DeleteNode()
+	Database.GetCurrentTab().AppendHistory({"Action":"Delete","Node":UIHandler.selected_node.duplicate(8)})
 	selected_node.queue_free()
 	selected_node=null
 	displayer.visible=false
 	timer=0
-
 func ResizeLegs(legs):
+	Database.GetCurrentTab().AppendHistory({"Action":"ResizeLegs","Node":selected_node,"From":selected_node.legs,"To":legs})
 	selected_node.ResizeLegs(legs)
 	CreateUI(selected_node)
+	
 

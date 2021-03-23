@@ -38,5 +38,15 @@ func ResizeLegs(leg_count):
 		$Gate/Label.rect_size.y=36*$Sockets.get_child_count()
 func CreateNode():
 	UIHandler.CreateUI(self)
-	Move.MoveStart(true)
+	Move.MoveStart(true,self)
+
 	
+func _on_Button_button_down():
+	if Move.create:
+		Move.hold=false
+	else:
+		Move.MoveStart(false,self)
+
+func _on_Button_button_up():
+	Move.hold=false
+

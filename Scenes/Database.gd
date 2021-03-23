@@ -6,8 +6,7 @@ var input = preload("res://base nodes/input.tscn")
 var output = preload("res://base nodes/output.tscn")
 var prefab_item=preload("res://Scenes/PrefabItems.tscn")
 var Prefab=preload("res://gates/prefab_gate.tscn")
-var Prefabs={}
-var Scenes={}
+var opening_error=false
 func _ready():
 	var dir = Directory.new()
 	if dir.open("user://") == OK:
@@ -88,18 +87,26 @@ func OpenFile(directory):
 	var Item={}
 	Item=OpenDirectory(directory)
 	if Item.error!=0:
-		print("Error\tat opening file:\t",Item.error)
+		opening_error=true
 	else:
 		Item=Item.result
 		if Item.has("Format"):
-			if Item["Format"]=="Scene":
-				CreateScene(directory,Item["Items"])
-			elif Item["Format"]=="Prefab":
-				var TabName=directory.get_file().left(directory.get_file().length()-5)
-				var tab=tab_container.CreateCustomTab(TabName,"Prefab")
-				CreatePrefab(directory,Item["Items"],Item["PrefabItems"],tab)
+			var is_opened=false
+			for i in tabs_node.get_children():
+				if i.name==directory.get_file().left(directory.get_file().length()-5):
+					tab_container.SwitchTab(i.name)
+					is_opened=true
+					break
+			if is_opened==false:
+				Database.GetCurrentTab().AppendHistory({"Action":"Open"})
+				if Item["Format"]=="Scene":
+					CreateScene(directory,Item["Items"])
+				elif Item["Format"]=="Prefab":
+					var TabName=directory.get_file().left(directory.get_file().length()-5)
+					var tab=tab_container.CreateCustomTab(TabName,"Prefab")
+					CreatePrefab(directory,Item["Items"],Item["PrefabItems"],tab)
 		else:
-			return "Error"
+			opening_error=true
 	
 func OpenDirectory(directory):
 	var Item={}
@@ -112,9 +119,10 @@ func OpenDirectory(directory):
 func CreateScene(Filepath,TabData):
 	var TabName=Filepath.get_file().left(Filepath.get_file().length()-5)
 	var tab=tab_container.CreateCustomTab(TabName,"Scene")
+	Database.GetCurrentTab().AppendHistory({"Action":"CreateScene","Tab":tab})
 	tab.format="Scene"
 	tab.path=Filepath
-	if tab!=null:
+	if tab!=null and opening_error==false:
 		for i in TabData.keys():
 			var unit=null
 			if TabData[i].Type in BaseGateHandler.gates.keys():
@@ -131,7 +139,8 @@ func CreateScene(Filepath,TabData):
 				unit.Item=OpenDirectory(TabData[i].Path)
 				unit.Info=TabData[i]
 				if unit.Item.error!=0:
-					print("Error\tat opening file:\t",unit.Item.error,Filepath)
+					print("Error at scene\tat opening file:\t",unit.Item.error,Filepath)
+					opening_error=true
 				else:
 					unit.Item=unit.Item.result
 					if unit.Item.has("Format"):
@@ -150,11 +159,13 @@ func CreateScene(Filepath,TabData):
 				unit.get_node("Gate/Label").text=TabData[i].Text
 			print("\tCreating\t",i,"\tat\t",TabData[i].Position.x,",",TabData[i].Position.y)
 		ConnectLines(TabData,null,tab)
+		
 func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 	tab.format="Prefab"
 	tab.path=Filepath
 	tab.add_child(prefab_item.instance())
-	if tab!=null:
+	Database.GetCurrentTab().AppendHistory({"Action":"CreatePrefab","Tab":tab})
+	if tab!=null and opening_error==false:
 		for i in PrefabItems.Inputs.keys():
 			var inp=input.instance()
 			inp.name=i
@@ -179,7 +190,8 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 				unit.Item=OpenDirectory(TabData[i].Path)
 				unit.Info=TabData[i]
 				if unit.Item.error!=0:
-					print("Error\tat opening file:\t",unit.Item.error,Filepath)
+					print("Error at prefab\tat opening file:\t",unit.Item.error,Filepath)
+					opening_error=true
 				else:
 					unit.Item=unit.Item.result
 					if unit.Item.has("Format"):
@@ -199,36 +211,42 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 				unit.get_node("Gate/Label").text=TabData[i].Text
 			print("\tCreating\t",i,"\tat\t",TabData[i].Position.x,",",TabData[i].Position.y)
 		ConnectLines(TabData,PrefabItems,tab)
+		
 
 func ConnectLines(TabData,PrefabItems,tab):
 	yield(get_tree().create_timer(0.2), "timeout")
 	print("==",tab.get_parent().get_parent().name,"\t requested to connect lines. Starting...")
-	for i in TabData.keys():
-		if TabData[i].has("Inputs"):
-			for j in TabData[i].Inputs.keys():
-				if TabData[i].Inputs[j].Source["Parent"]!="null":
-					var target
-					target=tab.get_node(i+"/Sockets/"+j)
-					var source=tab.get_node(TabData[i].Inputs[j].Source.Parent+"/Outputs/"+TabData[i].Inputs[j].Source.Socket)
-					print("\t=",target.get_parent().get_parent().name,".",target.name,"\t",source.get_parent().get_parent().name,".",source.name)
+	if opening_error==false:
+		
+		for i in TabData.keys():
+			if TabData[i].has("Inputs"):
+				for j in TabData[i].Inputs.keys():
+					if TabData[i].Inputs[j].Source["Parent"]!="null":
+						var target
+						target=tab.get_node(i+"/Sockets/"+j)
+						var source=tab.get_node(TabData[i].Inputs[j].Source.Parent+"/Outputs/"+TabData[i].Inputs[j].Source.Socket)
+						print("\t=",target.get_parent().get_parent().name,".",target.name,"\t",source.get_parent().get_parent().name,".",source.name)
+						var line= Line2D.new()
+						for l in TabData[i].Inputs[j].Source.Line:
+							line.add_point(Vector2(TabData[i].Inputs[j].Source.Line[l].x,TabData[i].Inputs[j].Source.Line[l].y))
+						target.ConnectOutput(source,line)
+						line.queue_free()
+						source.SetValue(source.value)
+		if tab.format=="Prefab":
+			for i in PrefabItems.Inputs.keys():
+				if PrefabItems.Inputs[i].Source["Parent"]!="null":
+					var target=tab.get_node("PrefabItems/Inputs/"+i)
+					var source=tab.get_node(PrefabItems.Inputs[i].Source.Parent+"/Outputs/"+PrefabItems.Inputs[i].Source.Socket)
 					var line= Line2D.new()
-					for l in TabData[i].Inputs[j].Source.Line:
-						line.add_point(Vector2(TabData[i].Inputs[j].Source.Line[l].x,TabData[i].Inputs[j].Source.Line[l].y))
+					for l in PrefabItems.Inputs[i].Source["Line"]:
+						line.add_point(Vector2(PrefabItems.Inputs[i].Source.Line[l].x,PrefabItems.Inputs[i].Source.Line[l].y))
 					target.ConnectOutput(source,line)
 					line.queue_free()
 					source.SetValue(source.value)
-	if tab.format=="Prefab":
-		for i in PrefabItems.Inputs.keys():
-			if PrefabItems.Inputs[i].Source["Parent"]!="null":
-				var target=tab.get_node("PrefabItems/Inputs/"+i)
-				var source=tab.get_node(PrefabItems.Inputs[i].Source.Parent+"/Outputs/"+PrefabItems.Inputs[i].Source.Socket)
-				var line= Line2D.new()
-				for l in PrefabItems.Inputs[i].Source["Line"]:
-					line.add_point(Vector2(PrefabItems.Inputs[i].Source.Line[l].x,PrefabItems.Inputs[i].Source.Line[l].y))
-				target.ConnectOutput(source,line)
-				line.queue_free()
-				source.SetValue(source.value)
-	print("==",tab.get_parent().get_parent().name,"\t all units are added")
+		print("==",tab.get_parent().get_parent().name,"\t all units are added")
+	else:
+		print("==Request failed")
+		get_tree().get_root().get_node("/root/Scene/CanvasLayer/OpeningError").popup()
 func GetCurrentTab():
 	var visible_scene
 	for i in get_tree().get_root().get_node("/root/Scene/Tabs").get_children():
