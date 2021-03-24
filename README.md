@@ -11,7 +11,7 @@ Logic Circuit Simulator is a open source tool that comes with following features
   * Save prefabs and reach them across other scenes and even other prefabs. 
   * Create your own datas either by drag & drop or write as .json file.
 
-Software
+#Software
   Logic Circuit Simulator is entirely built in Godot Engine.
   Uses .json to analyze scenes & prefabs.
   This software is developed by Umutcan Sevdi.
