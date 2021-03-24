@@ -17,16 +17,16 @@ func SaveScene(tab,filepath):
 	var TabData={}
 	for i in tab.get_children():
 		if i.get_node("Gate/Label").text=="Variable":
-			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Position":{"x":i.position.x,"y":i.position.y},"Value":i.value,"Outputs":{}}
+			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Rotation":i.rotation_degrees,"Position":{"x":i.position.x,"y":i.position.y},"Value":i.value,"Outputs":{}}
 			for out in i.get_node("Outputs").get_children():
 				TabData[i.name].Outputs[out.name]={"Connection":out.connection,"Value":out.value}
 		elif i.get_node("Gate/Label").text=="Clock":
-			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Position":{"x":i.position.x,"y":i.position.y},"Cycle":1/i.get_node("Timer").wait_time,"Outputs":{}}
+			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Rotation":i.rotation_degrees,"Position":{"x":i.position.x,"y":i.position.y},"Cycle":1/i.get_node("Timer").wait_time,"Outputs":{}}
 			for out in i.get_node("Outputs").get_children():
 				TabData[i.name].Outputs[out.name]={"Connection":out.connection,"Value":out.value}
 		elif i.TYPE=="Output":
 			var inp=i.get_node("Sockets/Input")
-			TabData[i.name]={"Type":i.TYPE,"Position":{"x":i.position.x,"y":i.position.y},"Inputs":{}}
+			TabData[i.name]={"Type":i.TYPE,"Rotation":i.rotation_degrees,"Position":{"x":i.position.x,"y":i.position.y},"Inputs":{}}
 			if inp.connected:
 				var line={}
 				for l in range (inp.get_node(inp.source.name).points.size()):
@@ -35,9 +35,9 @@ func SaveScene(tab,filepath):
 			else:
 				TabData[i.name].Inputs["Input"]={"Source":{"Parent":"null","Socket":"null","Line":"null"},"Value":inp.value}
 		elif i.TYPE=="Label":
-			TabData[i.name]={"Type":i.TYPE,"Position":{"x":i.position.x,"y":i.position.y},"Text":i.get_node("Gate/Label").text}	
+			TabData[i.name]={"Type":i.TYPE,"Rotation":i.rotation_degrees,"Position":{"x":i.position.x,"y":i.position.y},"Text":i.get_node("Gate/Label").text}	
 		elif i.get_node("Gate/Label").text in BaseGateHandler.gates.keys():
-			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Position":{"x":i.position.x,"y":i.position.y},"Inputs":{},"Outputs":{}}
+			TabData[i.name]={"Type":i.get_node("Gate/Label").text,"Rotation":i.rotation_degrees,"Position":{"x":i.position.x,"y":i.position.y},"Inputs":{},"Outputs":{}}
 			for inp in i.get_node("Sockets").get_children():
 				if inp.connected:
 					var line={}
@@ -49,7 +49,7 @@ func SaveScene(tab,filepath):
 			for out in i.get_node("Outputs").get_children():
 				TabData[i.name].Outputs[out.name]={"Connection":out.connection,"Value":out.value}
 		elif i.name!="PrefabItems":
-			TabData[i.name]={"Type":"Prefab","Position":{"x":i.position.x,"y":i.position.y},"Inputs":{},"Outputs":{},"Path":i.path}
+			TabData[i.name]={"Type":"Prefab","Rotation":i.rotation_degrees,"Position":{"x":i.position.x,"y":i.position.y},"Inputs":{},"Outputs":{},"Path":i.path}
 			for inp in i.get_node("Sockets").get_children():
 				if inp.connected:
 					var line={}
@@ -147,9 +147,12 @@ func CreateScene(Filepath,TabData):
 						if unit.Item["Format"]=="Prefab":
 							CreatePrefab(unit.path,unit.Item["Items"],unit.Item["PrefabItems"],unit.get_node("Gate/Tab"))
 							unit.ResizeLegs()
+			
 			unit.position.x=TabData[i].Position.x
 			unit.position.y=TabData[i].Position.y
 			tab.add_child(unit)
+			if TabData[i].has("Rotation"):
+				UIHandler.Rotate(TabData[i].Rotation/-90,unit)
 			unit.name=i
 			if TabData[i].Type=="Clock":
 				unit.get_node("SpinBox").value=TabData[i].Cycle
@@ -198,10 +201,12 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 						if unit.Item["Format"]=="Prefab":
 							CreatePrefab(unit.path,unit.Item["Items"],unit.Item["PrefabItems"],unit.get_node("Gate/Tab"))
 							unit.ResizeLegs()
-				
+			
 			unit.position.x=TabData[i].Position.x
 			unit.position.y=TabData[i].Position.y
 			tab.add_child(unit)
+			if TabData[i].has("Rotation"):
+				UIHandler.Rotate(TabData[i].Rotation/-90,unit)
 			unit.name=i
 			if TabData[i].Type=="Clock":
 				unit.get_node("SpinBox").value=TabData[i].Cycle

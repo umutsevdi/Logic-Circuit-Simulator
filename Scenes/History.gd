@@ -27,6 +27,26 @@ func UpdateHistory(Tab):
 		string+="    ("+str(int(event.Node.position.x))+","+str(int(event.Node.position.y))+")"
 	elif event.Action=="Move":
 		string+="    ("+str(int(event.From.x))+","+str(int(event.From.y))+")"+"    to    ("+str(int(event.To.x))+","+str(int(event.To.y))+")"
-	elif event.Action=="ResizeLegs":
+	elif event.Action=="ResizeLegs" or event.Action=="Rotate":
 		string+="    "+str(event.From)+"    to    "+str(event.To)
 	$ScrollContainer/Itemlist.add_item(string,load(icons[event.Action]))
+func SwitchTab():
+	$ScrollContainer/Itemlist.clear()
+	var Tab=Database.GetCurrentTab()
+	var event
+	for i in range (Tab.history.size()):
+		event=Tab.history[i]
+		var string
+		if event.has("Node"):
+			string=(event.Node.name).left(4)+event.Node.name.right(event.Node.name.length()-4)
+		elif event.has("Tab"):
+			string=event.Tab.get_parent().name
+		else:
+			string=Tab.name
+		if event.Action=="Create":
+			string+="    ("+str(int(event.Node.position.x))+","+str(int(event.Node.position.y))+")"
+		elif event.Action=="Move":
+			string+="    ("+str(int(event.From.x))+","+str(int(event.From.y))+")"+"    to    ("+str(int(event.To.x))+","+str(int(event.To.y))+")"
+		elif event.Action=="ResizeLegs":
+			string+="    "+str(event.From)+"    to    "+str(event.To)
+		$ScrollContainer/Itemlist.add_item(string,load(icons[event.Action]))

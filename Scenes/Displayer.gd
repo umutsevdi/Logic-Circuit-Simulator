@@ -52,3 +52,7 @@ func _on_LineEdit_text_entered(new_text):
 	elif new_text.to_int()>10:
 		$VBoxContainer/HBoxContainer/LineEdit.text="10"
 	UIHandler.ResizeLegs($VBoxContainer/HBoxContainer/LineEdit.text.to_int())
+
+
+func _on_OptionButton_item_selected(index):
+	UIHandler.Rotate(index,null)

@@ -38,6 +38,7 @@ func CreateUI_variable(node):
 	displayer.get_node("../DisplayerVariable")._on_Button_pressed()
 	displayer.get_node("../DisplayerVariable").visible=true
 	displayer.visible=false	
+	displayer.get_node("VBoxContainer/Rotation/OptionButton").selected=node.rotation_degrees/-90
 	selected_node=node
 	displayer.get_node("../DisplayerVariable").get_node("Header").text=node.name
 	displayer.get_node("../DisplayerVariable/VBoxContainer/Type").text="Type : "+selected_node.TYPE
@@ -65,6 +66,7 @@ func CreateUI_variable(node):
 func CreateUI(node):
 	selected_node=node
 	displayer.visible=true	
+	displayer.get_node("VBoxContainer/Rotation/OptionButton").selected=node.rotation_degrees/-90
 	displayer.get_node("../DisplayerVariable").visible=false
 	displayer.get_node("Header").text=node.name
 	displayer.get_node("VBoxContainer/Type").text="Type : "+node.get_node("Gate/Label").text
@@ -140,7 +142,7 @@ func UpdateUI(node):
 				tab.queue_free()
 	else:
 		displayer.get_node("../DisplayerVariable").visible=true
-		if selected_node.TYPE=="Variable":
+		if selected_node.TYPE=="Variable" or selected_node.TYPE=="Clock":
 			var i = node.get_node("Outputs").get_child(0)
 			var tab=displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab/Output")
 			if i.connection:
@@ -188,12 +190,16 @@ func connect_nodes(to):
 	connecting=false
 	line.queue_free()
 func start_connection(node):
+	
 	connecting=true
 	from=node
+	
 	line=fiber.instance()
 	line.modulate.a=0.3
 	line.position=Vector2(0,0)
 	line.add_point(Vector2(0,0))
+	
+	print(from.rect_rotation," ",from.get_parent().get_parent().rotation_degrees)
 	from.add_child(line)
 	
 func delete_node():
@@ -212,4 +218,18 @@ func ResizeLegs(legs):
 	selected_node.ResizeLegs(legs)
 	CreateUI(selected_node)
 	
+func Rotate(index,node):
+	
+	if node==null:
+		node=selected_node
+	Database.GetCurrentTab().AppendHistory({"Action":"Rotate","Node":node,"From":abs(node.rotation_degrees),"To":90*index})
+	node.rotation_degrees=-90*index
+	if node.TYPE=="Gate" or node.TYPE=="Prefab":
+		node.get_node("Gate/Label").rect_rotation=90*index
+	if node.has_node("Sockets"):
+		for i in node.get_node("Sockets").get_children():
+			i.rect_rotation=90*index
+	if node.has_node("Outputs"):
+		for i in node.get_node("Outputs").get_children():
+			i.rect_rotation=90*index
 

@@ -27,3 +27,7 @@ func _on_Header_text_changed(new_text):
 		UIHandler.selected_node.name=new_text
 	else:
 		UIHandler.selected_node.get_node("Gate/Label").text=new_text
+
+
+func _on_OptionButton_item_selected(index):
+	UIHandler.Rotate(index,null)

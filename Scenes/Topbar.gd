@@ -99,3 +99,7 @@ func _on_Sync_Clocks_pressed():
 
 func _on_About_pressed():
 	get_node("../About").popup()
+
+
+func _on_Copyright_pressed():
+	get_node("../Copyright").popup()

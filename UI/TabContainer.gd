@@ -46,7 +46,7 @@ func SwitchTab(tabname):
 		tab.visible=tab.name==tabname
 	self.current_tab=self.get_node(tabname).get_index()
 	get_node("../CreateBar/VBoxContainer/Output").visible=tabs_node.get_node(tabname).format=="Scene"
-
+	get_node("../History").SwitchTab()
 
 
 func _on_OpeningError_popup_hide():
