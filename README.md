@@ -12,6 +12,6 @@ Logic Circuit Simulator is a open source tool that comes with following features
   * Create your own datas either by drag & drop or write as .json file.
 
 # Software
-  Logic Circuit Simulator is entirely built in Godot Engine.
-  Uses .json to analyze scenes & prefabs.
-  This software is developed by Umutcan Sevdi.
+  * Logic Circuit Simulator is entirely built in Godot Engine.
+  * Uses .json to analyze scenes & prefabs.
+  * This software is developed by Umutcan Sevdi.
