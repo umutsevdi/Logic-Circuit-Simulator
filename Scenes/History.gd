@@ -30,6 +30,7 @@ func UpdateHistory(Tab):
 	elif event.Action=="ResizeLegs" or event.Action=="Rotate":
 		string+="    "+str(event.From)+"    to    "+str(event.To)
 	$ScrollContainer/Itemlist.add_item(string,load(icons[event.Action]))
+	print("=",event.Action,"\t",string)
 func SwitchTab():
 	$ScrollContainer/Itemlist.clear()
 	var Tab=Database.GetCurrentTab()

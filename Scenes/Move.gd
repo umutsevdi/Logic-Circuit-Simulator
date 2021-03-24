@@ -26,7 +26,6 @@ func _process(delta):
 func MoveStart(order,object):
 	UIHandler.selected_node=object
 	create=order
-	print("Creating: ",order)
 	hold=true
 	node=UIHandler.selected_node
 	old_position=node.global_position
@@ -39,7 +38,6 @@ func MoveStart(order,object):
 	set_process(true)
 	
 func MoveEnd(_position):
-	print("Ending movement:", create,hold)
 	set_process(false)
 	node.modulate.a=1
 	node.global_position=_position
@@ -47,7 +45,6 @@ func MoveEnd(_position):
 	if old_position==_position and create:
 		UIHandler.delete_node()
 	else:
-		print("Action")
 		if create:
 			Database.GetCurrentTab().AppendHistory({"Action":"Create","Node":UIHandler.selected_node})
 		elif old_position!=_position:

@@ -108,5 +108,5 @@ alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_down" from="Gate" to="Gate" method="_on_Button_button_down"]
-[connection signal="button_up" from="Gate" to="Gate" method="_on_Button_button_up"]
+[connection signal="button_down" from="Gate" to="." method="_on_Button_button_down"]
+[connection signal="button_up" from="Gate" to="." method="_on_Button_button_up"]

@@ -25,3 +25,7 @@ func _on_Gate_button_down():
 
 func _on_Gate_button_up():
 	Move.hold=false
+
+func DeleteNode():
+	if $Outputs/Output.connection:
+		$Outputs/Output.emit_signal("value_changed",2)

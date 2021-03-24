@@ -52,3 +52,12 @@ func DeleteNode():
 		$Sockets.rect_size.y=36*$Sockets.get_child_count()
 		$Gate.rect_size.y=36*$Sockets.get_child_count()
 		$Gate/Label.rect_size.y=36*$Sockets.get_child_count()
+		
+func _on_Button_button_down():
+	if Move.create:
+		Move.hold=false
+	else:
+		Move.MoveStart(false,self)
+
+func _on_Button_button_up():
+	Move.hold=false

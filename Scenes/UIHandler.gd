@@ -206,7 +206,7 @@ func delete_node():
 	
 	if selected_node.TYPE=="Gate":
 		ResizeLegs(0)
-	elif selected_node.TYPE=="Prefab":
+	elif selected_node.TYPE=="Prefab" or selected_node.TYPE=="Variable" or selected_node.TYPE=="Clock":
 		selected_node.DeleteNode()
 	Database.GetCurrentTab().AppendHistory({"Action":"Delete","Node":UIHandler.selected_node.duplicate(8)})
 	selected_node.queue_free()

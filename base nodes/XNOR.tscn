@@ -95,5 +95,3 @@ margin_left = 2.0
 margin_top = -8.0
 margin_right = 18.0
 margin_bottom = 8.0
-[connection signal="button_down" from="." to="." method="_on_Button_button_down"]
-[connection signal="button_up" from="." to="." method="_on_Button_button_up"]

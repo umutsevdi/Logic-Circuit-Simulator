@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://UI/TabContainer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=2]
@@ -65,6 +65,8 @@
 [ext_resource path="res://Assets/ButtonPressed.tres" type="StyleBox" id=63]
 [ext_resource path="res://Assets/ButtonDisabled.tres" type="StyleBox" id=64]
 [ext_resource path="res://Assets/ButtonHover.tres" type="StyleBox" id=65]
+[ext_resource path="res://Assets/Icons/Zoom.svg" type="Texture" id=66]
+[ext_resource path="res://Scenes/Scene.gd" type="Script" id=67]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 15.0
@@ -96,6 +98,7 @@ shortcut = SubResource( 5 )
 bg_color = Color( 0.156863, 0.168627, 0.12549, 1 )
 
 [node name="Scene" type="Node2D"]
+script = ExtResource( 67 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 802, 453 )
@@ -1151,6 +1154,22 @@ margin_right = 31.0
 margin_bottom = 36.0
 texture = ExtResource( 36 )
 stretch_mode = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ZoomLevel" type="Button" parent="CanvasLayer/GridSeperator"]
+margin_left = -178.0
+margin_right = -10.0
+margin_bottom = 36.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 60 )
+shortcut_in_tooltip = false
+button_mask = 0
+enabled_focus_mode = 0
+text = "Zoom Level : 100%"
+icon = ExtResource( 66 )
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -2233,6 +2252,15 @@ theme = ExtResource( 7 )
 window_title = "Opening Error:"
 dialog_text = "Error while opening filepath. File is missing, corrupted or not supported."
 dialog_autowrap = true
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 8.0
+margin_top = 104.0
+margin_right = 352.0
+margin_bottom = 160.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="tab_changed" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_changed"]
 [connection signal="tab_selected" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_selected"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/New Scene" to="CanvasLayer/TopBar" method="_on_New_Scene_pressed"]

@@ -9,11 +9,3 @@ func Calculate():
 		for i in range(get_node("Tab/PrefabItems/Inputs").get_child_count()):
 			get_node("../Outputs").get_child(i).SetValue(get_node("Tab/PrefabItems/Inputs").get_child(i).value)
 		
-func _on_Button_button_down():
-	if Move.create:
-		Move.hold=false
-	else:
-		Move.MoveStart(false,self)
-
-func _on_Button_button_up():
-	Move.hold=false
