@@ -11,5 +11,5 @@ func _draw():
 		for i in range(int((cam.y - size.y) / grid) - 1, int((size.y + cam.y) / grid) + 1):
 			draw_line(Vector2(cam.x + size.x + 100, i * grid), Vector2(cam.x - size.x - 100, i * grid), "50ffffff")
 
-func _process(delta):
+func _process(_delta):
 	update()

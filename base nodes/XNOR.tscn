@@ -16,12 +16,11 @@ corner_detail = 20
 anti_aliasing_size = 2
 
 [node name="Gate" type="Button"]
-margin_left = -40.0
-margin_top = -36.0
-margin_right = 40.0
-margin_bottom = 36.0
+margin_right = 80.0
+margin_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
+rect_pivot_offset = Vector2( 40, 36 )
 focus_mode = 0
 custom_styles/hover = ExtResource( 2 )
 custom_styles/pressed = ExtResource( 5 )
@@ -76,8 +75,8 @@ end_cap_mode = 2
 antialiased = true
 
 [node name="Label" type="Label" parent="."]
-margin_left = 8.0
-margin_right = 88.0
+margin_left = 5.0
+margin_right = 85.0
 margin_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2

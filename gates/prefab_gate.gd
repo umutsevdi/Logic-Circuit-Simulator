@@ -38,8 +38,12 @@ func ResizeLegs():
 			$Outputs.add_child(s)
 	$Sockets.rect_size.y=36*$Sockets.get_child_count()
 	$Outputs.rect_size.y=25*$Outputs.get_child_count()
-	$Gate.rect_size.y=36*$Sockets.get_child_count()
-	$Gate/Label.rect_size.y=36*$Sockets.get_child_count()
+	legs=$Sockets.get_child_count()
+	$Gate.rect_size.y=36*legs
+	$Gate.rect_position.y=-18*legs
+	$Gate.rect_pivot_offset.y=18*legs
+	$Gate/Label.rect_size.y=36*legs
+	$Gate/Label.rect_pivot_offset.y=18*legs
 func DeleteNode():
 	for i in range($Sockets.get_child_count()):
 		if $Sockets.get_child(i).connected:

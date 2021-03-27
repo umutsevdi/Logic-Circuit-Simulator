@@ -78,7 +78,7 @@ func CreateUI(node):
 		displayer.get_node("VBoxContainer/HBoxContainer/LineEdit").editable=true
 		displayer.get_node("VBoxContainer/HBoxContainer/Reduce").disabled=false
 		displayer.get_node("VBoxContainer/HBoxContainer/Increase").disabled=false
-	displayer.get_node("VBoxContainer/HBoxContainer/LineEdit").text=str(node.get_node("Sockets").get_child_count())
+	displayer.get_node("VBoxContainer/HBoxContainer/LineEdit").text=str(node.legs)
 
 	for tab in displayer.get_node("VBoxContainer/InputTab").get_children():
 		if !selected_node.get_node("Sockets").has_node(tab.socket):
@@ -224,8 +224,10 @@ func Rotate(index,node):
 		node=selected_node
 	Database.GetCurrentTab().AppendHistory({"Action":"Rotate","Node":node,"From":abs(node.rotation_degrees),"To":90*index})
 	node.rotation_degrees=-90*index
-	if node.TYPE=="Gate" or node.TYPE=="Prefab":
+	if (node.TYPE=="Gate" or node.TYPE=="Prefab"):# and index==2:
 		node.get_node("Gate/Label").rect_rotation=90*index
+	#else:
+	#	node.get_node("Gate/Label").rect_rotation=0
 	if node.has_node("Sockets"):
 		for i in node.get_node("Sockets").get_children():
 			i.rect_rotation=90*index

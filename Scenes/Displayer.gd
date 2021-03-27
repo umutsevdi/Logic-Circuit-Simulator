@@ -18,14 +18,20 @@ func _on_Button_pressed():
 	self.visible=false
 
 func _on_Reduce_pressed():
+	print("Reduce")
 	if ($VBoxContainer/HBoxContainer/LineEdit.text.to_int())>1:
+		print($VBoxContainer/HBoxContainer/LineEdit.text)
 		$VBoxContainer/HBoxContainer/LineEdit.text=str($VBoxContainer/HBoxContainer/LineEdit.text.to_int()-1)
-	UIHandler.ResizeLegs($VBoxContainer/HBoxContainer/LineEdit.text.to_int())
+		print($VBoxContainer/HBoxContainer/LineEdit.text)
+		UIHandler.ResizeLegs($VBoxContainer/HBoxContainer/LineEdit.text.to_int())
 
 func _on_Increase_pressed():
+	print("Increase")
 	if ($VBoxContainer/HBoxContainer/LineEdit.text.to_int())<10:
+		print($VBoxContainer/HBoxContainer/LineEdit.text)
 		$VBoxContainer/HBoxContainer/LineEdit.text=str($VBoxContainer/HBoxContainer/LineEdit.text.to_int()+1)
-	UIHandler.ResizeLegs($VBoxContainer/HBoxContainer/LineEdit.text.to_int())
+		print($VBoxContainer/HBoxContainer/LineEdit.text)
+		UIHandler.ResizeLegs($VBoxContainer/HBoxContainer/LineEdit.text.to_int())
 
 func _on_ConfirmationDialog_confirmed():
 	UIHandler.delete_node()
@@ -45,6 +51,7 @@ func _on_GridSeperator_value_changed(value):
 	Move.grid_value=value
 
 func _on_LineEdit_text_entered(new_text):
+	print("New Text")
 	if !new_text.is_valid_integer():
 		$VBoxContainer/HBoxContainer/LineEdit.text="1"
 	elif new_text.to_int()<=0:

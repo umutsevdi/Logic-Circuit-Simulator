@@ -20,10 +20,8 @@ thickness = 4
 vertical = true
 
 [node name="Gate" type="Button"]
-margin_left = -40.0
-margin_top = -36.0
-margin_right = 40.0
-margin_bottom = 36.0
+margin_right = 80.0
+margin_bottom = 72.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_pivot_offset = Vector2( 40, 36 )

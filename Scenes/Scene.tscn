@@ -614,7 +614,7 @@ custom_styles/normal = ExtResource( 60 )
 text = "Right"
 icon = ExtResource( 37 )
 align = 2
-items = [ "Right", ExtResource( 37 ), false, 0, null, "Down", ExtResource( 62 ), false, 1, null, "Left", ExtResource( 61 ), false, 2, null, "Up", ExtResource( 39 ), false, 3, null ]
+items = [ "Right", ExtResource( 37 ), false, 0, null, "Up", ExtResource( 39 ), false, 1, null, "Left", ExtResource( 61 ), false, 2, null, "Down", ExtResource( 62 ), false, 3, null ]
 selected = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
@@ -800,7 +800,7 @@ custom_styles/normal = ExtResource( 60 )
 text = "Right"
 icon = ExtResource( 37 )
 align = 2
-items = [ "Right", ExtResource( 37 ), false, 0, null, "Down", ExtResource( 62 ), false, 1, null, "Left", ExtResource( 61 ), false, 2, null, "Up", ExtResource( 39 ), false, 3, null ]
+items = [ "Right", ExtResource( 37 ), false, 0, null, "Up", ExtResource( 39 ), false, 1, null, "Left", ExtResource( 61 ), false, 2, null, "Down", ExtResource( 62 ), false, 3, null ]
 selected = 0
 
 [node name="HSeparator" type="HSeparator" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
@@ -1175,18 +1175,19 @@ __meta__ = {
 }
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="CanvasLayer"]
+visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -130.5
+margin_left = -120.0
 margin_top = -37.5
-margin_right = 130.5
+margin_right = 120.0
 margin_bottom = 37.5
 theme = ExtResource( 7 )
 popup_exclusive = true
 window_title = "Delete Request"
-dialog_text = "Are you sure that you want to permanently delete this circuit?"
+dialog_text = "Are you sure that you want to permanently delete this element?"
 dialog_autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false

@@ -33,9 +33,12 @@ func ResizeLegs(leg_count):
 				$Outputs/Output.emit_signal("value_changed",2)
 			$Sockets.get_child(i).queue_free()
 	if $Gate/Label.text!="NOT":
-		$Sockets.rect_size.y=36*$Sockets.get_child_count()
-		$Gate.rect_size.y=36*$Sockets.get_child_count()
-		$Gate/Label.rect_size.y=36*$Sockets.get_child_count()
+		$Gate.rect_size.y=36*legs
+		$Gate.rect_position.y=-18*legs
+		$Gate.rect_pivot_offset.y=18*legs
+		$Gate/Label.rect_size.y=36*legs
+		$Gate/Label.rect_pivot_offset.y=18*legs
+	UIHandler.CreateUI(self)
 func CreateNode():
 	UIHandler.CreateUI(self)
 	Move.MoveStart(true,self)

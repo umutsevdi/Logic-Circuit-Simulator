@@ -21,6 +21,8 @@ func SetupUnit(gatetype):
 	else:
 		node=base_gate.instance()
 		var gate=gates[gatetype].instance()
+		gate.rect_position.y=-36
+		gate.rect_position.x=-40
 		node.add_child(gate)
 		node.move_child(gate,0)
 	return node
