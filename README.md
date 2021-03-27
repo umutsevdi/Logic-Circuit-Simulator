@@ -1,4 +1,4 @@
-(https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/icon.png)
+![image](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/icon.png)
 # Logic-Circuit-Simulator
 A free Logic Circuit Simulator built-in Godot Engine by Umutcan Sevdi.
 
