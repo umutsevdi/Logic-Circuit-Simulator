@@ -1,5 +1,6 @@
-![image](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/icon.png)
+
 # Logic-Circuit-Simulator
+![image](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/icon.png)
 A free Logic Circuit Simulator built-in Godot Engine by Umutcan Sevdi.
 
 Logic Circuit Simulator is an open-source tool that comes with the following features:
@@ -12,11 +13,11 @@ Logic Circuit Simulator is an open-source tool that comes with the following fea
   * Save prefabs and reach them across other scenes and even other prefabs. 
   * Create your data either by drag & drop or write as a .json file.
 
-# Software
+## Software
   * Logic Circuit Simulator is entirely built-in Godot Engine.
   * Uses .json to analyze scenes & prefabs.
   * This software is developed by Umutcan Sevdi.
 
-# Download & Use:
+## Download & Use:
  * Check out following link to use this Simulator. You can use most of it's features on web version.
  * https://umuts.itch.io/logic-circuit-simulator
