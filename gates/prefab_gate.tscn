@@ -85,12 +85,12 @@ visible = false
 
 [node name="Sockets" type="VBoxContainer" parent="."]
 margin_left = -64.0
-margin_top = -35.0
+margin_top = -36.0
 margin_right = -39.0
-margin_bottom = 37.0
+margin_bottom = 36.0
 grow_horizontal = 2
 grow_vertical = 2
-rect_pivot_offset = Vector2( 12, 36 )
+rect_pivot_offset = Vector2( 12.5, 36 )
 alignment = 1
 __meta__ = {
 "_edit_use_anchors_": false

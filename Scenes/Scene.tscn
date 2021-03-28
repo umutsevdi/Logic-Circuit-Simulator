@@ -1,4 +1,4 @@
-[gd_scene load_steps=75 format=2]
+[gd_scene load_steps=76 format=2]
 
 [ext_resource path="res://UI/TabContainer.gd" type="Script" id=1]
 [ext_resource path="res://Scenes/Camera2D.gd" type="Script" id=2]
@@ -67,6 +67,7 @@
 [ext_resource path="res://Assets/ButtonHover.tres" type="StyleBox" id=65]
 [ext_resource path="res://Assets/Icons/Zoom.svg" type="Texture" id=66]
 [ext_resource path="res://Scenes/Scene.gd" type="Script" id=67]
+[ext_resource path="res://Assets/Icons/Mouse.svg" type="Texture" id=68]
 
 [sub_resource type="StyleBoxFlat" id=1]
 content_margin_left = 15.0
@@ -547,6 +548,7 @@ text = "About"
 icon = ExtResource( 35 )
 
 [node name="Displayer" type="Panel" parent="CanvasLayer"]
+visible = false
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
@@ -586,26 +588,37 @@ __meta__ = {
 margin_right = 219.0
 margin_bottom = 15.0
 rect_min_size = Vector2( 0, 15 )
-text = "Type: AND"
+text = "Type : AND"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
+margin_top = 19.0
+margin_right = 219.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 0, 15 )
+text = "Position : ( 1425 , 2049 )"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Rotation" type="HBoxContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 19.0
+margin_top = 38.0
 margin_right = 219.0
-margin_bottom = 41.0
+margin_bottom = 60.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Displayer/VBoxContainer/Rotation"]
 margin_top = 4.0
-margin_right = 57.0
+margin_right = 65.0
 margin_bottom = 18.0
-text = "Rotation:"
+text = "Rotation : "
 
 [node name="OptionButton" type="OptionButton" parent="CanvasLayer/Displayer/VBoxContainer/Rotation"]
-margin_left = 61.0
-margin_right = 149.0
+margin_left = 69.0
+margin_right = 157.0
 margin_bottom = 22.0
 custom_styles/hover = ExtResource( 65 )
 custom_styles/pressed = ExtResource( 63 )
@@ -618,9 +631,9 @@ items = [ "Right", ExtResource( 37 ), false, 0, null, "Up", ExtResource( 39 ), f
 selected = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 45.0
+margin_top = 64.0
 margin_right = 219.0
-margin_bottom = 70.0
+margin_bottom = 89.0
 rect_min_size = Vector2( 219, 25 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -631,7 +644,7 @@ margin_top = 5.0
 margin_right = 80.0
 margin_bottom = 19.0
 rect_min_size = Vector2( 80, 0 )
-text = "Input Legs: "
+text = "Input Legs : "
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -664,21 +677,21 @@ __meta__ = {
 }
 
 [node name="HSeparator" type="HSeparator" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 74.0
+margin_top = 93.0
 margin_right = 219.0
-margin_bottom = 79.0
+margin_bottom = 98.0
 custom_constants/separation = 5
 
 [node name="Input" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 83.0
+margin_top = 102.0
 margin_right = 219.0
-margin_bottom = 97.0
-text = "Input:"
+margin_bottom = 116.0
+text = "Input :"
 
 [node name="InputTab" type="TabContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 101.0
+margin_top = 120.0
 margin_right = 219.0
-margin_bottom = 157.0
+margin_bottom = 176.0
 rect_min_size = Vector2( 0, 56 )
 theme = ExtResource( 7 )
 __meta__ = {
@@ -686,15 +699,15 @@ __meta__ = {
 }
 
 [node name="Output" type="Label" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 161.0
+margin_top = 180.0
 margin_right = 219.0
-margin_bottom = 175.0
-text = "Output:"
+margin_bottom = 194.0
+text = "Output :"
 
 [node name="OutputTab" type="TabContainer" parent="CanvasLayer/Displayer/VBoxContainer"]
-margin_top = 179.0
+margin_top = 198.0
 margin_right = 219.0
-margin_bottom = 235.0
+margin_bottom = 254.0
 rect_min_size = Vector2( 0, 56 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -771,27 +784,38 @@ __meta__ = {
 margin_right = 219.0
 margin_bottom = 15.0
 rect_min_size = Vector2( 0, 15 )
-text = "Type: Variable"
+text = "Type : Variable"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position" type="Label" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
+margin_top = 19.0
+margin_right = 219.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 0, 15 )
+text = "Position : ( 1425 , 2049 )"
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Rotation" type="HBoxContainer" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 48.0
+margin_top = 38.0
 margin_right = 219.0
-margin_bottom = 70.0
+margin_bottom = 60.0
 theme = ExtResource( 7 )
 
 [node name="Label" type="Label" parent="CanvasLayer/DisplayerVariable/VBoxContainer/Rotation"]
 margin_top = 4.0
-margin_right = 57.0
+margin_right = 65.0
 margin_bottom = 18.0
-text = "Rotation:"
+text = "Rotation : "
 
 [node name="OptionButton" type="OptionButton" parent="CanvasLayer/DisplayerVariable/VBoxContainer/Rotation"]
-margin_left = 61.0
-margin_right = 140.0
+margin_left = 69.0
+margin_right = 157.0
 margin_bottom = 22.0
 custom_styles/hover = ExtResource( 65 )
 custom_styles/pressed = ExtResource( 63 )
@@ -804,21 +828,21 @@ items = [ "Right", ExtResource( 37 ), false, 0, null, "Up", ExtResource( 39 ), f
 selected = 0
 
 [node name="HSeparator" type="HSeparator" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 19.0
+margin_top = 64.0
 margin_right = 219.0
-margin_bottom = 24.0
+margin_bottom = 69.0
 custom_constants/separation = 5
 
 [node name="Output" type="Label" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 28.0
+margin_top = 73.0
 margin_right = 219.0
-margin_bottom = 42.0
-text = "Output:"
+margin_bottom = 87.0
+text = "Output :"
 
 [node name="OutputTab" type="TabContainer" parent="CanvasLayer/DisplayerVariable/VBoxContainer"]
-margin_top = 46.0
+margin_top = 91.0
 margin_right = 219.0
-margin_bottom = 155.0
+margin_bottom = 200.0
 rect_min_size = Vector2( 0, 56 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -839,8 +863,8 @@ __meta__ = {
 
 [node name="Delete" type="TextureButton" parent="CanvasLayer/DisplayerVariable/HBoxContainer"]
 modulate = Color( 0, 0, 0, 1 )
-margin_left = 173.0
-margin_right = 193.0
+margin_left = 197.0
+margin_right = 217.0
 margin_bottom = 20.0
 rect_min_size = Vector2( 20, 20 )
 shortcut = SubResource( 4 )
@@ -1169,6 +1193,22 @@ button_mask = 0
 enabled_focus_mode = 0
 text = "Zoom Level : 100%"
 icon = ExtResource( 66 )
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CursorPosition" type="Button" parent="CanvasLayer/GridSeperator"]
+margin_left = -370.0
+margin_right = -187.0
+margin_bottom = 36.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 60 )
+shortcut_in_tooltip = false
+button_mask = 0
+enabled_focus_mode = 0
+text = "Cursor : (-4021,-2015)"
+icon = ExtResource( 68 )
 clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false

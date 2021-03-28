@@ -36,8 +36,6 @@ func ResizeLegs():
 			var s = output.instance()
 			s.name="O"+str(i.get_instance_id())
 			$Outputs.add_child(s)
-	$Sockets.rect_size.y=36*$Sockets.get_child_count()
-	$Outputs.rect_size.y=25*$Outputs.get_child_count()
 	legs=$Sockets.get_child_count()
 	$Gate.rect_size.y=36*legs
 	$Gate.rect_position.y=-18*legs

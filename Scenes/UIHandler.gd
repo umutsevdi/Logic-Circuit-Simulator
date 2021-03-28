@@ -117,6 +117,7 @@ func UpdateUI(node):
 	selected_node=node
 	if node.TYPE!="Variable" and node.TYPE!="Label" and node.TYPE!="Output" and node.TYPE!="Clock":
 		displayer.visible=true
+		displayer.get_node("VBoxContainer/Position").text="Position : ( "+str(int(selected_node.position.x))+" , "+str(int(selected_node.position.y))+" )"
 		for tab in displayer.get_node("VBoxContainer/InputTab").get_children():
 			if selected_node.get_node("Sockets").has_node(tab.socket):
 				var found_node=selected_node.get_node("Sockets").get_node(tab.socket)
@@ -142,6 +143,7 @@ func UpdateUI(node):
 				tab.queue_free()
 	else:
 		displayer.get_node("../DisplayerVariable").visible=true
+		displayer.get_node("../DisplayerVariable/VBoxContainer/Position").text="Position : ( "+str(int(selected_node.position.x))+" , "+str(int(selected_node.position.y))+" )"
 		if selected_node.TYPE=="Variable" or selected_node.TYPE=="Clock":
 			var i = node.get_node("Outputs").get_child(0)
 			var tab=displayer.get_node("../DisplayerVariable/VBoxContainer/OutputTab/Output")
