@@ -43,6 +43,7 @@ func _on_Header_text_changed(new_text):
 	UIHandler.selected_node.name=new_text
 
 func _on_GridSeperator_value_changed(value):
+	get_node("../..").update()
 	if value>75:
 		grid_value=75
 		get_node("../GridSeperator").value=75

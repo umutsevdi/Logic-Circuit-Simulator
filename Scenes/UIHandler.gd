@@ -205,13 +205,16 @@ func start_connection(node):
 	from.add_child(line)
 	
 func delete_node():
-	
-	if selected_node.TYPE=="Gate":
-		ResizeLegs(0)
-	elif selected_node.TYPE=="Prefab" or selected_node.TYPE=="Variable" or selected_node.TYPE=="Clock":
-		selected_node.DeleteNode()
-	Database.GetCurrentTab().AppendHistory({"Action":"Delete","Node":UIHandler.selected_node.duplicate(8)})
-	selected_node.queue_free()
+	if selected_node.name in get_node("/root/Scene").selected.keys():
+		for i in get_node("/root/Scene").selected.keys():
+			selected_node=get_node("/root/Scene").selected[i].Node
+			if selected_node.TYPE=="Gate":
+				ResizeLegs(0)
+			elif selected_node.TYPE=="Prefab" or selected_node.TYPE=="Variable" or selected_node.TYPE=="Clock":
+				selected_node.DeleteNode()
+			Database.GetCurrentTab().AppendHistory({"Action":"Delete","Node":UIHandler.selected_node.duplicate(8)})
+			selected_node.queue_free()
+	get_node("/root/Scene").SelectionEffect(false)
 	selected_node=null
 	displayer.visible=false
 	timer=0
