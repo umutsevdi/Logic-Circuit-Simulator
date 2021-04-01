@@ -39,11 +39,11 @@ func ResizeLegs(leg_count):
 		$Gate/Label.rect_size.y=36*legs
 		$Gate/Label.rect_pivot_offset.y=18*legs
 	UIHandler.CreateUI(self)
+	
 func CreateNode():
 	UIHandler.CreateUI(self)
 	Move.MoveStart(true,self)
 
-	
 func _on_Button_button_down():
 	if Move.create:
 		Move.hold=false

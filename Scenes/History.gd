@@ -29,6 +29,8 @@ func UpdateHistory(Tab):
 		string+="    ("+str(int(event.From.x))+","+str(int(event.From.y))+")"+"    to    ("+str(int(event.To.x))+","+str(int(event.To.y))+")"
 	elif event.Action=="ResizeLegs" or event.Action=="Rotate":
 		string+="    "+str(event.From)+"    to    "+str(event.To)
+	elif event.Action=="Save":
+		string+="    Saved"
 	$ScrollContainer/Itemlist.add_item(string,load(icons[event.Action]))
 	print("=",event.Action,"\t",string)
 func SwitchTab():

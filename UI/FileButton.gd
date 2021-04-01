@@ -11,6 +11,7 @@ func _ready():
 			$Button.disabled=true
 	else:
 		$Button.hint_tooltip=self.name+"\nUnknown File Format\n\""+str(path)+"\""
+		
 func _on_Button_down():
 	var node=Prefab.instance()
 	node.name=self.name+" "+str(node.get_instance_id())

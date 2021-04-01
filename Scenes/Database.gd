@@ -12,8 +12,9 @@ func _ready():
 	if dir.open("user://") == OK:
 		dir.make_dir("user://Scenes")
 		dir.make_dir("user://Prefabs")
+		
 func SaveScene(tab,filepath):
-	print("Saving Tab:\t",tab)
+	GetCurrentTab().AppendHistory({"Action":"Save"})
 	var TabData={}
 	for i in tab.get_children():
 		if i.get_node("Gate/Label").text=="Variable":

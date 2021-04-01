@@ -5,10 +5,9 @@ var mouse=false
 
 signal value_changed
 var connection=0
-func _ready():
-	set_process(false)
+var coloring=false
 
-func _physics_process(delta):
+func _process(delta):
 	if mouse and $Blocks.rect_scale.x<1.5:
 		$Blocks.rect_scale+=Vector2(5*delta,5*delta)
 	elif mouse and $Blocks.rect_scale>=Vector2(1.5,1.5):
@@ -17,19 +16,20 @@ func _physics_process(delta):
 		$Blocks.rect_scale-=Vector2(5*delta,5*delta)
 	else:
 		$Blocks.rect_scale=Vector2(1,1)
-func _process(delta):
+		
+	if coloring:
+		if value==1 and $Blocks/off.modulate.a>0:	$Blocks/off.modulate.a-=5*delta
+		elif value==0 and $Blocks/off.modulate.a<1:	$Blocks/off.modulate.a+=5*delta
+		elif value==1 and $Blocks/off.modulate.a<=0:
+			$Blocks/off.modulate.a=0
+			coloring=false
+		else:
+			$Blocks/off.modulate.a=1
+			coloring=false
 
-	if value==1 and $Blocks/off.modulate.a>0:	$Blocks/off.modulate.a-=5*delta
-	elif value==0 and $Blocks/off.modulate.a<1:	$Blocks/off.modulate.a+=5*delta
-	elif value==1 and $Blocks/off.modulate.a<=0:
-		$Blocks/off.modulate.a=0
-		set_process(false)
-	else:
-		$Blocks/off.modulate.a=1
-		set_process(false)
 func SetValue(state):
 	if state!=value:
-		set_process(true)
+		coloring=true
 	if state>0:
 		value=state
 	else:

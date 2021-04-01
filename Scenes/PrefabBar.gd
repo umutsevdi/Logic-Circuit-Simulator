@@ -4,6 +4,7 @@ var file=preload("res://UI/FileButton.tscn")
 func _ready():
 	_on_RefreshButton_pressed()
 	$HBoxContainer/Button.pressed=true
+	
 func _on_Path_text_entered(new_text):
 	if new_text=="res://":
 		get_node("HBoxContainer/Path").text="user://"

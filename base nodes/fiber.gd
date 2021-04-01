@@ -1,6 +1,7 @@
 extends Line2D
 var source=null
 var target=null
+
 func _process(_delta):
 	if source!=null and target!=null:
 		$Light.points[self.points.size()-1]=self.points[self.points.size()-1]

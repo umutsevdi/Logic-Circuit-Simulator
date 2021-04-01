@@ -1,5 +1,8 @@
 extends Node2D
 export var on = true
+
+func _process(_delta):
+	update()
 func _draw():
 	if dragging:
 		draw_rect(Rect2(drag_start, get_global_mouse_position() - drag_start),
@@ -13,34 +16,32 @@ func _draw():
 		for i in range(int((cam.y - size.y) / grid) - 1, int((size.y + cam.y) / grid) + 1):
 			draw_line(Vector2(cam.x + size.x + 100, i * grid), Vector2(cam.x - size.x - 100, i * grid), "50ffffff")
 
-var dragging = false  # Are we currently dragging?
-var selected = {}  # Array of currently selected units.
-var drag_start = Vector2.ZERO  # Location where drag began.
-var select_rect = RectangleShape2D.new()  # Collision shape for drag box.
-		
+var dragging = false 
+var selected = {}
+var drag_start = Vector2.ZERO
 func _unhandled_input(event):
 	if event is InputEventMouseButton and event.button_index == BUTTON_LEFT:
 		if event.pressed:
+			drag_start = Vector2.ZERO
 			if selected.size() == 0:
 				dragging = true
 				drag_start = UIHandler.mouse_position
 			else:
 				SelectionEffect(false)
-			
-		# Button released while dragging.
 		elif dragging:
 			dragging = false
-			update()
-			var drag_end = event.position
-			select_rect.extents = (drag_end - drag_start) / 2
+			#var drag_end = event.position
+			var drag_end=UIHandler.mouse_position
+			print("---")
 			for i in Database.GetCurrentTab().get_children():
-				if i.position.x in range(drag_start.x,drag_end.x) and i.position.y in range(drag_start.y,drag_end.y):
+				print(i.position,"\t",drag_start,"\t",drag_end,i.position.x in range(drag_start.x,drag_end.x), i.position.y in range(drag_start.y,drag_end.y))
+				if i.position.x>=drag_start.x and i.position.x<=drag_end.x and i.position.y>=drag_start.y and i.position.y<=drag_end.y:
 					selected[i.name]={"Node":i,"Position":i.position}
+					print(i.name)
 			SelectionEffect(true)
-			#selected=[]
 
 	if event is InputEventMouseMotion and dragging:
-		update()
+		pass#update()
 func SelectionEffect(selecting):
 	get_node("CanvasLayer/Label").text="Selected:"
 	if selecting:
