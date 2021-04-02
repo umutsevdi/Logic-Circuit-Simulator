@@ -1215,7 +1215,6 @@ __meta__ = {
 }
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="CanvasLayer"]
-visible = true
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -2302,6 +2301,60 @@ margin_bottom = 160.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="CloseTab" type="WindowDialog" parent="CanvasLayer"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -148.0
+margin_top = -39.0
+margin_right = 148.0
+margin_bottom = 39.0
+window_title = "Close Tab"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CanvasLayer/CloseTab"]
+margin_left = 16.0
+margin_top = 6.0
+margin_right = 283.0
+margin_bottom = 51.0
+text = "You've made changes on this tab since the last save. "
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/CloseTab"]
+margin_top = 51.0
+margin_right = 296.0
+margin_bottom = 71.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Save" type="Button" parent="CanvasLayer/CloseTab/HBoxContainer"]
+margin_left = 14.0
+margin_right = 120.0
+margin_bottom = 20.0
+text = "Save & Close"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Close" type="Button" parent="CanvasLayer/CloseTab/HBoxContainer"]
+margin_left = 124.0
+margin_right = 282.0
+margin_bottom = 20.0
+text = "Close Without Saving"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="tab_changed" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_changed"]
 [connection signal="tab_selected" from="CanvasLayer/TabContainer" to="CanvasLayer/TabContainer" method="_on_TabContainer_tab_selected"]
 [connection signal="pressed" from="CanvasLayer/TopBar/Files/HBoxContainer/New Scene" to="CanvasLayer/TopBar" method="_on_New_Scene_pressed"]
@@ -2346,3 +2399,5 @@ __meta__ = {
 [connection signal="pressed" from="CanvasLayer/About/HBoxContainer/Linkedin" to="CanvasLayer/About" method="_on_Linkedin_pressed"]
 [connection signal="pressed" from="CanvasLayer/About/HBoxContainer/itch" to="CanvasLayer/About" method="_on_itch_pressed"]
 [connection signal="popup_hide" from="CanvasLayer/OpeningError" to="CanvasLayer/TabContainer" method="_on_OpeningError_popup_hide"]
+[connection signal="pressed" from="CanvasLayer/CloseTab/HBoxContainer/Save" to="CanvasLayer/TopBar" method="_on_SaveAndClose_pressed"]
+[connection signal="pressed" from="CanvasLayer/CloseTab/HBoxContainer/Close" to="CanvasLayer/TopBar" method="_on_SaveWithoutClose_pressed"]

@@ -18,9 +18,9 @@ func _process(delta):
 				if grid_value==0:
 					selected_units[i].Node.position=UIHandler.mouse_position+mouse_dist+selected_units[i].Position-old_position
 				else:
-					node.position.x=int((UIHandler.mouse_position.x+mouse_dist.x)/grid_value)*grid_value+mouse_dist+selected_units[i].Position-old_position
-					node.position.y=int((UIHandler.mouse_position.y+mouse_dist.y)/grid_value)*grid_value+mouse_dist+selected_units[i].Position-old_position
-				
+					selected_units[i].Node.position.x=int((UIHandler.mouse_position.x+mouse_dist.x)/grid_value)*grid_value
+					selected_units[i].Node.position.y=int((UIHandler.mouse_position.y+mouse_dist.y)/grid_value)*grid_value
+					selected_units[i].Node.position+=selected_units[i].Position-old_position
 				if Input.is_action_just_pressed("right_click"):
 					MoveEnd(old_position)
 		else:

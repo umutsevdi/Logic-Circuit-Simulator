@@ -5,14 +5,16 @@ onready var Prefab=preload("res://gates/prefab_gate.tscn")
 var path=""
 var Item={}
 func _ready():
+
 	if Item.has("Format"):
 		$Button.hint_tooltip=self.name+"\n"+Item.Format+" File\n\""+str(path)+"\""
 		if Item.Format=="Scene":
 			$Button.disabled=true
 	else:
 		$Button.hint_tooltip=self.name+"\nUnknown File Format\n\""+str(path)+"\""
-		
 func _on_Button_down():
+	
+	
 	var node=Prefab.instance()
 	node.name=self.name+" "+str(node.get_instance_id())
 	var selected_tab=Database.GetCurrentTab()

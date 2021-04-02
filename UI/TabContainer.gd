@@ -20,6 +20,24 @@ func _on_TabContainer_tab_selected(tab):
 	if self.get_tab_control(tab).name=="+":
 		get_node("../CreateScene").EmptyBox("Scene")
 		get_node("../CreateScene").popup()
+		for i in get_node("../CreateBar/VBoxContainer").get_children():
+			if i.get_class()=="Button":
+				i.disabled=true
+		get_node("../PrefabBar/HBoxContainer/Path").editable=false
+		get_node("../PrefabBar/HBoxContainer/UpButton").disabled=true
+		get_node("../PrefabBar/HBoxContainer/Button").disabled=true
+		for i in get_node("../PrefabBar/ScrollContainer/VBoxContainer").get_children():
+			i.get_node("Button").disabled=true
+	else:
+		for i in get_node("../CreateBar/VBoxContainer").get_children():
+			if i.get_class()=="Button":
+				i.disabled=false
+		get_node("../PrefabBar/HBoxContainer/Path").editable=true
+		get_node("../PrefabBar/HBoxContainer/UpButton").disabled=false
+		get_node("../PrefabBar/HBoxContainer/Button").disabled=false
+		for i in get_node("../PrefabBar/ScrollContainer/VBoxContainer").get_children():
+			i.get_node("Button").disabled=false
+		
 func CreateCustomTab(tabname,format):
 	var is_existing=false
 	for i in self.get_children():

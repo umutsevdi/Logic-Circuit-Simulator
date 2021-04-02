@@ -152,8 +152,6 @@ func CreateScene(Filepath,TabData):
 			unit.position.x=TabData[i].Position.x
 			unit.position.y=TabData[i].Position.y
 			tab.add_child(unit)
-			if TabData[i].has("Rotation"):
-				UIHandler.Rotate(TabData[i].Rotation/-90,unit)
 			unit.name=i
 			if TabData[i].Type=="Clock":
 				unit.get_node("SpinBox").value=TabData[i].Cycle
@@ -206,8 +204,7 @@ func CreatePrefab(Filepath,TabData,PrefabItems,tab):
 			unit.position.x=TabData[i].Position.x
 			unit.position.y=TabData[i].Position.y
 			tab.add_child(unit)
-			if TabData[i].has("Rotation"):
-				UIHandler.Rotate(TabData[i].Rotation/-90,unit)
+
 			unit.name=i
 			if TabData[i].Type=="Clock":
 				unit.get_node("SpinBox").value=TabData[i].Cycle
@@ -225,6 +222,8 @@ func ConnectLines(TabData,PrefabItems,tab):
 	if opening_error==false:
 		
 		for i in TabData.keys():
+			if TabData[i].has("Rotation"):
+				UIHandler.Rotate(TabData[i].Rotation/-90,tab.get_node(i))
 			if TabData[i].has("Inputs"):
 				for j in TabData[i].Inputs.keys():
 					if TabData[i].Inputs[j].Source["Parent"]!="null":
@@ -238,6 +237,7 @@ func ConnectLines(TabData,PrefabItems,tab):
 						target.ConnectOutput(source,line)
 						line.queue_free()
 						source.SetValue(source.value)
+							
 		if tab.format=="Prefab":
 			for i in PrefabItems.Inputs.keys():
 				if PrefabItems.Inputs[i].Source["Parent"]!="null":

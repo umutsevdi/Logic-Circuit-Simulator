@@ -240,3 +240,8 @@ func Rotate(index,node):
 		for i in node.get_node("Outputs").get_children():
 			i.rect_rotation=90*index
 
+func CloseCurrentTab():
+	
+	get_node("../Scene/CanvasLayer/TabContainer/"+Database.GetCurrentTab().name).queue_free()
+	Database.GetCurrentTab().queue_free()
+	get_node("../Scene/CanvasLayer/TabContainer").SwitchTab(get_node("../Scene/CanvasLayer/TabContainer").get_child(0).name)

@@ -32,12 +32,10 @@ func _unhandled_input(event):
 			dragging = false
 			#var drag_end = event.position
 			var drag_end=UIHandler.mouse_position
-			print("---")
-			for i in Database.GetCurrentTab().get_children():
-				print(i.position,"\t",drag_start,"\t",drag_end,i.position.x in range(drag_start.x,drag_end.x), i.position.y in range(drag_start.y,drag_end.y))
-				if i.position.x>=drag_start.x and i.position.x<=drag_end.x and i.position.y>=drag_start.y and i.position.y<=drag_end.y:
-					selected[i.name]={"Node":i,"Position":i.position}
-					print(i.name)
+			if get_node("CanvasLayer/TabContainer").get_tab_control(get_node("CanvasLayer/TabContainer").current_tab).name!="+":
+				for i in Database.GetCurrentTab().get_children():
+					if i.position.x>=drag_start.x and i.position.x<=drag_end.x and i.position.y>=drag_start.y and i.position.y<=drag_end.y:
+						selected[i.name]={"Node":i,"Position":i.position}
 			SelectionEffect(true)
 
 	if event is InputEventMouseMotion and dragging:

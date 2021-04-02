@@ -39,7 +39,7 @@ func SwitchTab():
 	var event
 	for i in range (Tab.history.size()):
 		event=Tab.history[i]
-		var string
+		var string=""
 		if event.has("Node"):
 			string=(event.Node.name).left(4)+event.Node.name.right(event.Node.name.length()-4)
 		elif event.has("Tab"):
