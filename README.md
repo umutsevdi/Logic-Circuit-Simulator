@@ -12,17 +12,17 @@
   <a href="https://github.com/Logic Circuit Simulator">
     <img src="https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/icon.png" alt="Logo" width="80" height="80">
   </a>
-
+  
   <h3 align="center">Logic Circuit Simulator</h3>
+  
+  <a href="https://umuts.itch.io/logic-circuit-simulator">
+    <p align="center">Project Page</p>
+  </a>
+  <p align="center">A free Logic Circuit Simulator built in Godot Engine by Umutcan Sevdi.</p>
+  
 </p>
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-A free Logic Circuit Simulator built in Godot Engine by Umutcan Sevdi.
-
-
-![Screenshot 1](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc1.png)
 
 ## Features
 Logic Circuit Simulator is an open-source tool that comes with the following features:
@@ -35,14 +35,12 @@ Logic Circuit Simulator is an open-source tool that comes with the following fea
   * Save prefabs and reach them across other scenes and even other prefabs. 
   * Create your data either by drag & drop or write as a .json file.
 
+![Screenshot 1](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc1.png)
+
 
 ### Built With
 
 Logic Circuit Simulator was built in Godot Engine.
-
-
-![Screenshot 4](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc4.png)
-
 
 
 ### Installation
@@ -64,6 +62,8 @@ Logic Circuit Simulator was built in Godot Engine.
 
 ![Screenshot 2](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc2.png)
 ![Screenshot 3](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc3.png)
+![Screenshot 4](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc4.png)
+
 <!-- ROADMAP -->
 ## Roadmap
 * At the end of the june, I'll update the program and provide more optimized and clean code. I'll fix existing bugs and try to add new features.
