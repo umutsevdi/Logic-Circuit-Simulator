@@ -20,6 +20,8 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 A free Logic Circuit Simulator built in Godot Engine by Umutcan Sevdi.
+
+
 ![Screenshot 1](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc1.png)
 
 ## Features
@@ -37,6 +39,7 @@ Logic Circuit Simulator is an open-source tool that comes with the following fea
 ### Built With
 
 Logic Circuit Simulator was built in Godot Engine.
+
 
 ![Screenshot 4](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc4.png)
 
@@ -57,6 +60,8 @@ Logic Circuit Simulator was built in Godot Engine.
    ```
 
 ## Screenshots
+
+
 ![Screenshot 2](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc2.png)
 ![Screenshot 3](https://raw.githubusercontent.com/umutsevdi1/Logic-Circuit-Simulator/main/screenshots/sc3.png)
 <!-- ROADMAP -->
@@ -86,7 +91,7 @@ Project Link: [https://github.com/umutsevdi1/Logic-Circuit-Simulator](https://gi
 [issues-shield]: https://img.shields.io/github/issues/umutsevdi1/Logic-Circuit-Simulator.svg?style=for-the-badge
 [issues-url]: https://github.com/umutsevdi1/Logic-Circuit-Simulator/issues
 [license-shield]: https://img.shields.io/github/license/umutsevdi1/Logic-Circuit-Simulator.svg?style=for-the-badge
-[license-url]: https://github.com/umutsevdi1/Logic-Circuit-Simulator/LICENSE
+[license-url]: https://github.com/umutsevdi1/Logic-Circuit-Simulator/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/umut-sevdi
 [product-screenshot]: images/screenshot.png
