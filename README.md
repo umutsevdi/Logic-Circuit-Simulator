@@ -80,6 +80,8 @@ Distributed under the  GNU General Public License. See `LICENSE` for more inform
 <!-- CONTACT -->
 ## Contact
 Project Link: [https://github.com/umutsevdi1/Logic-Circuit-Simulator](https://github.com/umutsevdi1/Logic-Circuit-Simulator)
+itch.io Link: [https://umuts.itch.io/logic-circuit-simulator](https://umuts.itch.io/logic-circuit-simulator)
+
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
