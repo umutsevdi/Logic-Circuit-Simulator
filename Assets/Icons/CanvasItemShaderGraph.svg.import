@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CanvasItemShaderGraph.svg-d525b34f5f082a6b8ace618cc9945738.stex"
+path="res://.import/CanvasItemShaderGraph.svg-bf193a5381bbae7218638ef4a53cffb4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/CanvasItemShaderGraph.svg"
-dest_files=[ "res://.import/CanvasItemShaderGraph.svg-d525b34f5f082a6b8ace618cc9945738.stex" ]
+source_file="res://Assets/Icons/CanvasItemShaderGraph.svg"
+dest_files=[ "res://.import/CanvasItemShaderGraph.svg-bf193a5381bbae7218638ef4a53cffb4.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ActionCut.svg-bf1f15fc4a84e2862d6870e20b792a47.stex"
+path="res://.import/ActionCut.svg-f93f791e72d65c72ae958000cc87d87f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/ActionCut.svg"
-dest_files=[ "res://.import/ActionCut.svg-bf1f15fc4a84e2862d6870e20b792a47.stex" ]
+source_file="res://Assets/Icons/ActionCut.svg"
+dest_files=[ "res://.import/ActionCut.svg-f93f791e72d65c72ae958000cc87d87f.stex" ]
 
 [params]
 

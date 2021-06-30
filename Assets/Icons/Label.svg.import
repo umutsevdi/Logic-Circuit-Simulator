@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Label.svg-1528a22b7b6b193fdc4543dabc6c7830.stex"
+path="res://.import/Label.svg-8558979d67e233c78d869f1243784090.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Label.svg"
-dest_files=[ "res://.import/Label.svg-1528a22b7b6b193fdc4543dabc6c7830.stex" ]
+source_file="res://Assets/Icons/Label.svg"
+dest_files=[ "res://.import/Label.svg-8558979d67e233c78d869f1243784090.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InsertBefore.svg-d110d21d3dd0232934d1d3aaf4f9b06b.stex"
+path="res://.import/InsertBefore.svg-e392cc2b680efeda56364fba2e37bb3c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/InsertBefore.svg"
-dest_files=[ "res://.import/InsertBefore.svg-d110d21d3dd0232934d1d3aaf4f9b06b.stex" ]
+source_file="res://Assets/Icons/InsertBefore.svg"
+dest_files=[ "res://.import/InsertBefore.svg-e392cc2b680efeda56364fba2e37bb3c.stex" ]
 
 [params]
 

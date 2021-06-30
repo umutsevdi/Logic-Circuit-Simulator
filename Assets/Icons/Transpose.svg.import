@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Transpose.svg-e39a3826c54a5c7227f2f5bce6e1bd31.stex"
+path="res://.import/Transpose.svg-dd19d97bcfabc9e354e6559a97c0895e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Transpose.svg"
-dest_files=[ "res://.import/Transpose.svg-e39a3826c54a5c7227f2f5bce6e1bd31.stex" ]
+source_file="res://Assets/Icons/Transpose.svg"
+dest_files=[ "res://.import/Transpose.svg-dd19d97bcfabc9e354e6559a97c0895e.stex" ]
 
 [params]
 

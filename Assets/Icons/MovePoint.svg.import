@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MovePoint.svg-71746d402c7faaf5b62f4fcb601b46a2.stex"
+path="res://.import/MovePoint.svg-3a88ef5e7ce04f8d08c90e7689b679bd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/MovePoint.svg"
-dest_files=[ "res://.import/MovePoint.svg-71746d402c7faaf5b62f4fcb601b46a2.stex" ]
+source_file="res://Assets/Icons/MovePoint.svg"
+dest_files=[ "res://.import/MovePoint.svg-3a88ef5e7ce04f8d08c90e7689b679bd.stex" ]
 
 [params]
 

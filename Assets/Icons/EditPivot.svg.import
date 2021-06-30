@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EditPivot.svg-488cc8cfd82e27d28f86c3f1638c831c.stex"
+path="res://.import/EditPivot.svg-cef43f6f57e991dfcbb8d86545dd4c47.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/EditPivot.svg"
-dest_files=[ "res://.import/EditPivot.svg-488cc8cfd82e27d28f86c3f1638c831c.stex" ]
+source_file="res://Assets/Icons/EditPivot.svg"
+dest_files=[ "res://.import/EditPivot.svg-cef43f6f57e991dfcbb8d86545dd4c47.stex" ]
 
 [params]
 

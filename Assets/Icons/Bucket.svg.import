@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bucket.svg-696de6a5679b87ae1671996b6ffb2022.stex"
+path="res://.import/Bucket.svg-4efccaedd0872ff37869a4d2a0405145.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Bucket.svg"
-dest_files=[ "res://.import/Bucket.svg-696de6a5679b87ae1671996b6ffb2022.stex" ]
+source_file="res://Assets/Icons/Bucket.svg"
+dest_files=[ "res://.import/Bucket.svg-4efccaedd0872ff37869a4d2a0405145.stex" ]
 
 [params]
 

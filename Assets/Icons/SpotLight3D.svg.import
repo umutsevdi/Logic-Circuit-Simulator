@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SpotLight3D.svg-fb6ce609a2360d01f6a77a5cae556e54.stex"
+path="res://.import/SpotLight3D.svg-60d1cbe14ec7ea448cdfbf7eb70f3062.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/SpotLight3D.svg"
-dest_files=[ "res://.import/SpotLight3D.svg-fb6ce609a2360d01f6a77a5cae556e54.stex" ]
+source_file="res://Assets/Icons/SpotLight3D.svg"
+dest_files=[ "res://.import/SpotLight3D.svg-60d1cbe14ec7ea448cdfbf7eb70f3062.stex" ]
 
 [params]
 

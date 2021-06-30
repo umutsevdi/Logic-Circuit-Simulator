@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AnimatedSprite2D.svg-2d62dde264cb9b64fcc5e92d9a05a218.stex"
+path="res://.import/AnimatedSprite2D.svg-c1b018f510b6bd34907eab78cd1fbe72.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/AnimatedSprite2D.svg"
-dest_files=[ "res://.import/AnimatedSprite2D.svg-2d62dde264cb9b64fcc5e92d9a05a218.stex" ]
+source_file="res://Assets/Icons/AnimatedSprite2D.svg"
+dest_files=[ "res://.import/AnimatedSprite2D.svg-c1b018f510b6bd34907eab78cd1fbe72.stex" ]
 
 [params]
 

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/MenuButtonNormal.tres" type="StyleBox" id=1]
+[ext_resource path="res://Assets/MenuButtonDisabled.tres" type="StyleBox" id=2]
+[ext_resource path="res://Assets/MenuButtonHover.tres" type="StyleBox" id=3]
+
+[node name="TruthTableUnit" type="Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1520.0
+margin_bottom = -876.0
+focus_mode = 0
+custom_styles/hover = ExtResource( 3 )
+custom_styles/disabled = ExtResource( 2 )
+custom_styles/normal = ExtResource( 1 )
+shortcut_in_tooltip = false
+button_mask = 0
+enabled_focus_mode = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}

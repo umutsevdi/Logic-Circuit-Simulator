@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PointMesh.svg-e757070570725c74aa77259a083e4790.stex"
+path="res://.import/PointMesh.svg-fab86f7b539e20708d52f1adc45d1b57.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/PointMesh.svg"
-dest_files=[ "res://.import/PointMesh.svg-e757070570725c74aa77259a083e4790.stex" ]
+source_file="res://Assets/Icons/PointMesh.svg"
+dest_files=[ "res://.import/PointMesh.svg-fab86f7b539e20708d52f1adc45d1b57.stex" ]
 
 [params]
 

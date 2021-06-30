@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GizmoBakedLightmap.svg-17b454a8dc9d201e66c877f9772eca5e.stex"
+path="res://.import/GizmoBakedLightmap.svg-0648637e7053fa79ac2efc564d50f727.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GizmoBakedLightmap.svg"
-dest_files=[ "res://.import/GizmoBakedLightmap.svg-17b454a8dc9d201e66c877f9772eca5e.stex" ]
+source_file="res://Assets/Icons/GizmoBakedLightmap.svg"
+dest_files=[ "res://.import/GizmoBakedLightmap.svg-0648637e7053fa79ac2efc564d50f727.stex" ]
 
 [params]
 

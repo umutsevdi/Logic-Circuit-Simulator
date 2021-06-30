@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OptionButton.svg-96c30a3224dcbe7c3ba22fbc686f74aa.stex"
+path="res://.import/OptionButton.svg-d76783e3482502c352d244242e6fc232.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/OptionButton.svg"
-dest_files=[ "res://.import/OptionButton.svg-96c30a3224dcbe7c3ba22fbc686f74aa.stex" ]
+source_file="res://Assets/Icons/OptionButton.svg"
+dest_files=[ "res://.import/OptionButton.svg-d76783e3482502c352d244242e6fc232.stex" ]
 
 [params]
 

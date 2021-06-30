@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KeyNext.svg-7e986aeb403b042332648b63e64b78ef.stex"
+path="res://.import/KeyNext.svg-b0f48c123751b4629b4ad6e5d6d17698.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/KeyNext.svg"
-dest_files=[ "res://.import/KeyNext.svg-7e986aeb403b042332648b63e64b78ef.stex" ]
+source_file="res://Assets/Icons/KeyNext.svg"
+dest_files=[ "res://.import/KeyNext.svg-b0f48c123751b4629b4ad6e5d6d17698.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AutoKey.svg-ab9e0b9c3deb09f855b39c0525ebb41e.stex"
+path="res://.import/AutoKey.svg-09797a502f03e59abf87dd8bdf8ee9a3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/AutoKey.svg"
-dest_files=[ "res://.import/AutoKey.svg-ab9e0b9c3deb09f855b39c0525ebb41e.stex" ]
+source_file="res://Assets/Icons/AutoKey.svg"
+dest_files=[ "res://.import/AutoKey.svg-09797a502f03e59abf87dd8bdf8ee9a3.stex" ]
 
 [params]
 

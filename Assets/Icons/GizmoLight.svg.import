@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GizmoLight.svg-651e36081667cba3f2c842030b481d12.stex"
+path="res://.import/GizmoLight.svg-07c56552e09222e86220e98d59c4b005.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GizmoLight.svg"
-dest_files=[ "res://.import/GizmoLight.svg-651e36081667cba3f2c842030b481d12.stex" ]
+source_file="res://Assets/Icons/GizmoLight.svg"
+dest_files=[ "res://.import/GizmoLight.svg-07c56552e09222e86220e98d59c4b005.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BakedLightmapData.svg-8ce1fd5a2bee0f741d3575ba2a205e69.stex"
+path="res://.import/BakedLightmapData.svg-c35d118ef7b97cf9fcb2bd5dd896d3fe.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/BakedLightmapData.svg"
-dest_files=[ "res://.import/BakedLightmapData.svg-8ce1fd5a2bee0f741d3575ba2a205e69.stex" ]
+source_file="res://Assets/Icons/BakedLightmapData.svg"
+dest_files=[ "res://.import/BakedLightmapData.svg-c35d118ef7b97cf9fcb2bd5dd896d3fe.stex" ]
 
 [params]
 

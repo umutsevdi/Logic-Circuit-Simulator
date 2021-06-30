@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TrackColor.svg-0f1df58a64d515edeee706e73d899f9c.stex"
+path="res://.import/TrackColor.svg-9f0eade23812675796dda86600de0cae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/TrackColor.svg"
-dest_files=[ "res://.import/TrackColor.svg-0f1df58a64d515edeee706e73d899f9c.stex" ]
+source_file="res://Assets/Icons/TrackColor.svg"
+dest_files=[ "res://.import/TrackColor.svg-9f0eade23812675796dda86600de0cae.stex" ]
 
 [params]
 

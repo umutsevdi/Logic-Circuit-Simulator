@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EditorPathSharpHandle.svg-63f9fa8d1c584913ddd7b0e4736fbf8e.stex"
+path="res://.import/EditorPathSharpHandle.svg-3761f6089c5a7c539f32361cf7b864f6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/EditorPathSharpHandle.svg"
-dest_files=[ "res://.import/EditorPathSharpHandle.svg-63f9fa8d1c584913ddd7b0e4736fbf8e.stex" ]
+source_file="res://Assets/Icons/EditorPathSharpHandle.svg"
+dest_files=[ "res://.import/EditorPathSharpHandle.svg-3761f6089c5a7c539f32361cf7b864f6.stex" ]
 
 [params]
 

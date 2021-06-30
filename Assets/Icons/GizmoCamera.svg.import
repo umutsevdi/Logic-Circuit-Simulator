@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GizmoCamera.svg-aba756679bb7294f7a05158bdcd5fa27.stex"
+path="res://.import/GizmoCamera.svg-0e156bacf67d4ee340eee300c6e9acdc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GizmoCamera.svg"
-dest_files=[ "res://.import/GizmoCamera.svg-aba756679bb7294f7a05158bdcd5fa27.stex" ]
+source_file="res://Assets/Icons/GizmoCamera.svg"
+dest_files=[ "res://.import/GizmoCamera.svg-0e156bacf67d4ee340eee300c6e9acdc.stex" ]
 
 [params]
 

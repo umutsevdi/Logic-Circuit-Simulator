@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KeyBezierHandle.svg-5fb3a3d8e29274102c00d1f144d15033.stex"
+path="res://.import/KeyBezierHandle.svg-5576da3c4c7cf827d1036efe073535c4.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/KeyBezierHandle.svg"
-dest_files=[ "res://.import/KeyBezierHandle.svg-5fb3a3d8e29274102c00d1f144d15033.stex" ]
+source_file="res://Assets/Icons/KeyBezierHandle.svg"
+dest_files=[ "res://.import/KeyBezierHandle.svg-5576da3c4c7cf827d1036efe073535c4.stex" ]
 
 [params]
 

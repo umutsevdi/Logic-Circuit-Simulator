@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlaneMesh.svg-15b7981e1b1f634dc98f0fead3f4307e.stex"
+path="res://.import/PlaneMesh.svg-1110243607bd7cc5a98b02c2b75624a0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/PlaneMesh.svg"
-dest_files=[ "res://.import/PlaneMesh.svg-15b7981e1b1f634dc98f0fead3f4307e.stex" ]
+source_file="res://Assets/Icons/PlaneMesh.svg"
+dest_files=[ "res://.import/PlaneMesh.svg-1110243607bd7cc5a98b02c2b75624a0.stex" ]
 
 [params]
 

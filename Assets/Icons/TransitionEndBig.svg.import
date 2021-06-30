@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TransitionEndBig.svg-ffb14aba4117c057984a97c1ee823fa7.stex"
+path="res://.import/TransitionEndBig.svg-e6fa3b3255ce635d0ba9e281d54f049e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/TransitionEndBig.svg"
-dest_files=[ "res://.import/TransitionEndBig.svg-ffb14aba4117c057984a97c1ee823fa7.stex" ]
+source_file="res://Assets/Icons/TransitionEndBig.svg"
+dest_files=[ "res://.import/TransitionEndBig.svg-e6fa3b3255ce635d0ba9e281d54f049e.stex" ]
 
 [params]
 

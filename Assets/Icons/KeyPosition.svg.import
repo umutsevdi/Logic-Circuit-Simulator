@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KeyPosition.svg-4a0ad1dcdeeb2132a0d667eaf50feb25.stex"
+path="res://.import/KeyPosition.svg-0848789db4ef6e4aea60117b39c50828.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/KeyPosition.svg"
-dest_files=[ "res://.import/KeyPosition.svg-4a0ad1dcdeeb2132a0d667eaf50feb25.stex" ]
+source_file="res://Assets/Icons/KeyPosition.svg"
+dest_files=[ "res://.import/KeyPosition.svg-0848789db4ef6e4aea60117b39c50828.stex" ]
 
 [params]
 

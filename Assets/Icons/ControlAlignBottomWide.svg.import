@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ControlAlignBottomWide.svg-a67823ba9aec1ce9e7701d192225d315.stex"
+path="res://.import/ControlAlignBottomWide.svg-c639b1b78f4d2762f267d4abb1ba3b28.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/ControlAlignBottomWide.svg"
-dest_files=[ "res://.import/ControlAlignBottomWide.svg-a67823ba9aec1ce9e7701d192225d315.stex" ]
+source_file="res://Assets/Icons/ControlAlignBottomWide.svg"
+dest_files=[ "res://.import/ControlAlignBottomWide.svg-c639b1b78f4d2762f267d4abb1ba3b28.stex" ]
 
 [params]
 

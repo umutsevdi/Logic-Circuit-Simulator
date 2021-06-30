@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Enum.svg-089bbe09ddc2e233bc50df3e170c4125.stex"
+path="res://.import/Enum.svg-b37e0072e65e3e862afe5d965fd50a71.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Enum.svg"
-dest_files=[ "res://.import/Enum.svg-089bbe09ddc2e233bc50df3e170c4125.stex" ]
+source_file="res://Assets/Icons/Enum.svg"
+dest_files=[ "res://.import/Enum.svg-b37e0072e65e3e862afe5d965fd50a71.stex" ]
 
 [params]
 

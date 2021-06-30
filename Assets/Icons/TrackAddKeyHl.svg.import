@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TrackAddKeyHl.svg-ab8bfe569c9090c157bf0d9dfdb4360f.stex"
+path="res://.import/TrackAddKeyHl.svg-a3e6206624e6be89ec3ff87e0f4bde8c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/TrackAddKeyHl.svg"
-dest_files=[ "res://.import/TrackAddKeyHl.svg-ab8bfe569c9090c157bf0d9dfdb4360f.stex" ]
+source_file="res://Assets/Icons/TrackAddKeyHl.svg"
+dest_files=[ "res://.import/TrackAddKeyHl.svg-a3e6206624e6be89ec3ff87e0f4bde8c.stex" ]
 
 [params]
 

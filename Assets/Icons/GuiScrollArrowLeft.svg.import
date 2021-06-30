@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiScrollArrowLeft.svg-024074245e8c4cbe46a8c7427fa25c3b.stex"
+path="res://.import/GuiScrollArrowLeft.svg-6ef6d01e3a2c6ae1152b7b9d5d52fc49.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GuiScrollArrowLeft.svg"
-dest_files=[ "res://.import/GuiScrollArrowLeft.svg-024074245e8c4cbe46a8c7427fa25c3b.stex" ]
+source_file="res://Assets/Icons/GuiScrollArrowLeft.svg"
+dest_files=[ "res://.import/GuiScrollArrowLeft.svg-6ef6d01e3a2c6ae1152b7b9d5d52fc49.stex" ]
 
 [params]
 

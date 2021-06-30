@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/VisualShaderPort.svg-f5726e31c4437bfc51619a4519f61688.stex"
+path="res://.import/VisualShaderPort.svg-6e3eb9d7ced32eeb5e36239d0adf0a72.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/VisualShaderPort.svg"
-dest_files=[ "res://.import/VisualShaderPort.svg-f5726e31c4437bfc51619a4519f61688.stex" ]
+source_file="res://Assets/Icons/VisualShaderPort.svg"
+dest_files=[ "res://.import/VisualShaderPort.svg-6e3eb9d7ced32eeb5e36239d0adf0a72.stex" ]
 
 [params]
 

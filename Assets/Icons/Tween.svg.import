@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tween.svg-2b8b2a7fa3e1e282d778c3f3b04ba912.stex"
+path="res://.import/Tween.svg-d0d9ff638849b93e4d415cacf8ae7124.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Tween.svg"
-dest_files=[ "res://.import/Tween.svg-2b8b2a7fa3e1e282d778c3f3b04ba912.stex" ]
+source_file="res://Assets/Icons/Tween.svg"
+dest_files=[ "res://.import/Tween.svg-d0d9ff638849b93e4d415cacf8ae7124.stex" ]
 
 [params]
 

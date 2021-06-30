@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CylinderMesh.svg-4e02063be2f3c2a252179fa43c9ec64c.stex"
+path="res://.import/CylinderMesh.svg-964c1ee114fcaa2982f3c6413014249f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/CylinderMesh.svg"
-dest_files=[ "res://.import/CylinderMesh.svg-4e02063be2f3c2a252179fa43c9ec64c.stex" ]
+source_file="res://Assets/Icons/CylinderMesh.svg"
+dest_files=[ "res://.import/CylinderMesh.svg-964c1ee114fcaa2982f3c6413014249f.stex" ]
 
 [params]
 

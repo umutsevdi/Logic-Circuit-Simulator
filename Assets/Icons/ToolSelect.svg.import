@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ToolSelect.svg-d2c429c2cccc06593a764ec7738ddbdb.stex"
+path="res://.import/ToolSelect.svg-1ad5fc47492df85898bee606691d73de.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/ToolSelect.svg"
-dest_files=[ "res://.import/ToolSelect.svg-d2c429c2cccc06593a764ec7738ddbdb.stex" ]
+source_file="res://Assets/Icons/ToolSelect.svg"
+dest_files=[ "res://.import/ToolSelect.svg-1ad5fc47492df85898bee606691d73de.stex" ]
 
 [params]
 

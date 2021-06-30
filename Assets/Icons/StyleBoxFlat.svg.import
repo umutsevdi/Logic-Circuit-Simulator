@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StyleBoxFlat.svg-623351ec46a4d9498e80367e6c77c6cd.stex"
+path="res://.import/StyleBoxFlat.svg-feba579734a586151acceaa181c767b1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/StyleBoxFlat.svg"
-dest_files=[ "res://.import/StyleBoxFlat.svg-623351ec46a4d9498e80367e6c77c6cd.stex" ]
+source_file="res://Assets/Icons/StyleBoxFlat.svg"
+dest_files=[ "res://.import/StyleBoxFlat.svg-feba579734a586151acceaa181c767b1.stex" ]
 
 [params]
 

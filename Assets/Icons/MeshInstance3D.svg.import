@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MeshInstance3D.svg-61d5ecdb01c2e20a21b839b3ba377fce.stex"
+path="res://.import/MeshInstance3D.svg-47427c39dff8879bb40811850225b3d1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/MeshInstance3D.svg"
-dest_files=[ "res://.import/MeshInstance3D.svg-61d5ecdb01c2e20a21b839b3ba377fce.stex" ]
+source_file="res://Assets/Icons/MeshInstance3D.svg"
+dest_files=[ "res://.import/MeshInstance3D.svg-47427c39dff8879bb40811850225b3d1.stex" ]
 
 [params]
 

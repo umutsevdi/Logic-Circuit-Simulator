@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GridMinimap.svg-085dcf1d8f1b267384a26bb162278f0d.stex"
+path="res://.import/GridMinimap.svg-9fd140b7abbf9565de0905a297ace30d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GridMinimap.svg"
-dest_files=[ "res://.import/GridMinimap.svg-085dcf1d8f1b267384a26bb162278f0d.stex" ]
+source_file="res://Assets/Icons/GridMinimap.svg"
+dest_files=[ "res://.import/GridMinimap.svg-9fd140b7abbf9565de0905a297ace30d.stex" ]
 
 [params]
 

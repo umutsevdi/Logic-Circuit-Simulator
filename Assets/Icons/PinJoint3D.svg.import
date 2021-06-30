@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PinJoint3D.svg-61d94b72b9674a86a71dbf43bd2232ed.stex"
+path="res://.import/PinJoint3D.svg-413cd6f33d7fb60495a47eb2c7eb9d6a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/PinJoint3D.svg"
-dest_files=[ "res://.import/PinJoint3D.svg-61d94b72b9674a86a71dbf43bd2232ed.stex" ]
+source_file="res://Assets/Icons/PinJoint3D.svg"
+dest_files=[ "res://.import/PinJoint3D.svg-413cd6f33d7fb60495a47eb2c7eb9d6a.stex" ]
 
 [params]
 

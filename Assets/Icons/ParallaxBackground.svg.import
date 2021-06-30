@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ParallaxBackground.svg-71a57d1c2cf262f797e34cae60047a3f.stex"
+path="res://.import/ParallaxBackground.svg-34150e5b117276b5a73f42e897559f8b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/ParallaxBackground.svg"
-dest_files=[ "res://.import/ParallaxBackground.svg-71a57d1c2cf262f797e34cae60047a3f.stex" ]
+source_file="res://Assets/Icons/ParallaxBackground.svg"
+dest_files=[ "res://.import/ParallaxBackground.svg-34150e5b117276b5a73f42e897559f8b.stex" ]
 
 [params]
 

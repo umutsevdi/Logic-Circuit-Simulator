@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InformationSign.svg-a83cb8a91be779852b3d628a8df94c2f.stex"
+path="res://.import/InformationSign.svg-da4c78508e734001bbc10cd7f053a689.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/InformationSign.svg"
-dest_files=[ "res://.import/InformationSign.svg-a83cb8a91be779852b3d628a8df94c2f.stex" ]
+source_file="res://Assets/Icons/InformationSign.svg"
+dest_files=[ "res://.import/InformationSign.svg-da4c78508e734001bbc10cd7f053a689.stex" ]
 
 [params]
 

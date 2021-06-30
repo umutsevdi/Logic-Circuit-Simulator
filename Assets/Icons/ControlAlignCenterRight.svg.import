@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ControlAlignCenterRight.svg-504948a7944950bc7bf0bed65f2811e6.stex"
+path="res://.import/ControlAlignCenterRight.svg-79fc8507b915b02a4135f45e1123365b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/ControlAlignCenterRight.svg"
-dest_files=[ "res://.import/ControlAlignCenterRight.svg-504948a7944950bc7bf0bed65f2811e6.stex" ]
+source_file="res://Assets/Icons/ControlAlignCenterRight.svg"
+dest_files=[ "res://.import/ControlAlignCenterRight.svg-79fc8507b915b02a4135f45e1123365b.stex" ]
 
 [params]
 

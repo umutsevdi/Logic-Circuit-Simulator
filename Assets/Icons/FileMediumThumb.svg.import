@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FileMediumThumb.svg-8e91ddbbbb94333b088da3249c69101a.stex"
+path="res://.import/FileMediumThumb.svg-2ce72919cf9f387d506253b130322ae7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/FileMediumThumb.svg"
-dest_files=[ "res://.import/FileMediumThumb.svg-8e91ddbbbb94333b088da3249c69101a.stex" ]
+source_file="res://Assets/Icons/FileMediumThumb.svg"
+dest_files=[ "res://.import/FileMediumThumb.svg-2ce72919cf9f387d506253b130322ae7.stex" ]
 
 [params]
 

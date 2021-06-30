@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Tabs.svg-01071a48a639518df82a19ad136d1305.stex"
+path="res://.import/Tabs.svg-3cb067643eb325e3ddb856384b5326e5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Tabs.svg"
-dest_files=[ "res://.import/Tabs.svg-01071a48a639518df82a19ad136d1305.stex" ]
+source_file="res://Assets/Icons/Tabs.svg"
+dest_files=[ "res://.import/Tabs.svg-3cb067643eb325e3ddb856384b5326e5.stex" ]
 
 [params]
 

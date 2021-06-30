@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Quad.svg-246e77f9f1a1a44fcd9a413585ddb99e.stex"
+path="res://.import/Quad.svg-914db73047eaa27f2fa8f53db7b65347.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Quad.svg"
-dest_files=[ "res://.import/Quad.svg-246e77f9f1a1a44fcd9a413585ddb99e.stex" ]
+source_file="res://Assets/Icons/Quad.svg"
+dest_files=[ "res://.import/Quad.svg-914db73047eaa27f2fa8f53db7b65347.stex" ]
 
 [params]
 

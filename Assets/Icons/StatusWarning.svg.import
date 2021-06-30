@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StatusWarning.svg-10f487a425e0bfaef8ff1cfd1e6b0fea.stex"
+path="res://.import/StatusWarning.svg-1ab45c6c9dc4c9c1dfe320e2b729a666.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/StatusWarning.svg"
-dest_files=[ "res://.import/StatusWarning.svg-10f487a425e0bfaef8ff1cfd1e6b0fea.stex" ]
+source_file="res://Assets/Icons/StatusWarning.svg"
+dest_files=[ "res://.import/StatusWarning.svg-1ab45c6c9dc4c9c1dfe320e2b729a666.stex" ]
 
 [params]
 

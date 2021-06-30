@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiVsplitBg.svg-142b1917ff883cb3dabcd2e14788c2f4.stex"
+path="res://.import/GuiVsplitBg.svg-9665fbffdeb3bfbbcb5da2a8d74e8274.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GuiVsplitBg.svg"
-dest_files=[ "res://.import/GuiVsplitBg.svg-142b1917ff883cb3dabcd2e14788c2f4.stex" ]
+source_file="res://Assets/Icons/GuiVsplitBg.svg"
+dest_files=[ "res://.import/GuiVsplitBg.svg-9665fbffdeb3bfbbcb5da2a8d74e8274.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ReflectionProbe.svg-2aaa26225f1de1815c8dc03b6e9be2e1.stex"
+path="res://.import/ReflectionProbe.svg-11b8ba6b93c4c20daf6776ca7cf8f388.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/ReflectionProbe.svg"
-dest_files=[ "res://.import/ReflectionProbe.svg-2aaa26225f1de1815c8dc03b6e9be2e1.stex" ]
+source_file="res://Assets/Icons/ReflectionProbe.svg"
+dest_files=[ "res://.import/ReflectionProbe.svg-11b8ba6b93c4c20daf6776ca7cf8f388.stex" ]
 
 [params]
 

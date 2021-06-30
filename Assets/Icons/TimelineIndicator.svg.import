@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TimelineIndicator.svg-beee2751dbe11a1c61c5694267a185b5.stex"
+path="res://.import/TimelineIndicator.svg-a2ace895196ffeebb17701b30cc225ce.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/TimelineIndicator.svg"
-dest_files=[ "res://.import/TimelineIndicator.svg-beee2751dbe11a1c61c5694267a185b5.stex" ]
+source_file="res://Assets/Icons/TimelineIndicator.svg"
+dest_files=[ "res://.import/TimelineIndicator.svg-a2ace895196ffeebb17701b30cc225ce.stex" ]
 
 [params]
 

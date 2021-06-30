@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiResizer.svg-ee2234450e3cbe37ce68778d2b175e5d.stex"
+path="res://.import/GuiResizer.svg-7b8514d54490c2327823047327bf338a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GuiResizer.svg"
-dest_files=[ "res://.import/GuiResizer.svg-ee2234450e3cbe37ce68778d2b175e5d.stex" ]
+source_file="res://Assets/Icons/GuiResizer.svg"
+dest_files=[ "res://.import/GuiResizer.svg-7b8514d54490c2327823047327bf338a.stex" ]
 
 [params]
 

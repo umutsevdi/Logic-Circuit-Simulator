@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KeyRotation.svg-468769a8f7a62e39d32960cec24b8899.stex"
+path="res://.import/KeyRotation.svg-124f2c9f2719b22fd1c64d65f2660342.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/KeyRotation.svg"
-dest_files=[ "res://.import/KeyRotation.svg-468769a8f7a62e39d32960cec24b8899.stex" ]
+source_file="res://Assets/Icons/KeyRotation.svg"
+dest_files=[ "res://.import/KeyRotation.svg-124f2c9f2719b22fd1c64d65f2660342.stex" ]
 
 [params]
 

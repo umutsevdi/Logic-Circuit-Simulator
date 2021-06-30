@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CPUParticles3D.svg-73d139b58132d665fab39006f0acd89a.stex"
+path="res://.import/CPUParticles3D.svg-fb59c90482f517391325e78f0870ab77.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/CPUParticles3D.svg"
-dest_files=[ "res://.import/CPUParticles3D.svg-73d139b58132d665fab39006f0acd89a.stex" ]
+source_file="res://Assets/Icons/CPUParticles3D.svg"
+dest_files=[ "res://.import/CPUParticles3D.svg-fb59c90482f517391325e78f0870ab77.stex" ]
 
 [params]
 

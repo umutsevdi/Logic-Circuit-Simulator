@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BoneTrack.svg-932e91f608c4f4a584a186be800ee0aa.stex"
+path="res://.import/BoneTrack.svg-dc415747220acc9741fcf1e22fb1434e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/BoneTrack.svg"
-dest_files=[ "res://.import/BoneTrack.svg-932e91f608c4f4a584a186be800ee0aa.stex" ]
+source_file="res://Assets/Icons/BoneTrack.svg"
+dest_files=[ "res://.import/BoneTrack.svg-dc415747220acc9741fcf1e22fb1434e.stex" ]
 
 [params]
 

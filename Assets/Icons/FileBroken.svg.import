@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FileBroken.svg-3e4d0a2c33216fe12c3903e0e417a7ba.stex"
+path="res://.import/FileBroken.svg-efc268e5baf2e332e71eba67ba869cb6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/FileBroken.svg"
-dest_files=[ "res://.import/FileBroken.svg-3e4d0a2c33216fe12c3903e0e417a7ba.stex" ]
+source_file="res://Assets/Icons/FileBroken.svg"
+dest_files=[ "res://.import/FileBroken.svg-efc268e5baf2e332e71eba67ba869cb6.stex" ]
 
 [params]
 

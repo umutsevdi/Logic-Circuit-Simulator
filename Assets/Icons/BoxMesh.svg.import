@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BoxMesh.svg-b3dd5095ebd7354ae85495924062db20.stex"
+path="res://.import/BoxMesh.svg-8b5162dac35a4f63e7451acabf19808d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/BoxMesh.svg"
-dest_files=[ "res://.import/BoxMesh.svg-b3dd5095ebd7354ae85495924062db20.stex" ]
+source_file="res://Assets/Icons/BoxMesh.svg"
+dest_files=[ "res://.import/BoxMesh.svg-8b5162dac35a4f63e7451acabf19808d.stex" ]
 
 [params]
 

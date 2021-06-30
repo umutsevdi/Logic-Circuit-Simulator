@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Forward.svg-b7b7eb12b9537b6ea3a7a5f3b1fe5c44.stex"
+path="res://.import/Forward.svg-4b05a8b32715accb89d7f58465d5c0d7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Forward.svg"
-dest_files=[ "res://.import/Forward.svg-b7b7eb12b9537b6ea3a7a5f3b1fe5c44.stex" ]
+source_file="res://Assets/Icons/Forward.svg"
+dest_files=[ "res://.import/Forward.svg-4b05a8b32715accb89d7f58465d5c0d7.stex" ]
 
 [params]
 

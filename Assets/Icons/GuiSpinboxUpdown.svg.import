@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiSpinboxUpdown.svg-e44b83f73e885a042446a9a70c22f955.stex"
+path="res://.import/GuiSpinboxUpdown.svg-924c523c781cf4c02130c113763d1e97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GuiSpinboxUpdown.svg"
-dest_files=[ "res://.import/GuiSpinboxUpdown.svg-e44b83f73e885a042446a9a70c22f955.stex" ]
+source_file="res://Assets/Icons/GuiSpinboxUpdown.svg"
+dest_files=[ "res://.import/GuiSpinboxUpdown.svg-924c523c781cf4c02130c113763d1e97.stex" ]
 
 [params]
 

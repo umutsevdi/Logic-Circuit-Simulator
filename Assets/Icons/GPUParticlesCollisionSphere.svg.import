@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GPUParticlesCollisionSphere.svg-0459a80412314e1482195eff19bb5f91.stex"
+path="res://.import/GPUParticlesCollisionSphere.svg-106114cd61343c6df6a6dbaba22cc69d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GPUParticlesCollisionSphere.svg"
-dest_files=[ "res://.import/GPUParticlesCollisionSphere.svg-0459a80412314e1482195eff19bb5f91.stex" ]
+source_file="res://Assets/Icons/GPUParticlesCollisionSphere.svg"
+dest_files=[ "res://.import/GPUParticlesCollisionSphere.svg-106114cd61343c6df6a6dbaba22cc69d.stex" ]
 
 [params]
 

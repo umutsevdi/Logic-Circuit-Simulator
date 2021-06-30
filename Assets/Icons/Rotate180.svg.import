@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rotate180.svg-5dad5461af569ef55a546d6756689b92.stex"
+path="res://.import/Rotate180.svg-c642e95640ad70d30f1f9e61e14aa2e6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Rotate180.svg"
-dest_files=[ "res://.import/Rotate180.svg-5dad5461af569ef55a546d6756689b92.stex" ]
+source_file="res://Assets/Icons/Rotate180.svg"
+dest_files=[ "res://.import/Rotate180.svg-c642e95640ad70d30f1f9e61e14aa2e6.stex" ]
 
 [params]
 

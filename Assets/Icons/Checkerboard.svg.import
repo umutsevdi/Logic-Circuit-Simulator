@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Checkerboard.svg-acc76059f35f9d453796edb7a5d0b12a.stex"
+path="res://.import/Checkerboard.svg-78ff2bdbab8beb792ce15b665745fe9c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Checkerboard.svg"
-dest_files=[ "res://.import/Checkerboard.svg-acc76059f35f9d453796edb7a5d0b12a.stex" ]
+source_file="res://Assets/Icons/Checkerboard.svg"
+dest_files=[ "res://.import/Checkerboard.svg-78ff2bdbab8beb792ce15b665745fe9c.stex" ]
 
 [params]
 

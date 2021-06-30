@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MaterialPreviewLight2Off.svg-be508fbf765a3de1b7871fce96df825b.stex"
+path="res://.import/MaterialPreviewLight2Off.svg-1d1b38549c5ac4c2bc4c0ae41ccac062.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/MaterialPreviewLight2Off.svg"
-dest_files=[ "res://.import/MaterialPreviewLight2Off.svg-be508fbf765a3de1b7871fce96df825b.stex" ]
+source_file="res://Assets/Icons/MaterialPreviewLight2Off.svg"
+dest_files=[ "res://.import/MaterialPreviewLight2Off.svg-1d1b38549c5ac4c2bc4c0ae41ccac062.stex" ]
 
 [params]
 

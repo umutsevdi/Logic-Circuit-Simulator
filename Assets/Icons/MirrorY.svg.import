@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MirrorY.svg-b458f7ec22f6c96c3cf6094308dde3a3.stex"
+path="res://.import/MirrorY.svg-c62a0300c60332cde1071ad7cac678a5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/MirrorY.svg"
-dest_files=[ "res://.import/MirrorY.svg-b458f7ec22f6c96c3cf6094308dde3a3.stex" ]
+source_file="res://Assets/Icons/MirrorY.svg"
+dest_files=[ "res://.import/MirrorY.svg-c62a0300c60332cde1071ad7cac678a5.stex" ]
 
 [params]
 

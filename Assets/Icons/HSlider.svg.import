@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HSlider.svg-de14f0d3bf4652c71f2864f3f3b3e214.stex"
+path="res://.import/HSlider.svg-9d2a29aa402da326c05de58d5b2a48b7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/HSlider.svg"
-dest_files=[ "res://.import/HSlider.svg-de14f0d3bf4652c71f2864f3f3b3e214.stex" ]
+source_file="res://Assets/Icons/HSlider.svg"
+dest_files=[ "res://.import/HSlider.svg-9d2a29aa402da326c05de58d5b2a48b7.stex" ]
 
 [params]
 

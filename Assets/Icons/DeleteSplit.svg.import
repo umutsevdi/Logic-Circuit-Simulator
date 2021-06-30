@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DeleteSplit.svg-db4c81e0e24584fd8133ea74a025e18c.stex"
+path="res://.import/DeleteSplit.svg-0301371c9138d4ab8670d08008d2007e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/DeleteSplit.svg"
-dest_files=[ "res://.import/DeleteSplit.svg-db4c81e0e24584fd8133ea74a025e18c.stex" ]
+source_file="res://Assets/Icons/DeleteSplit.svg"
+dest_files=[ "res://.import/DeleteSplit.svg-0301371c9138d4ab8670d08008d2007e.stex" ]
 
 [params]
 

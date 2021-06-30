@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InterpRaw.svg-3b4b5edc91dac87a4397245cf72bfee8.stex"
+path="res://.import/InterpRaw.svg-4868c0d86682fa8df5e0f48992b54e29.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/InterpRaw.svg"
-dest_files=[ "res://.import/InterpRaw.svg-3b4b5edc91dac87a4397245cf72bfee8.stex" ]
+source_file="res://Assets/Icons/InterpRaw.svg"
+dest_files=[ "res://.import/InterpRaw.svg-4868c0d86682fa8df5e0f48992b54e29.stex" ]
 
 [params]
 

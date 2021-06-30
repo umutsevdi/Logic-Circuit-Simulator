@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Snap.svg-495209be998c2f5406bd4722f928c689.stex"
+path="res://.import/Snap.svg-808ad68288563e2c10b839cea0ba3f95.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Snap.svg"
-dest_files=[ "res://.import/Snap.svg-495209be998c2f5406bd4722f928c689.stex" ]
+source_file="res://Assets/Icons/Snap.svg"
+dest_files=[ "res://.import/Snap.svg-808ad68288563e2c10b839cea0ba3f95.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Loop.svg-64838c4f7699148fc08f30c9107eb3ea.stex"
+path="res://.import/Loop.svg-af45fae773fa119d55ae09a6cbdbc294.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Loop.svg"
-dest_files=[ "res://.import/Loop.svg-64838c4f7699148fc08f30c9107eb3ea.stex" ]
+source_file="res://Assets/Icons/Loop.svg"
+dest_files=[ "res://.import/Loop.svg-af45fae773fa119d55ae09a6cbdbc294.stex" ]
 
 [params]
 

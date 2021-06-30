@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TrackCapture.svg-4d71904f51c3e92cd2eb971b2eb568cf.stex"
+path="res://.import/TrackCapture.svg-07434541c7a476bf5f14dabca511616e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/TrackCapture.svg"
-dest_files=[ "res://.import/TrackCapture.svg-4d71904f51c3e92cd2eb971b2eb568cf.stex" ]
+source_file="res://Assets/Icons/TrackCapture.svg"
+dest_files=[ "res://.import/TrackCapture.svg-07434541c7a476bf5f14dabca511616e.stex" ]
 
 [params]
 

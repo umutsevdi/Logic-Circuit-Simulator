@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AutoPlayBackwards.svg-00c4f42316c0d9b54e21998d9f6360d9.stex"
+path="res://.import/AutoPlayBackwards.svg-8280bf9d9a0c4940e8214abe4993fddb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/AutoPlayBackwards.svg"
-dest_files=[ "res://.import/AutoPlayBackwards.svg-00c4f42316c0d9b54e21998d9f6360d9.stex" ]
+source_file="res://Assets/Icons/AutoPlayBackwards.svg"
+dest_files=[ "res://.import/AutoPlayBackwards.svg-8280bf9d9a0c4940e8214abe4993fddb.stex" ]
 
 [params]
 

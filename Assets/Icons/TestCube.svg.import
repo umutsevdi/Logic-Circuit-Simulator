@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TestCube.svg-1deb1fc153847141ab994266f4139222.stex"
+path="res://.import/TestCube.svg-f8bb49f125d9b19d74f7a57b0f457c67.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/TestCube.svg"
-dest_files=[ "res://.import/TestCube.svg-1deb1fc153847141ab994266f4139222.stex" ]
+source_file="res://Assets/Icons/TestCube.svg"
+dest_files=[ "res://.import/TestCube.svg-f8bb49f125d9b19d74f7a57b0f457c67.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CheckBox.svg-269b2235ae4efa2af00cc49a2a927fe6.stex"
+path="res://.import/CheckBox.svg-1e2c29f5292789351aa4d038fa3c0d3c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/CheckBox.svg"
-dest_files=[ "res://.import/CheckBox.svg-269b2235ae4efa2af00cc49a2a927fe6.stex" ]
+source_file="res://Assets/Icons/CheckBox.svg"
+dest_files=[ "res://.import/CheckBox.svg-1e2c29f5292789351aa4d038fa3c0d3c.stex" ]
 
 [params]
 

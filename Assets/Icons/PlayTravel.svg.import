@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayTravel.svg-d18c816f643f121220bc7fc30055d7a2.stex"
+path="res://.import/PlayTravel.svg-878933825419462eb05f74abcfcc645a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/PlayTravel.svg"
-dest_files=[ "res://.import/PlayTravel.svg-d18c816f643f121220bc7fc30055d7a2.stex" ]
+source_file="res://Assets/Icons/PlayTravel.svg"
+dest_files=[ "res://.import/PlayTravel.svg-878933825419462eb05f74abcfcc645a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TileMap.svg-cbb35fd38150f80f8bc0a69f4a52b59e.stex"
+path="res://.import/TileMap.svg-3f78cbe2d1fa716ce86066dd526b49fd.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/TileMap.svg"
-dest_files=[ "res://.import/TileMap.svg-cbb35fd38150f80f8bc0a69f4a52b59e.stex" ]
+source_file="res://Assets/Icons/TileMap.svg"
+dest_files=[ "res://.import/TileMap.svg-3f78cbe2d1fa716ce86066dd526b49fd.stex" ]
 
 [params]
 

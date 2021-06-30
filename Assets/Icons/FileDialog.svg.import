@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FileDialog.svg-a39a07759c87b50168ca9a6c873049b2.stex"
+path="res://.import/FileDialog.svg-9b466c8f5bd9e64e14dfc6863ebb0e31.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/FileDialog.svg"
-dest_files=[ "res://.import/FileDialog.svg-a39a07759c87b50168ca9a6c873049b2.stex" ]
+source_file="res://Assets/Icons/FileDialog.svg"
+dest_files=[ "res://.import/FileDialog.svg-9b466c8f5bd9e64e14dfc6863ebb0e31.stex" ]
 
 [params]
 

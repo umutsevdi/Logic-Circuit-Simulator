@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KeyAnimation.svg-ac5352aacccc48aaf9d0c0dffacd5900.stex"
+path="res://.import/KeyAnimation.svg-aedd4d86d65554ee2a38baf6e8849299.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/KeyAnimation.svg"
-dest_files=[ "res://.import/KeyAnimation.svg-ac5352aacccc48aaf9d0c0dffacd5900.stex" ]
+source_file="res://Assets/Icons/KeyAnimation.svg"
+dest_files=[ "res://.import/KeyAnimation.svg-aedd4d86d65554ee2a38baf6e8849299.stex" ]
 
 [params]
 

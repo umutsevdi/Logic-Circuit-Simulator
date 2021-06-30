@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiTabMirrored.svg-a2b62c924d3c0d6ed6f72a6035774b66.stex"
+path="res://.import/GuiTabMirrored.svg-62096bc54474b9da69b9e5bde6df90c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/GuiTabMirrored.svg"
-dest_files=[ "res://.import/GuiTabMirrored.svg-a2b62c924d3c0d6ed6f72a6035774b66.stex" ]
+source_file="res://Assets/Icons/GuiTabMirrored.svg"
+dest_files=[ "res://.import/GuiTabMirrored.svg-62096bc54474b9da69b9e5bde6df90c8.stex" ]
 
 [params]
 

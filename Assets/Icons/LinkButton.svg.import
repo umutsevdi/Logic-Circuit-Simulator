@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LinkButton.svg-0448d7892c533d9a52500e3dcc171bf4.stex"
+path="res://.import/LinkButton.svg-88151732f8b9abf258470641ce989cf0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/LinkButton.svg"
-dest_files=[ "res://.import/LinkButton.svg-0448d7892c533d9a52500e3dcc171bf4.stex" ]
+source_file="res://Assets/Icons/LinkButton.svg"
+dest_files=[ "res://.import/LinkButton.svg-88151732f8b9abf258470641ce989cf0.stex" ]
 
 [params]
 

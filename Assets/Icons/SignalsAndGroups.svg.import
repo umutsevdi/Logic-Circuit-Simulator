@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SignalsAndGroups.svg-76605713a41602a509cdc9d58643fdc4.stex"
+path="res://.import/SignalsAndGroups.svg-20370470c3f13e3bd80c51abcc379048.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/SignalsAndGroups.svg"
-dest_files=[ "res://.import/SignalsAndGroups.svg-76605713a41602a509cdc9d58643fdc4.stex" ]
+source_file="res://Assets/Icons/SignalsAndGroups.svg"
+dest_files=[ "res://.import/SignalsAndGroups.svg-20370470c3f13e3bd80c51abcc379048.stex" ]
 
 [params]
 

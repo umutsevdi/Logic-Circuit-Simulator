@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rayito.svg-6ab867473aea0948dba81c775cc02590.stex"
+path="res://.import/Rayito.svg-52644ecc3e5270b56dd2cac7ad176b97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Rayito.svg"
-dest_files=[ "res://.import/Rayito.svg-6ab867473aea0948dba81c775cc02590.stex" ]
+source_file="res://Assets/Icons/Rayito.svg"
+dest_files=[ "res://.import/Rayito.svg-52644ecc3e5270b56dd2cac7ad176b97.stex" ]
 
 [params]
 

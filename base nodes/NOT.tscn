@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://base nodes/NOT.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Not.tscn" type="PackedScene" id=2]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.647059, 0.647059, 0.552941, 1 )
+border_width_left = 2
+border_color = Color( 0.211765, 0.223529, 0.180392, 1 )
+border_blend = true
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxLine" id=2]
+color = Color( 0.156863, 0.168627, 0.12549, 1 )
+grow_begin = 0.0
+grow_end = 0.0
+thickness = 4
+vertical = true
+
+[node name="Gate" type="Button"]
+margin_right = 80.0
+margin_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 40, 36 )
+focus_mode = 0
+custom_styles/hover = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -4.0
+margin_right = 65.0
+margin_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_pivot_offset = Vector2( 40, 36 )
+custom_colors/font_color = Color( 0.156863, 0.168627, 0.12549, 1 )
+text = "NOT"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Line2D" type="Line2D" parent="."]
+position = Vector2( 1.8, 0 )
+points = PoolVector2Array( 2.01348, 1.00109, 70, 36, 2.01565, 70.9185 )
+width = 2.0
+default_color = Color( 0.156863, 0.168627, 0.12549, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Not3" parent="." instance=ExtResource( 2 )]
+margin_left = -4.77759
+margin_top = -5.73166
+margin_right = 7.22241
+margin_bottom = 6.26834
+rect_min_size = Vector2( 12, 12 )

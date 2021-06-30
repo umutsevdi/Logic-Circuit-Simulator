@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HelpSearch.svg-ad57f4f411d86d00b66960979c501f99.stex"
+path="res://.import/HelpSearch.svg-75e3aa78078fdb055d8d9ea945aa18cb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/HelpSearch.svg"
-dest_files=[ "res://.import/HelpSearch.svg-ad57f4f411d86d00b66960979c501f99.stex" ]
+source_file="res://Assets/Icons/HelpSearch.svg"
+dest_files=[ "res://.import/HelpSearch.svg-75e3aa78078fdb055d8d9ea945aa18cb.stex" ]
 
 [params]
 

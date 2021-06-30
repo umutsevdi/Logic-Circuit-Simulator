@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Panels2Alt.svg-4fd4c858925e1e78ec927816c4505381.stex"
+path="res://.import/Panels2Alt.svg-29e1859c75a011d6d3c28b914c5a40b3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/Panels2Alt.svg"
-dest_files=[ "res://.import/Panels2Alt.svg-4fd4c858925e1e78ec927816c4505381.stex" ]
+source_file="res://Assets/Icons/Panels2Alt.svg"
+dest_files=[ "res://.import/Panels2Alt.svg-29e1859c75a011d6d3c28b914c5a40b3.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AnimationTree.svg-8b7744cf8f3c933eea69a967d060173d.stex"
+path="res://.import/AnimationTree.svg-f01f39eaffc4670b0ff2cb3625cc60ca.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/AnimationTree.svg"
-dest_files=[ "res://.import/AnimationTree.svg-8b7744cf8f3c933eea69a967d060173d.stex" ]
+source_file="res://Assets/Icons/AnimationTree.svg"
+dest_files=[ "res://.import/AnimationTree.svg-f01f39eaffc4670b0ff2cb3625cc60ca.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MoveUp.svg-5c564bfde3b81bd924502cf97f0c650f.stex"
+path="res://.import/MoveUp.svg-415bbb82d7576706960b4e8f29b4fdd6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/MoveUp.svg"
-dest_files=[ "res://.import/MoveUp.svg-5c564bfde3b81bd924502cf97f0c650f.stex" ]
+source_file="res://Assets/Icons/MoveUp.svg"
+dest_files=[ "res://.import/MoveUp.svg-415bbb82d7576706960b4e8f29b4fdd6.stex" ]
 
 [params]
 

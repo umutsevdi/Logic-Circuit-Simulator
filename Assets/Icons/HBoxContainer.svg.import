@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HBoxContainer.svg-7fa22b740e237e4965fa474d248b4e94.stex"
+path="res://.import/HBoxContainer.svg-60abfe417ceb50072932d42f66a32fa2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/HBoxContainer.svg"
-dest_files=[ "res://.import/HBoxContainer.svg-7fa22b740e237e4965fa474d248b4e94.stex" ]
+source_file="res://Assets/Icons/HBoxContainer.svg"
+dest_files=[ "res://.import/HBoxContainer.svg-60abfe417ceb50072932d42f66a32fa2.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SnapGrid.svg-3e844511f4ccae16eb97f78f3e3abd8c.stex"
+path="res://.import/SnapGrid.svg-6cf3254209fa508766b1784b2e471daf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Icons/SnapGrid.svg"
-dest_files=[ "res://.import/SnapGrid.svg-3e844511f4ccae16eb97f78f3e3abd8c.stex" ]
+source_file="res://Assets/Icons/SnapGrid.svg"
+dest_files=[ "res://.import/SnapGrid.svg-6cf3254209fa508766b1784b2e471daf.stex" ]
 
 [params]
 
