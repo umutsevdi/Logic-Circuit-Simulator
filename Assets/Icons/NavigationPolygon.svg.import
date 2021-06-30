@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NavigationPolygon.svg-66c7b8af98f6aa886c9f1e85ff35d82d.stex"
+path="res://.import/NavigationPolygon.svg-a6047b0f2b7473993cb8d7428f16ec41.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/NavigationPolygon.svg"
-dest_files=[ "res://.import/NavigationPolygon.svg-66c7b8af98f6aa886c9f1e85ff35d82d.stex" ]
+source_file="res://assets/Icons/NavigationPolygon.svg"
+dest_files=[ "res://.import/NavigationPolygon.svg-a6047b0f2b7473993cb8d7428f16ec41.stex" ]
 
 [params]
 

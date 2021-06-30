@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GPUParticles2D.svg-a679ac631bed3eeae2d063e3d0079ca8.stex"
+path="res://.import/GPUParticles2D.svg-7fb6e479fafee8878327b20ba38ada26.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GPUParticles2D.svg"
-dest_files=[ "res://.import/GPUParticles2D.svg-a679ac631bed3eeae2d063e3d0079ca8.stex" ]
+source_file="res://assets/Icons/GPUParticles2D.svg"
+dest_files=[ "res://.import/GPUParticles2D.svg-7fb6e479fafee8878327b20ba38ada26.stex" ]
 
 [params]
 

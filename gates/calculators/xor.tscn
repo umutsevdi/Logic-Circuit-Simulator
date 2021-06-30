@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://gates/calculators/xor.gd" type="Script" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.470588, 0.470588, 0.470588, 0.501961 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_detail = 20
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.470588, 0.470588, 0.470588, 0.705882 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_detail = 20
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.470588, 0.470588, 0.470588, 0 )
+draw_center = false
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_detail = 20
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.298039, 0.298039, 0.298039, 1 )
+border_width_top = 2
+border_width_right = 4
+border_width_bottom = 2
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_detail = 20
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0, 0, 0, 0 )
+border_width_top = 2
+border_width_right = 4
+border_width_bottom = 2
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_detail = 20
+anti_aliasing_size = 2
+
+[node name="XOR" type="Button"]
+margin_top = -3.8147e-06
+margin_right = 90.0
+margin_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 90, 100 )
+rect_pivot_offset = Vector2( 50, 50 )
+focus_mode = 0
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+clip_text = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_left = 3.0
+margin_right = 27.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel2" type="Panel" parent="."]
+margin_left = -18.0
+margin_right = 6.0
+margin_bottom = 100.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

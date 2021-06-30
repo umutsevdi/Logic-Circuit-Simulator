@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Grid.svg-07f5e9667d8a454eda2d8e97457a7126.stex"
+path="res://.import/Grid.svg-383e033fae4d629c6f4e16737a562c4a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Grid.svg"
-dest_files=[ "res://.import/Grid.svg-07f5e9667d8a454eda2d8e97457a7126.stex" ]
+source_file="res://assets/Icons/Grid.svg"
+dest_files=[ "res://.import/Grid.svg-383e033fae4d629c6f4e16737a562c4a.stex" ]
 
 [params]
 

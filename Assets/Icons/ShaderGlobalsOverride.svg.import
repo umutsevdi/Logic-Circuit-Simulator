@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ShaderGlobalsOverride.svg-a41848b95058bfaf3956264cdc5636c4.stex"
+path="res://.import/ShaderGlobalsOverride.svg-6588a16c80733d557f4c69836b3ae931.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ShaderGlobalsOverride.svg"
-dest_files=[ "res://.import/ShaderGlobalsOverride.svg-a41848b95058bfaf3956264cdc5636c4.stex" ]
+source_file="res://assets/Icons/ShaderGlobalsOverride.svg"
+dest_files=[ "res://.import/ShaderGlobalsOverride.svg-6588a16c80733d557f4c69836b3ae931.stex" ]
 
 [params]
 

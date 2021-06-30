@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bake.svg-1bb82586e7db2c8e3db86f8c7fe0346b.stex"
+path="res://.import/Bake.svg-ae0f9fe77bc94cbf4f5d2fb4ef33896b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Bake.svg"
-dest_files=[ "res://.import/Bake.svg-1bb82586e7db2c8e3db86f8c7fe0346b.stex" ]
+source_file="res://assets/Icons/Bake.svg"
+dest_files=[ "res://.import/Bake.svg-ae0f9fe77bc94cbf4f5d2fb4ef33896b.stex" ]
 
 [params]
 

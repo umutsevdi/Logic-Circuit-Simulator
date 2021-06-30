@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FileBigThumb.svg-95a5541f8e14153a074945f1fd863ccc.stex"
+path="res://.import/FileBigThumb.svg-025c04126d4557ae3d91729edf601e34.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/FileBigThumb.svg"
-dest_files=[ "res://.import/FileBigThumb.svg-95a5541f8e14153a074945f1fd863ccc.stex" ]
+source_file="res://assets/Icons/FileBigThumb.svg"
+dest_files=[ "res://.import/FileBigThumb.svg-025c04126d4557ae3d91729edf601e34.stex" ]
 
 [params]
 

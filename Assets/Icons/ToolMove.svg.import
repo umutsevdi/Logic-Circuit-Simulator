@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ToolMove.svg-4c42a6ea1dde6ecc3aace04091cf3e00.stex"
+path="res://.import/ToolMove.svg-fa69ee7f7b1157ff258788a3f4ef0254.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ToolMove.svg"
-dest_files=[ "res://.import/ToolMove.svg-4c42a6ea1dde6ecc3aace04091cf3e00.stex" ]
+source_file="res://assets/Icons/ToolMove.svg"
+dest_files=[ "res://.import/ToolMove.svg-fa69ee7f7b1157ff258788a3f4ef0254.stex" ]
 
 [params]
 

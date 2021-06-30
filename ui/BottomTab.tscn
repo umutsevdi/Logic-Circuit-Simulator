@@ -1,0 +1,163 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/FontSmall.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/Icons/new/zoom.png" type="Texture" id=2]
+[ext_resource path="res://assets/Icons/new/cursor.png" type="Texture" id=3]
+[ext_resource path="res://assets/Icons/new/selection.png" type="Texture" id=4]
+[ext_resource path="res://assets/Icons/new/current_tab.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.2, 0.219608, 0.258824, 1 )
+
+[node name="BottomTab" type="Control"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -20.0
+margin_right = 0.00012207
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -737.0
+margin_top = -10.0
+margin_right = -0.00012207
+margin_bottom = 10.0
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparatorSelection" type="VSeparator" parent="HBoxContainer"]
+visible = false
+margin_left = 50.0
+margin_right = 54.0
+margin_bottom = 20.0
+
+[node name="IconSelection" type="TextureRect" parent="HBoxContainer"]
+visible = false
+margin_left = 58.0
+margin_right = 78.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 4
+
+[node name="Selection" type="Label" parent="HBoxContainer"]
+visible = false
+margin_left = 82.0
+margin_right = 212.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 130, 20 )
+custom_fonts/font = ExtResource( 1 )
+align = 1
+valign = 1
+clip_text = true
+
+[node name="VSeparator3" type="VSeparator" parent="HBoxContainer"]
+margin_left = 216.0
+margin_right = 220.0
+margin_bottom = 20.0
+
+[node name="IconTab" type="TextureRect" parent="HBoxContainer"]
+margin_left = 224.0
+margin_right = 244.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+hint_tooltip = "Current Tab"
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 4
+
+[node name="CurrentTab" type="Label" parent="HBoxContainer"]
+margin_left = 248.0
+margin_right = 368.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 120, 20 )
+custom_fonts/font = ExtResource( 1 )
+text = "New Tab"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer"]
+margin_left = 372.0
+margin_right = 376.0
+margin_bottom = 20.0
+
+[node name="IconCursor" type="TextureRect" parent="HBoxContainer"]
+margin_left = 380.0
+margin_right = 400.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+hint_tooltip = "Mouse Position"
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 4
+
+[node name="Cursor" type="Label" parent="HBoxContainer"]
+margin_left = 404.0
+margin_right = 564.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 160, 20 )
+custom_fonts/font = ExtResource( 1 )
+text = "(0,0)"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer"]
+margin_left = 568.0
+margin_right = 572.0
+margin_bottom = 20.0
+
+[node name="IconZoom" type="TextureRect" parent="HBoxContainer"]
+margin_left = 576.0
+margin_right = 596.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+hint_tooltip = "Zoom"
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 4
+
+[node name="Zoom" type="Label" parent="HBoxContainer"]
+margin_left = 600.0
+margin_right = 675.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 75, 20 )
+custom_fonts/font = ExtResource( 1 )
+text = "100%"
+align = 1
+valign = 1
+clip_text = true
+
+[node name="VSeperator3" type="VSeparator" parent="HBoxContainer"]
+margin_left = 679.0
+margin_right = 683.0
+margin_bottom = 20.0
+
+[node name="EmptySlot" type="Label" parent="HBoxContainer"]
+margin_left = 687.0
+margin_right = 737.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 50, 20 )
+custom_fonts/font = ExtResource( 1 )
+align = 1
+valign = 1
+clip_text = true

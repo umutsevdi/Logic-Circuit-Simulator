@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Progress1.svg-89647bfc420536425feb1db8a1e4a69f.stex"
+path="res://.import/Progress1.svg-e6313627983ea42a4a1b58501f7ccbac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Progress1.svg"
-dest_files=[ "res://.import/Progress1.svg-89647bfc420536425feb1db8a1e4a69f.stex" ]
+source_file="res://assets/Icons/Progress1.svg"
+dest_files=[ "res://.import/Progress1.svg-e6313627983ea42a4a1b58501f7ccbac.stex" ]
 
 [params]
 

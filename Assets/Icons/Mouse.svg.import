@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Mouse.svg-002ee9a3587ee31cc3012227a99dd7f1.stex"
+path="res://.import/Mouse.svg-a3bd88c1382a4bc231affbf6d76c0f53.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Mouse.svg"
-dest_files=[ "res://.import/Mouse.svg-002ee9a3587ee31cc3012227a99dd7f1.stex" ]
+source_file="res://assets/Icons/Mouse.svg"
+dest_files=[ "res://.import/Mouse.svg-a3bd88c1382a4bc231affbf6d76c0f53.stex" ]
 
 [params]
 

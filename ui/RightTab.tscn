@@ -1,0 +1,558 @@
+[gd_scene load_steps=40 format=2]
+
+[ext_resource path="res://Screenshot 2021-06-28 174739.png" type="Texture" id=1]
+[ext_resource path="res://ui/RightTab.gd" type="Script" id=2]
+[ext_resource path="res://assets/Icons/new/object.png" type="Texture" id=3]
+[ext_resource path="res://assets/Icons/new/truth_table.png" type="Texture" id=4]
+[ext_resource path="res://assets/Icons/new/folder.png" type="Texture" id=5]
+[ext_resource path="res://assets/Icons/new/store.png" type="Texture" id=6]
+[ext_resource path="res://assets/font/Inconsolata-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://assets/themes/button_disabled.tres" type="StyleBox" id=8]
+[ext_resource path="res://assets/themes/button_normal.tres" type="StyleBox" id=9]
+[ext_resource path="res://assets/Icons/new/off.png" type="Texture" id=10]
+[ext_resource path="res://assets/Icons/new/on.png" type="Texture" id=11]
+[ext_resource path="res://assets/Icons/new/search.png" type="Texture" id=12]
+[ext_resource path="res://assets/Icons/new/on_disabled.png" type="Texture" id=13]
+[ext_resource path="res://assets/Icons/new/off_disabled.png" type="Texture" id=14]
+[ext_resource path="res://assets/themes/button_pressed.tres" type="StyleBox" id=15]
+[ext_resource path="res://assets/themes/button_hover.tres" type="StyleBox" id=16]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.2, 0.219608, 0.258824, 1 )
+border_color = Color( 0.756863, 0.772549, 0.796078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 15.0
+bg_color = Color( 0.317647, 0.333333, 0.356863, 1 )
+border_width_right = 4
+border_color = Color( 0.843137, 0.854902, 0.878431, 1 )
+corner_radius_top_right = 2
+
+[sub_resource type="StyleBoxFlat" id=3]
+content_margin_left = 15.0
+bg_color = Color( 0.129412, 0.145098, 0.168627, 1 )
+border_width_right = 4
+border_color = Color( 0.843137, 0.854902, 0.878431, 1 )
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+
+[sub_resource type="StyleBoxFlat" id=4]
+content_margin_left = 15.0
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.129412, 0.145098, 0.168627, 1 )
+
+[sub_resource type="StyleBoxFlat" id=24]
+content_margin_left = 0.0
+content_margin_right = 30.0
+bg_color = Color( 0.2, 0.219608, 0.258824, 1 )
+corner_detail = 20
+
+[sub_resource type="DynamicFont" id=7]
+size = 20
+use_filter = true
+extra_spacing_char = 2
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+content_margin_left = 24.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.156863, 0.172549, 0.203922, 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 18
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+content_margin_left = 0.0
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+content_margin_right = 65.0
+bg_color = Color( 0.386169, 0.386169, 0.445313, 1 )
+border_width_bottom = 1
+border_color = Color( 0.756863, 0.772549, 0.796078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+content_margin_right = 65.0
+bg_color = Color( 0.160784, 0.176471, 0.2, 1 )
+border_width_bottom = 1
+border_color = Color( 0.439216, 0.501961, 0.537255, 1 )
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id=13]
+content_margin_right = 65.0
+bg_color = Color( 0.172549, 0.164706, 0.196078, 1 )
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color( 0.133333, 0.12549, 0.14902, 1 )
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[sub_resource type="StyleBoxFlat" id=14]
+content_margin_left = 65.0
+bg_color = Color( 0.386169, 0.386169, 0.445313, 1 )
+border_width_bottom = 1
+border_color = Color( 0.756863, 0.772549, 0.796078, 1 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+content_margin_right = 65.0
+bg_color = Color( 0.160784, 0.176471, 0.2, 1 )
+border_width_bottom = 1
+border_color = Color( 0.439216, 0.501961, 0.537255, 1 )
+corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id=16]
+content_margin_left = 0.0
+bg_color = Color( 0.2, 0.219608, 0.258824, 1 )
+
+[sub_resource type="StyleBoxFlat" id=17]
+content_margin_left = 0.0
+bg_color = Color( 0.2, 0.219608, 0.258824, 1 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+content_margin_left = 25.0
+content_margin_right = 25.0
+bg_color = Color( 0.156863, 0.172549, 0.203922, 1 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+content_margin_left = 15.0
+content_margin_right = 15.0
+bg_color = Color( 0.129412, 0.145098, 0.168627, 1 )
+
+[sub_resource type="StyleBoxFlat" id=20]
+bg_color = Color( 0.156863, 0.172549, 0.203922, 1 )
+
+[sub_resource type="StyleBoxFlat" id=21]
+bg_color = Color( 0.317647, 0.333333, 0.356863, 1 )
+
+[sub_resource type="StyleBoxFlat" id=22]
+
+[sub_resource type="StyleBoxFlat" id=23]
+draw_center = false
+border_width_bottom = 2
+border_color = Color( 0.439216, 0.501961, 0.537255, 1 )
+
+[node name="RightTab" type="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -60.0
+margin_top = 35.0
+margin_right = 2.0
+margin_bottom = 6.10352e-05
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Screenshot 2021-06-28 174739" type="Sprite" parent="."]
+position = Vector2( 1582.17, 347.133 )
+texture = ExtResource( 1 )
+
+[node name="TabSelection" type="Panel" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -60.0
+rect_min_size = Vector2( 60, 850 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabSelection"]
+anchor_bottom = 1.0
+margin_top = 68.0
+margin_right = 60.0
+rect_min_size = Vector2( 60, 0 )
+custom_constants/separation = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Search" type="Button" parent="TabSelection/VBoxContainer"]
+margin_right = 60.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 60, 60 )
+focus_mode = 0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+toggle_mode = true
+enabled_focus_mode = 0
+icon = ExtResource( 12 )
+
+[node name="Inspector" type="Button" parent="TabSelection/VBoxContainer"]
+margin_top = 65.0
+margin_right = 60.0
+margin_bottom = 125.0
+rect_min_size = Vector2( 60, 60 )
+focus_mode = 0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+toggle_mode = true
+enabled_focus_mode = 0
+icon = ExtResource( 3 )
+
+[node name="Truth Table" type="Button" parent="TabSelection/VBoxContainer"]
+margin_top = 130.0
+margin_right = 60.0
+margin_bottom = 190.0
+rect_min_size = Vector2( 60, 60 )
+focus_mode = 0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+toggle_mode = true
+enabled_focus_mode = 0
+icon = ExtResource( 4 )
+
+[node name="Package Manager" type="Button" parent="TabSelection/VBoxContainer"]
+margin_top = 195.0
+margin_right = 60.0
+margin_bottom = 255.0
+rect_min_size = Vector2( 60, 60 )
+focus_mode = 0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+toggle_mode = true
+enabled_focus_mode = 0
+icon = ExtResource( 6 )
+
+[node name="Local Files" type="Button" parent="TabSelection/VBoxContainer"]
+margin_top = 260.0
+margin_right = 60.0
+margin_bottom = 320.0
+rect_min_size = Vector2( 60, 60 )
+focus_mode = 0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+toggle_mode = true
+enabled_focus_mode = 0
+icon = ExtResource( 5 )
+
+[node name="Tabs" type="Panel" parent="TabSelection"]
+anchor_bottom = 1.0
+margin_left = -330.0
+margin_bottom = 6.10352e-05
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="Label" parent="TabSelection/Tabs"]
+anchor_top = -0.000491743
+anchor_bottom = -0.000491743
+margin_top = 0.424866
+margin_right = 330.0
+margin_bottom = 38.4249
+custom_styles/normal = SubResource( 24 )
+custom_fonts/font = SubResource( 7 )
+custom_constants/line_spacing = 0
+text = "properties"
+align = 2
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ObjectName" type="LineEdit" parent="TabSelection/Tabs"]
+margin_top = 37.0
+margin_right = 330.0
+margin_bottom = 67.0
+focus_mode = 1
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.756863, 0.772549, 0.796078, 1 )
+clear_button_enabled = true
+placeholder_text = "Object Name"
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inspector" type="VBoxContainer" parent="TabSelection/Tabs"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -156.5
+margin_top = 80.0
+margin_right = 164.5
+margin_bottom = 854.0
+custom_constants/separation = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Id" type="HBoxContainer" parent="TabSelection/Tabs/Inspector"]
+margin_right = 321.0
+margin_bottom = 30.0
+rect_pivot_offset = Vector2( -746.893, 95.2158 )
+
+[node name="Label" type="Label" parent="TabSelection/Tabs/Inspector/Id"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_styles/normal = SubResource( 10 )
+text = "Id  :"
+valign = 1
+
+[node name="Value" type="Label" parent="TabSelection/Tabs/Inspector/Id"]
+margin_left = 154.0
+margin_top = 2.0
+margin_right = 304.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 150, 25 )
+text = "1764866"
+align = 1
+valign = 1
+
+[node name="Type" type="HBoxContainer" parent="TabSelection/Tabs/Inspector"]
+margin_top = 33.0
+margin_right = 321.0
+margin_bottom = 63.0
+rect_pivot_offset = Vector2( -746.893, 95.2158 )
+
+[node name="Label" type="Label" parent="TabSelection/Tabs/Inspector/Type"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_styles/normal = SubResource( 10 )
+text = "Type  :"
+valign = 1
+
+[node name="Value" type="Label" parent="TabSelection/Tabs/Inspector/Type"]
+margin_left = 154.0
+margin_top = 2.0
+margin_right = 304.0
+margin_bottom = 27.0
+rect_min_size = Vector2( 150, 25 )
+text = "AND"
+align = 1
+valign = 1
+
+[node name="Value" type="HBoxContainer" parent="TabSelection/Tabs/Inspector"]
+margin_top = 66.0
+margin_right = 321.0
+margin_bottom = 99.0
+rect_pivot_offset = Vector2( -746.893, 95.2158 )
+
+[node name="Label" type="Label" parent="TabSelection/Tabs/Inspector/Value"]
+margin_top = 6.0
+margin_right = 150.0
+margin_bottom = 26.0
+rect_min_size = Vector2( 150, 20 )
+custom_styles/normal = SubResource( 10 )
+text = "Value :"
+valign = 1
+
+[node name="Value" type="CheckButton" parent="TabSelection/Tabs/Inspector/Value"]
+margin_left = 154.0
+margin_right = 304.0
+margin_bottom = 33.0
+rect_min_size = Vector2( 150, 20 )
+focus_mode = 0
+custom_icons/off = ExtResource( 10 )
+custom_icons/on_disabled = ExtResource( 13 )
+custom_icons/on = ExtResource( 11 )
+custom_icons/off_disabled = ExtResource( 14 )
+custom_styles/hover = SubResource( 11 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/disabled = SubResource( 13 )
+custom_styles/hover_pressed = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+enabled_focus_mode = 0
+
+[node name="Interval" type="HBoxContainer" parent="TabSelection/Tabs/Inspector"]
+margin_top = 102.0
+margin_right = 321.0
+margin_bottom = 132.0
+rect_pivot_offset = Vector2( -746.893, 95.2158 )
+
+[node name="Label" type="Label" parent="TabSelection/Tabs/Inspector/Interval"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_styles/normal = SubResource( 10 )
+text = "Interval :"
+valign = 1
+
+[node name="Value" type="LineEdit" parent="TabSelection/Tabs/Inspector/Interval"]
+margin_left = 154.0
+margin_right = 304.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 150, 25 )
+focus_mode = 1
+custom_styles/read_only = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+align = 1
+max_length = 5
+placeholder_text = "Clock Interval"
+caret_blink = true
+
+[node name="Position_x" type="HBoxContainer" parent="TabSelection/Tabs/Inspector"]
+margin_top = 135.0
+margin_right = 321.0
+margin_bottom = 165.0
+rect_pivot_offset = Vector2( -746.893, 95.2158 )
+
+[node name="Label" type="Label" parent="TabSelection/Tabs/Inspector/Position_x"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_styles/normal = SubResource( 10 )
+text = "Position :"
+valign = 1
+
+[node name="property" type="Label" parent="TabSelection/Tabs/Inspector/Position_x"]
+margin_left = 154.0
+margin_right = 184.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/normal = SubResource( 16 )
+text = "x"
+align = 1
+valign = 1
+
+[node name="Value" type="LineEdit" parent="TabSelection/Tabs/Inspector/Position_x"]
+margin_left = 188.0
+margin_right = 303.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 115, 25 )
+focus_mode = 1
+custom_styles/read_only = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+align = 1
+caret_blink = true
+
+[node name="Position_y" type="HBoxContainer" parent="TabSelection/Tabs/Inspector"]
+margin_top = 168.0
+margin_right = 321.0
+margin_bottom = 198.0
+rect_pivot_offset = Vector2( -746.893, 95.2158 )
+
+[node name="Label" type="Label" parent="TabSelection/Tabs/Inspector/Position_y"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_styles/normal = SubResource( 10 )
+valign = 1
+
+[node name="property" type="Label" parent="TabSelection/Tabs/Inspector/Position_y"]
+margin_left = 154.0
+margin_right = 184.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 30, 30 )
+custom_styles/normal = SubResource( 17 )
+text = "y"
+align = 1
+valign = 1
+
+[node name="Value" type="LineEdit" parent="TabSelection/Tabs/Inspector/Position_y"]
+margin_left = 188.0
+margin_right = 303.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 115, 25 )
+focus_mode = 1
+custom_styles/read_only = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+align = 1
+caret_blink = true
+
+[node name="Rotation" type="HBoxContainer" parent="TabSelection/Tabs/Inspector"]
+margin_top = 201.0
+margin_right = 321.0
+margin_bottom = 231.0
+rect_pivot_offset = Vector2( -746.893, 95.2158 )
+
+[node name="Label" type="Label" parent="TabSelection/Tabs/Inspector/Rotation"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_styles/normal = SubResource( 10 )
+text = "Rotation :"
+valign = 1
+
+[node name="Value" type="OptionButton" parent="TabSelection/Tabs/Inspector/Rotation"]
+margin_left = 154.0
+margin_right = 304.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 150, 25 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 16 )
+custom_styles/pressed = ExtResource( 15 )
+custom_styles/disabled = ExtResource( 8 )
+custom_styles/normal = ExtResource( 9 )
+enabled_focus_mode = 0
+text = "Right"
+align = 1
+items = [ "Right", null, false, 0, null, "Down", null, false, 1, null, "Up", null, false, 2, null, "Left", null, false, 3, null ]
+selected = 0
+
+[node name="TabContainer" type="TabContainer" parent="TabSelection/Tabs/Inspector"]
+margin_top = 234.0
+margin_right = 321.0
+margin_bottom = 562.0
+rect_min_size = Vector2( 315, 0 )
+rect_clip_content = true
+custom_styles/tab_fg = SubResource( 18 )
+custom_styles/tab_bg = SubResource( 19 )
+custom_styles/panel = SubResource( 20 )
+
+[node name="Input" type="Tabs" parent="TabSelection/Tabs/Inspector/TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 30.0
+rect_min_size = Vector2( 0, 300 )
+
+[node name="Output" type="Tabs" parent="TabSelection/Tabs/Inspector/TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 30.0
+
+[node name="Source" type="HBoxContainer" parent="TabSelection/Tabs/Inspector"]
+margin_top = 565.0
+margin_right = 321.0
+margin_bottom = 595.0
+rect_pivot_offset = Vector2( -746.893, 95.2158 )
+
+[node name="Label" type="Label" parent="TabSelection/Tabs/Inspector/Source"]
+margin_top = -1.0
+margin_right = 150.0
+margin_bottom = 29.0
+rect_min_size = Vector2( 150, 30 )
+custom_styles/normal = SubResource( 10 )
+text = "Source :"
+valign = 1
+
+[node name="Value" type="Button" parent="TabSelection/Tabs/Inspector/Source"]
+margin_left = 154.0
+margin_right = 304.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 150, 25 )
+focus_mode = 0
+custom_styles/hover = SubResource( 21 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/normal = SubResource( 23 )
+enabled_focus_mode = 0
+text = "package_manager://"
+clip_text = true

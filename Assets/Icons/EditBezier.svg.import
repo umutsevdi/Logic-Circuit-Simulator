@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EditBezier.svg-686b88e7d54e0bfede9ed9b6ec12d102.stex"
+path="res://.import/EditBezier.svg-2a943ccddc00aecfd22766dc89f4cfae.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/EditBezier.svg"
-dest_files=[ "res://.import/EditBezier.svg-686b88e7d54e0bfede9ed9b6ec12d102.stex" ]
+source_file="res://assets/Icons/EditBezier.svg"
+dest_files=[ "res://.import/EditBezier.svg-2a943ccddc00aecfd22766dc89f4cfae.stex" ]
 
 [params]
 

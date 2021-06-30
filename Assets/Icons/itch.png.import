@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/itch.png-32ae6161e59ca3e6745bb018f9307ce6.stex"
+path="res://.import/itch.png-6c97e0b0a1d5e4d1f9bafb7da19abc86.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/itch.png"
-dest_files=[ "res://.import/itch.png-32ae6161e59ca3e6745bb018f9307ce6.stex" ]
+source_file="res://assets/Icons/itch.png"
+dest_files=[ "res://.import/itch.png-6c97e0b0a1d5e4d1f9bafb7da19abc86.stex" ]
 
 [params]
 

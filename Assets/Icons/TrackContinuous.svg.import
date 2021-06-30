@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TrackContinuous.svg-31a52d940d23e05201b7d826adb96a15.stex"
+path="res://.import/TrackContinuous.svg-b124998b9ef8c512b01fd3f7ca95c8fc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/TrackContinuous.svg"
-dest_files=[ "res://.import/TrackContinuous.svg-31a52d940d23e05201b7d826adb96a15.stex" ]
+source_file="res://assets/Icons/TrackContinuous.svg"
+dest_files=[ "res://.import/TrackContinuous.svg-b124998b9ef8c512b01fd3f7ca95c8fc.stex" ]
 
 [params]
 

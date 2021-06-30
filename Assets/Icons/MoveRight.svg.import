@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MoveRight.svg-760c035e1a229383c7f2741dc8d34152.stex"
+path="res://.import/MoveRight.svg-c9d1c37033a32ed75d18983b845c8338.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/MoveRight.svg"
-dest_files=[ "res://.import/MoveRight.svg-760c035e1a229383c7f2741dc8d34152.stex" ]
+source_file="res://assets/Icons/MoveRight.svg"
+dest_files=[ "res://.import/MoveRight.svg-c9d1c37033a32ed75d18983b845c8338.stex" ]
 
 [params]
 

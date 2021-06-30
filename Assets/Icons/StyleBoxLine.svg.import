@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StyleBoxLine.svg-d2ad4e488d5cd610a51a26c8b032d181.stex"
+path="res://.import/StyleBoxLine.svg-4ebdf2a6aeab75591aa976702f0c7dd9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/StyleBoxLine.svg"
-dest_files=[ "res://.import/StyleBoxLine.svg-d2ad4e488d5cd610a51a26c8b032d181.stex" ]
+source_file="res://assets/Icons/StyleBoxLine.svg"
+dest_files=[ "res://.import/StyleBoxLine.svg-4ebdf2a6aeab75591aa976702f0c7dd9.stex" ]
 
 [params]
 

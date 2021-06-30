@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayBackwards.svg-033c9a64d83f3c11b9448c16ab72c102.stex"
+path="res://.import/PlayBackwards.svg-47f77f0dc1c97a6a886b7022bc4cab51.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/PlayBackwards.svg"
-dest_files=[ "res://.import/PlayBackwards.svg-033c9a64d83f3c11b9448c16ab72c102.stex" ]
+source_file="res://assets/Icons/PlayBackwards.svg"
+dest_files=[ "res://.import/PlayBackwards.svg-47f77f0dc1c97a6a886b7022bc4cab51.stex" ]
 
 [params]
 

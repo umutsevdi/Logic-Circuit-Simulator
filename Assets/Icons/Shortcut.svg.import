@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Shortcut.svg-a25e24ff9d9e6906455bafa62e1fcb99.stex"
+path="res://.import/Shortcut.svg-c80a96033ebf5387947392bda8d949a1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Shortcut.svg"
-dest_files=[ "res://.import/Shortcut.svg-a25e24ff9d9e6906455bafa62e1fcb99.stex" ]
+source_file="res://assets/Icons/Shortcut.svg"
+dest_files=[ "res://.import/Shortcut.svg-c80a96033ebf5387947392bda8d949a1.stex" ]
 
 [params]
 

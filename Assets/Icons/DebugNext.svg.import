@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DebugNext.svg-1ce21e1967857d28a750750290edde74.stex"
+path="res://.import/DebugNext.svg-df9a0d70c855dd376c5ca88e48caf719.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/DebugNext.svg"
-dest_files=[ "res://.import/DebugNext.svg-1ce21e1967857d28a750750290edde74.stex" ]
+source_file="res://assets/Icons/DebugNext.svg"
+dest_files=[ "res://.import/DebugNext.svg-df9a0d70c855dd376c5ca88e48caf719.stex" ]
 
 [params]
 

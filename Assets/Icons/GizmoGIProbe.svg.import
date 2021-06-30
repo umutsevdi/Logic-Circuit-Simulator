@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GizmoGIProbe.svg-47f06049784d44f94c1eb98bbfea8c32.stex"
+path="res://.import/GizmoGIProbe.svg-bef8b45d0b58c3f76f283087eb7b2736.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GizmoGIProbe.svg"
-dest_files=[ "res://.import/GizmoGIProbe.svg-47f06049784d44f94c1eb98bbfea8c32.stex" ]
+source_file="res://assets/Icons/GizmoGIProbe.svg"
+dest_files=[ "res://.import/GizmoGIProbe.svg-bef8b45d0b58c3f76f283087eb7b2736.stex" ]
 
 [params]
 

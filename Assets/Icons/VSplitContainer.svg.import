@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/VSplitContainer.svg-9d8b0232802aca4b665925d63eaa944c.stex"
+path="res://.import/VSplitContainer.svg-ca2f30b0a2580f9774a434c062957171.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/VSplitContainer.svg"
-dest_files=[ "res://.import/VSplitContainer.svg-9d8b0232802aca4b665925d63eaa944c.stex" ]
+source_file="res://assets/Icons/VSplitContainer.svg"
+dest_files=[ "res://.import/VSplitContainer.svg-ca2f30b0a2580f9774a434c062957171.stex" ]
 
 [params]
 

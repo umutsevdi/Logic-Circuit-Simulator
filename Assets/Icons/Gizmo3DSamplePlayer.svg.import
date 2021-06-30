@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Gizmo3DSamplePlayer.svg-cb6bbab15fd369dcc5af2e245dbfea01.stex"
+path="res://.import/Gizmo3DSamplePlayer.svg-f6d0055209bf8d084a13eaac3b043af0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Gizmo3DSamplePlayer.svg"
-dest_files=[ "res://.import/Gizmo3DSamplePlayer.svg-cb6bbab15fd369dcc5af2e245dbfea01.stex" ]
+source_file="res://assets/Icons/Gizmo3DSamplePlayer.svg"
+dest_files=[ "res://.import/Gizmo3DSamplePlayer.svg-f6d0055209bf8d084a13eaac3b043af0.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GrooveJoint2D.svg-ae178f34df80135478b2bda8a40d6325.stex"
+path="res://.import/GrooveJoint2D.svg-8093eae0d04882bade0c1eab87774684.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GrooveJoint2D.svg"
-dest_files=[ "res://.import/GrooveJoint2D.svg-ae178f34df80135478b2bda8a40d6325.stex" ]
+source_file="res://assets/Icons/GrooveJoint2D.svg"
+dest_files=[ "res://.import/GrooveJoint2D.svg-8093eae0d04882bade0c1eab87774684.stex" ]
 
 [params]
 

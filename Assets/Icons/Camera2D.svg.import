@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Camera2D.svg-f7ff9a7e2b7478fa3eeeac7dfc6b181f.stex"
+path="res://.import/Camera2D.svg-4791c83e32bec913748b2cd802d0fd6a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Camera2D.svg"
-dest_files=[ "res://.import/Camera2D.svg-f7ff9a7e2b7478fa3eeeac7dfc6b181f.stex" ]
+source_file="res://assets/Icons/Camera2D.svg"
+dest_files=[ "res://.import/Camera2D.svg-4791c83e32bec913748b2cd802d0fd6a.stex" ]
 
 [params]
 

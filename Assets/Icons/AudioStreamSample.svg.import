@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AudioStreamSample.svg-5559fe4d64f028ad41d42f57dd7942c4.stex"
+path="res://.import/AudioStreamSample.svg-cc94cd679f86ac47dd1ee085c1dab127.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/AudioStreamSample.svg"
-dest_files=[ "res://.import/AudioStreamSample.svg-5559fe4d64f028ad41d42f57dd7942c4.stex" ]
+source_file="res://assets/Icons/AudioStreamSample.svg"
+dest_files=[ "res://.import/AudioStreamSample.svg-cc94cd679f86ac47dd1ee085c1dab127.stex" ]
 
 [params]
 

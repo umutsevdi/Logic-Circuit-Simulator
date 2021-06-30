@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MultiEdit.svg-35301568a97f958143906b1ea84b3375.stex"
+path="res://.import/MultiEdit.svg-7ecbf347a85a8fcb671aa7e22ce84eac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/MultiEdit.svg"
-dest_files=[ "res://.import/MultiEdit.svg-35301568a97f958143906b1ea84b3375.stex" ]
+source_file="res://assets/Icons/MultiEdit.svg"
+dest_files=[ "res://.import/MultiEdit.svg-7ecbf347a85a8fcb671aa7e22ce84eac.stex" ]
 
 [params]
 

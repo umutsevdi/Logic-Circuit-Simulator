@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ConeTwistJoint3D.svg-0c97a04a307c982769d88b9f02a36968.stex"
+path="res://.import/ConeTwistJoint3D.svg-5324e31fa9f4aea5b1ae05b9ecb86d97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ConeTwistJoint3D.svg"
-dest_files=[ "res://.import/ConeTwistJoint3D.svg-0c97a04a307c982769d88b9f02a36968.stex" ]
+source_file="res://assets/Icons/ConeTwistJoint3D.svg"
+dest_files=[ "res://.import/ConeTwistJoint3D.svg-5324e31fa9f4aea5b1ae05b9ecb86d97.stex" ]
 
 [params]
 

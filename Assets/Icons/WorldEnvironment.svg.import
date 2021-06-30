@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/WorldEnvironment.svg-e3c0065f23f234f3b57b336a7d4e3bab.stex"
+path="res://.import/WorldEnvironment.svg-7ffa175ea3e7893aab0cbc9e19a4a23f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/WorldEnvironment.svg"
-dest_files=[ "res://.import/WorldEnvironment.svg-e3c0065f23f234f3b57b336a7d4e3bab.stex" ]
+source_file="res://assets/Icons/WorldEnvironment.svg"
+dest_files=[ "res://.import/WorldEnvironment.svg-7ffa175ea3e7893aab0cbc9e19a4a23f.stex" ]
 
 [params]
 

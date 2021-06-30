@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BusVuFrozen.svg-c76bdaed57b66207cb4140246b6fd0b9.stex"
+path="res://.import/BusVuFrozen.svg-042fbe980c44287b2d7c3064c981395d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/BusVuFrozen.svg"
-dest_files=[ "res://.import/BusVuFrozen.svg-c76bdaed57b66207cb4140246b6fd0b9.stex" ]
+source_file="res://assets/Icons/BusVuFrozen.svg"
+dest_files=[ "res://.import/BusVuFrozen.svg-042fbe980c44287b2d7c3064c981395d.stex" ]
 
 [params]
 

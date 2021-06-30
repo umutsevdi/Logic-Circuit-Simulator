@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ScriptCreate.svg-8a5ca2cf4805cd7b73cebac365d026fc.stex"
+path="res://.import/ScriptCreate.svg-221d30e15c5cd0ee825971c0030c3346.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ScriptCreate.svg"
-dest_files=[ "res://.import/ScriptCreate.svg-8a5ca2cf4805cd7b73cebac365d026fc.stex" ]
+source_file="res://assets/Icons/ScriptCreate.svg"
+dest_files=[ "res://.import/ScriptCreate.svg-221d30e15c5cd0ee825971c0030c3346.stex" ]
 
 [params]
 

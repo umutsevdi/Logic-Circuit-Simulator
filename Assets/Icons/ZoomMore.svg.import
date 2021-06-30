@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ZoomMore.svg-380fec2216cca33ba1add471477a3748.stex"
+path="res://.import/ZoomMore.svg-be2a64116ecfb8b463ba20773f8c52c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ZoomMore.svg"
-dest_files=[ "res://.import/ZoomMore.svg-380fec2216cca33ba1add471477a3748.stex" ]
+source_file="res://assets/Icons/ZoomMore.svg"
+dest_files=[ "res://.import/ZoomMore.svg-be2a64116ecfb8b463ba20773f8c52c8.stex" ]
 
 [params]
 

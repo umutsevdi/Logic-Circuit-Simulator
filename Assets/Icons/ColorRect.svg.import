@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ColorRect.svg-f5b241570d74b09dba0742bcfafad4a0.stex"
+path="res://.import/ColorRect.svg-20b6a2e38257f5b6f594487b69f929a9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ColorRect.svg"
-dest_files=[ "res://.import/ColorRect.svg-f5b241570d74b09dba0742bcfafad4a0.stex" ]
+source_file="res://assets/Icons/ColorRect.svg"
+dest_files=[ "res://.import/ColorRect.svg-20b6a2e38257f5b6f594487b69f929a9.stex" ]
 
 [params]
 

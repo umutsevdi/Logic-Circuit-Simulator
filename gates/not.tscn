@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/Icons/GuiSliderGrabberHl.svg" type="Texture" id=1]
+
+[node name="NOT" type="GraphNode"]
+margin_right = 120.0
+margin_bottom = 50.0
+mouse_filter = 1
+custom_icons/port = ExtResource( 1 )
+title = "NOT"
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 104.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 0, 20 )

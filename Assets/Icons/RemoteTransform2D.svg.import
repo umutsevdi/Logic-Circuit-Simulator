@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RemoteTransform2D.svg-ee964a6dd4cb744d0c2002b7ddb4fa09.stex"
+path="res://.import/RemoteTransform2D.svg-ae6eac469ecd69d916197b65a07c953d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/RemoteTransform2D.svg"
-dest_files=[ "res://.import/RemoteTransform2D.svg-ee964a6dd4cb744d0c2002b7ddb4fa09.stex" ]
+source_file="res://assets/Icons/RemoteTransform2D.svg"
+dest_files=[ "res://.import/RemoteTransform2D.svg-ae6eac469ecd69d916197b65a07c953d.stex" ]
 
 [params]
 

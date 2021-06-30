@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayOverlay.svg-f7f4c8363dda9558d461d145a8488421.stex"
+path="res://.import/PlayOverlay.svg-877e4a5b8388e016a5869f656a7fa045.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/PlayOverlay.svg"
-dest_files=[ "res://.import/PlayOverlay.svg-f7f4c8363dda9558d461d145a8488421.stex" ]
+source_file="res://assets/Icons/PlayOverlay.svg"
+dest_files=[ "res://.import/PlayOverlay.svg-877e4a5b8388e016a5869f656a7fa045.stex" ]
 
 [params]
 

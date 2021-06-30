@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KeyInvalid.svg-9e5f35f62f7cabf5159b651dd6483130.stex"
+path="res://.import/KeyInvalid.svg-f5c16c6e06eb5196eb004fbdd39126ad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/KeyInvalid.svg"
-dest_files=[ "res://.import/KeyInvalid.svg-9e5f35f62f7cabf5159b651dd6483130.stex" ]
+source_file="res://assets/Icons/KeyInvalid.svg"
+dest_files=[ "res://.import/KeyInvalid.svg-f5c16c6e06eb5196eb004fbdd39126ad.stex" ]
 
 [params]
 

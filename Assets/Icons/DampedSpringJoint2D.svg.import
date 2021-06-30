@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/DampedSpringJoint2D.svg-1b194451b480101a097c7016eb8aa9a8.stex"
+path="res://.import/DampedSpringJoint2D.svg-b0014d9e5df2a6025236a2374d71129f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/DampedSpringJoint2D.svg"
-dest_files=[ "res://.import/DampedSpringJoint2D.svg-1b194451b480101a097c7016eb8aa9a8.stex" ]
+source_file="res://assets/Icons/DampedSpringJoint2D.svg"
+dest_files=[ "res://.import/DampedSpringJoint2D.svg-b0014d9e5df2a6025236a2374d71129f.stex" ]
 
 [params]
 

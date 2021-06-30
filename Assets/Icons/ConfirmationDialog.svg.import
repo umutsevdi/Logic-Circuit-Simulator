@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ConfirmationDialog.svg-b2ed5183a603c6871a6c89db9792f63d.stex"
+path="res://.import/ConfirmationDialog.svg-df8a9b07986cc3da0f46d5c60035f1ec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ConfirmationDialog.svg"
-dest_files=[ "res://.import/ConfirmationDialog.svg-b2ed5183a603c6871a6c89db9792f63d.stex" ]
+source_file="res://assets/Icons/ConfirmationDialog.svg"
+dest_files=[ "res://.import/ConfirmationDialog.svg-df8a9b07986cc3da0f46d5c60035f1ec.stex" ]
 
 [params]
 

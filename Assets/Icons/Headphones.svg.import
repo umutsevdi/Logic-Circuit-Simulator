@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Headphones.svg-09bcc8a5c93d3c10a20382b49a9c29c9.stex"
+path="res://.import/Headphones.svg-de9459117e862dc4bee082e35e56d450.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Headphones.svg"
-dest_files=[ "res://.import/Headphones.svg-09bcc8a5c93d3c10a20382b49a9c29c9.stex" ]
+source_file="res://assets/Icons/Headphones.svg"
+dest_files=[ "res://.import/Headphones.svg-de9459117e862dc4bee082e35e56d450.stex" ]
 
 [params]
 

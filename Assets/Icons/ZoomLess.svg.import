@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ZoomLess.svg-b76bb561d7b12bea2e1833bb6345a144.stex"
+path="res://.import/ZoomLess.svg-abeaba193fa46cce7f8d880905eecda9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ZoomLess.svg"
-dest_files=[ "res://.import/ZoomLess.svg-b76bb561d7b12bea2e1833bb6345a144.stex" ]
+source_file="res://assets/Icons/ZoomLess.svg"
+dest_files=[ "res://.import/ZoomLess.svg-abeaba193fa46cce7f8d880905eecda9.stex" ]
 
 [params]
 

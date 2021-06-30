@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OccluderPolygon2D.svg-523270fda2727b9e760809206cf71868.stex"
+path="res://.import/OccluderPolygon2D.svg-feda8434f8a4bae7e3d1d888a34ce026.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/OccluderPolygon2D.svg"
-dest_files=[ "res://.import/OccluderPolygon2D.svg-523270fda2727b9e760809206cf71868.stex" ]
+source_file="res://assets/Icons/OccluderPolygon2D.svg"
+dest_files=[ "res://.import/OccluderPolygon2D.svg-feda8434f8a4bae7e3d1d888a34ce026.stex" ]
 
 [params]
 

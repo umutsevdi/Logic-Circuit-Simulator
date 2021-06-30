@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Line2D.svg-5db8f5ce7a55910e00514e209cad6513.stex"
+path="res://.import/Line2D.svg-ded28293613bb3254c898887eccd8bb9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Line2D.svg"
-dest_files=[ "res://.import/Line2D.svg-5db8f5ce7a55910e00514e209cad6513.stex" ]
+source_file="res://assets/Icons/Line2D.svg"
+dest_files=[ "res://.import/Line2D.svg-ded28293613bb3254c898887eccd8bb9.stex" ]
 
 [params]
 

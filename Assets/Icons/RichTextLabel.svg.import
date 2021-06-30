@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RichTextLabel.svg-b3a09aa3f4fcdf18ca85708f31e60b3e.stex"
+path="res://.import/RichTextLabel.svg-0fa5fa7c860de22dcb2a9992cb5fa66b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/RichTextLabel.svg"
-dest_files=[ "res://.import/RichTextLabel.svg-b3a09aa3f4fcdf18ca85708f31e60b3e.stex" ]
+source_file="res://assets/Icons/RichTextLabel.svg"
+dest_files=[ "res://.import/RichTextLabel.svg-0fa5fa7c860de22dcb2a9992cb5fa66b.stex" ]
 
 [params]
 

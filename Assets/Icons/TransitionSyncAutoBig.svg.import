@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/TransitionSyncAutoBig.svg-2003b41988ece77dba3aa5ba3aec7af5.stex"
+path="res://.import/TransitionSyncAutoBig.svg-ccf0e592da3787c4d5d5e717d1784662.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/TransitionSyncAutoBig.svg"
-dest_files=[ "res://.import/TransitionSyncAutoBig.svg-2003b41988ece77dba3aa5ba3aec7af5.stex" ]
+source_file="res://assets/Icons/TransitionSyncAutoBig.svg"
+dest_files=[ "res://.import/TransitionSyncAutoBig.svg-ccf0e592da3787c4d5d5e717d1784662.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MoveDown.svg-2384faf4e16badbbaa3d2ab8662933b3.stex"
+path="res://.import/MoveDown.svg-bff1e19fc9669ae0aa2d2f8bbbf8961d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/MoveDown.svg"
-dest_files=[ "res://.import/MoveDown.svg-2384faf4e16badbbaa3d2ab8662933b3.stex" ]
+source_file="res://assets/Icons/MoveDown.svg"
+dest_files=[ "res://.import/MoveDown.svg-bff1e19fc9669ae0aa2d2f8bbbf8961d.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Reload.svg-5d27a5a87adf6af4173997cf00d3fff9.stex"
+path="res://.import/Reload.svg-c0f23bf744450ad5d62e236d8f4cd57e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Reload.svg"
-dest_files=[ "res://.import/Reload.svg-5d27a5a87adf6af4173997cf00d3fff9.stex" ]
+source_file="res://assets/Icons/Reload.svg"
+dest_files=[ "res://.import/Reload.svg-c0f23bf744450ad5d62e236d8f4cd57e.stex" ]
 
 [params]
 

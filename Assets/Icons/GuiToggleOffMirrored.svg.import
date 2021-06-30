@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiToggleOffMirrored.svg-e65bf624029f61924c01edfabcf07ee6.stex"
+path="res://.import/GuiToggleOffMirrored.svg-74353cbd33a4fac0534b30c7a6079019.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiToggleOffMirrored.svg"
-dest_files=[ "res://.import/GuiToggleOffMirrored.svg-e65bf624029f61924c01edfabcf07ee6.stex" ]
+source_file="res://assets/Icons/GuiToggleOffMirrored.svg"
+dest_files=[ "res://.import/GuiToggleOffMirrored.svg-74353cbd33a4fac0534b30c7a6079019.stex" ]
 
 [params]
 

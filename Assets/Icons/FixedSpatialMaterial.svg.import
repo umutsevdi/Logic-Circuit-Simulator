@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FixedSpatialMaterial.svg-70f4e455a838942eedf83fafd01716fc.stex"
+path="res://.import/FixedSpatialMaterial.svg-628bc5e1be18e06ddd2e0c1f20f64e54.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/FixedSpatialMaterial.svg"
-dest_files=[ "res://.import/FixedSpatialMaterial.svg-70f4e455a838942eedf83fafd01716fc.stex" ]
+source_file="res://assets/Icons/FixedSpatialMaterial.svg"
+dest_files=[ "res://.import/FixedSpatialMaterial.svg-628bc5e1be18e06ddd2e0c1f20f64e54.stex" ]
 
 [params]
 

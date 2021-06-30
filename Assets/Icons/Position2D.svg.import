@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Position2D.svg-c32f678e5148ab4a85e555891bea28bf.stex"
+path="res://.import/Position2D.svg-2e177e252855f15f6f0cf7b0555333d9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Position2D.svg"
-dest_files=[ "res://.import/Position2D.svg-c32f678e5148ab4a85e555891bea28bf.stex" ]
+source_file="res://assets/Icons/Position2D.svg"
+dest_files=[ "res://.import/Position2D.svg-2e177e252855f15f6f0cf7b0555333d9.stex" ]
 
 [params]
 

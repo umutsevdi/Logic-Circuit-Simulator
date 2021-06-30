@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/SpriteSheet.svg-176334d6cdb56d9eadee3d77bcc50dea.stex"
+path="res://.import/SpriteSheet.svg-3bdf114766a2669884d755aa32d94466.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/SpriteSheet.svg"
-dest_files=[ "res://.import/SpriteSheet.svg-176334d6cdb56d9eadee3d77bcc50dea.stex" ]
+source_file="res://assets/Icons/SpriteSheet.svg"
+dest_files=[ "res://.import/SpriteSheet.svg-3bdf114766a2669884d755aa32d94466.stex" ]
 
 [params]
 

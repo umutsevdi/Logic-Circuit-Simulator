@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiTabMenu.svg-e4818a23e308524eef157c2422282584.stex"
+path="res://.import/GuiTabMenu.svg-e2235b9756cbbee8d9db023898c25d2a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiTabMenu.svg"
-dest_files=[ "res://.import/GuiTabMenu.svg-e4818a23e308524eef157c2422282584.stex" ]
+source_file="res://assets/Icons/GuiTabMenu.svg"
+dest_files=[ "res://.import/GuiTabMenu.svg-e2235b9756cbbee8d9db023898c25d2a.stex" ]
 
 [params]
 

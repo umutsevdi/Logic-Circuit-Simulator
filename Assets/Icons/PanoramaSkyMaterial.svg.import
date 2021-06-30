@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PanoramaSkyMaterial.svg-ffcfbdb12fca8c6b6341510c18d54061.stex"
+path="res://.import/PanoramaSkyMaterial.svg-39b109bbdcb5d330eecefca0ca211cff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/PanoramaSkyMaterial.svg"
-dest_files=[ "res://.import/PanoramaSkyMaterial.svg-ffcfbdb12fca8c6b6341510c18d54061.stex" ]
+source_file="res://assets/Icons/PanoramaSkyMaterial.svg"
+dest_files=[ "res://.import/PanoramaSkyMaterial.svg-39b109bbdcb5d330eecefca0ca211cff.stex" ]
 
 [params]
 

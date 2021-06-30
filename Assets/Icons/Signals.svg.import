@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Signals.svg-ae4523bb9312935ffcc59e00343d2474.stex"
+path="res://.import/Signals.svg-03f65326a98859976d7613308393f650.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Signals.svg"
-dest_files=[ "res://.import/Signals.svg-ae4523bb9312935ffcc59e00343d2474.stex" ]
+source_file="res://assets/Icons/Signals.svg"
+dest_files=[ "res://.import/Signals.svg-03f65326a98859976d7613308393f650.stex" ]
 
 [params]
 

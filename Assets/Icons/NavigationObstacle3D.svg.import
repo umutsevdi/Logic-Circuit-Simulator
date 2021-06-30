@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NavigationObstacle3D.svg-58f4517b1d232f2f95f7fc6c5af1a9e3.stex"
+path="res://.import/NavigationObstacle3D.svg-3fd420bca500c5eb8aa25809005de27a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/NavigationObstacle3D.svg"
-dest_files=[ "res://.import/NavigationObstacle3D.svg-58f4517b1d232f2f95f7fc6c5af1a9e3.stex" ]
+source_file="res://assets/Icons/NavigationObstacle3D.svg"
+dest_files=[ "res://.import/NavigationObstacle3D.svg-3fd420bca500c5eb8aa25809005de27a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ClippedCamera3D.svg-fcbec59c7eb0609d64992511b5831750.stex"
+path="res://.import/ClippedCamera3D.svg-01733af119ec6c2858205d76159fed48.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ClippedCamera3D.svg"
-dest_files=[ "res://.import/ClippedCamera3D.svg-fcbec59c7eb0609d64992511b5831750.stex" ]
+source_file="res://assets/Icons/ClippedCamera3D.svg"
+dest_files=[ "res://.import/ClippedCamera3D.svg-01733af119ec6c2858205d76159fed48.stex" ]
 
 [params]
 

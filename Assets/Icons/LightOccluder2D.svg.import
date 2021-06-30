@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LightOccluder2D.svg-f6ebf209c09edd815a686f94ff019c1e.stex"
+path="res://.import/LightOccluder2D.svg-8700c7921954ccea0e3686aec6a018a6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/LightOccluder2D.svg"
-dest_files=[ "res://.import/LightOccluder2D.svg-f6ebf209c09edd815a686f94ff019c1e.stex" ]
+source_file="res://assets/Icons/LightOccluder2D.svg"
+dest_files=[ "res://.import/LightOccluder2D.svg-8700c7921954ccea0e3686aec6a018a6.stex" ]
 
 [params]
 

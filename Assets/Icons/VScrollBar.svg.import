@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/VScrollBar.svg-95c574a7ec99b88d062441d4f19d5b30.stex"
+path="res://.import/VScrollBar.svg-b5f57fc9c112bffc858501ea787df5ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/VScrollBar.svg"
-dest_files=[ "res://.import/VScrollBar.svg-95c574a7ec99b88d062441d4f19d5b30.stex" ]
+source_file="res://assets/Icons/VScrollBar.svg"
+dest_files=[ "res://.import/VScrollBar.svg-b5f57fc9c112bffc858501ea787df5ba.stex" ]
 
 [params]
 

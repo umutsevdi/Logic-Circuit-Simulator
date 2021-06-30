@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/VehicleBody3D.svg-febc93b9095b23d2fa91ce1504d106d8.stex"
+path="res://.import/VehicleBody3D.svg-9fcfefc24e575221410cbe277f3ffbef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/VehicleBody3D.svg"
-dest_files=[ "res://.import/VehicleBody3D.svg-febc93b9095b23d2fa91ce1504d106d8.stex" ]
+source_file="res://assets/Icons/VehicleBody3D.svg"
+dest_files=[ "res://.import/VehicleBody3D.svg-9fcfefc24e575221410cbe277f3ffbef.stex" ]
 
 [params]
 

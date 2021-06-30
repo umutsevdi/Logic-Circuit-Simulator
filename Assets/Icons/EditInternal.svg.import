@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EditInternal.svg-d47382b8dedd79370b7fe89ee71af79b.stex"
+path="res://.import/EditInternal.svg-5bd35228c97b8564369f3e74544f9e7f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/EditInternal.svg"
-dest_files=[ "res://.import/EditInternal.svg-d47382b8dedd79370b7fe89ee71af79b.stex" ]
+source_file="res://assets/Icons/EditInternal.svg"
+dest_files=[ "res://.import/EditInternal.svg-5bd35228c97b8564369f3e74544f9e7f.stex" ]
 
 [params]
 

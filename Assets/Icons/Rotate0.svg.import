@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rotate0.svg-0d1736b39c1dba814d0297fa7d15bd76.stex"
+path="res://.import/Rotate0.svg-39e55fa05f0044f5ef5aef8420dc75ef.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Rotate0.svg"
-dest_files=[ "res://.import/Rotate0.svg-0d1736b39c1dba814d0297fa7d15bd76.stex" ]
+source_file="res://assets/Icons/Rotate0.svg"
+dest_files=[ "res://.import/Rotate0.svg-39e55fa05f0044f5ef5aef8420dc75ef.stex" ]
 
 [params]
 

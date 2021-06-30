@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/VisibilityNotifier2D.svg-9ad5dd9e714afeba4cc11bdf3987114e.stex"
+path="res://.import/VisibilityNotifier2D.svg-fde77945a5869b861e83ecacbd74560f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/VisibilityNotifier2D.svg"
-dest_files=[ "res://.import/VisibilityNotifier2D.svg-9ad5dd9e714afeba4cc11bdf3987114e.stex" ]
+source_file="res://assets/Icons/VisibilityNotifier2D.svg"
+dest_files=[ "res://.import/VisibilityNotifier2D.svg-fde77945a5869b861e83ecacbd74560f.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ControlVcenterWide.svg-ee53c91460caf4a76082ee715c35eb94.stex"
+path="res://.import/ControlVcenterWide.svg-d50cee77b153888be8285c1815b38c64.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ControlVcenterWide.svg"
-dest_files=[ "res://.import/ControlVcenterWide.svg-ee53c91460caf4a76082ee715c35eb94.stex" ]
+source_file="res://assets/Icons/ControlVcenterWide.svg"
+dest_files=[ "res://.import/ControlVcenterWide.svg-d50cee77b153888be8285c1815b38c64.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiToggleOn.svg-982530d4bfa3f972ab3e9113f36cb708.stex"
+path="res://.import/GuiToggleOn.svg-f54403fb7577cf6e575f0ef1245a5702.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiToggleOn.svg"
-dest_files=[ "res://.import/GuiToggleOn.svg-982530d4bfa3f972ab3e9113f36cb708.stex" ]
+source_file="res://assets/Icons/GuiToggleOn.svg"
+dest_files=[ "res://.import/GuiToggleOn.svg-f54403fb7577cf6e575f0ef1245a5702.stex" ]
 
 [params]
 

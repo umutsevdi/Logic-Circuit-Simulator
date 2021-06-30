@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ScriptCreateDialog.svg-16b9451f59d79d617e29ec5f4d21697f.stex"
+path="res://.import/ScriptCreateDialog.svg-6abde1ab802aafb259e9381a9871cfe2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ScriptCreateDialog.svg"
-dest_files=[ "res://.import/ScriptCreateDialog.svg-16b9451f59d79d617e29ec5f4d21697f.stex" ]
+source_file="res://assets/Icons/ScriptCreateDialog.svg"
+dest_files=[ "res://.import/ScriptCreateDialog.svg-6abde1ab802aafb259e9381a9871cfe2.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiRadioUnchecked.svg-c0fb16c5098f3c0fd2e1147bbccb5316.stex"
+path="res://.import/GuiRadioUnchecked.svg-b820804abab9042303096d653101760b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiRadioUnchecked.svg"
-dest_files=[ "res://.import/GuiRadioUnchecked.svg-c0fb16c5098f3c0fd2e1147bbccb5316.stex" ]
+source_file="res://assets/Icons/GuiRadioUnchecked.svg"
+dest_files=[ "res://.import/GuiRadioUnchecked.svg-b820804abab9042303096d653101760b.stex" ]
 
 [params]
 

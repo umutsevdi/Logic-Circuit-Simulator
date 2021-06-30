@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AddAtlasTile.svg-10ab141710310c9d5c5f71a26f1f95f1.stex"
+path="res://.import/AddAtlasTile.svg-bfe9de10474fd5801dd341dcad7d14b8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/AddAtlasTile.svg"
-dest_files=[ "res://.import/AddAtlasTile.svg-10ab141710310c9d5c5f71a26f1f95f1.stex" ]
+source_file="res://assets/Icons/AddAtlasTile.svg"
+dest_files=[ "res://.import/AddAtlasTile.svg-bfe9de10474fd5801dd341dcad7d14b8.stex" ]
 
 [params]
 

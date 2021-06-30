@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ViewportSpeed.svg-49f4347ab87aeb405e8273fb33a3318b.stex"
+path="res://.import/ViewportSpeed.svg-2ba9e91078b9944fd3bfaa6610d18e6d.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ViewportSpeed.svg"
-dest_files=[ "res://.import/ViewportSpeed.svg-49f4347ab87aeb405e8273fb33a3318b.stex" ]
+source_file="res://assets/Icons/ViewportSpeed.svg"
+dest_files=[ "res://.import/ViewportSpeed.svg-2ba9e91078b9944fd3bfaa6610d18e6d.stex" ]
 
 [params]
 

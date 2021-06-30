@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/EditorPositionUnselected.svg-51df26ac7be03e9e12a44351cad5209b.stex"
+path="res://.import/EditorPositionUnselected.svg-d51c47f5bbc5129ec68fb9590271b736.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/EditorPositionUnselected.svg"
-dest_files=[ "res://.import/EditorPositionUnselected.svg-51df26ac7be03e9e12a44351cad5209b.stex" ]
+source_file="res://assets/Icons/EditorPositionUnselected.svg"
+dest_files=[ "res://.import/EditorPositionUnselected.svg-d51c47f5bbc5129ec68fb9590271b736.stex" ]
 
 [params]
 

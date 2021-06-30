@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiEllipsis.svg-05604e211a51ce50db721d2309b88c44.stex"
+path="res://.import/GuiEllipsis.svg-af93bae9a6f13b62d50bff9a6d3709c1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiEllipsis.svg"
-dest_files=[ "res://.import/GuiEllipsis.svg-05604e211a51ce50db721d2309b88c44.stex" ]
+source_file="res://assets/Icons/GuiEllipsis.svg"
+dest_files=[ "res://.import/GuiEllipsis.svg-af93bae9a6f13b62d50bff9a6d3709c1.stex" ]
 
 [params]
 

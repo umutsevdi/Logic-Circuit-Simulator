@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LineEdit.svg-cf295e6e7b4e51f9456e687aa740dfb7.stex"
+path="res://.import/LineEdit.svg-ec1b5076e2603585e73103e95c58d4b0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/LineEdit.svg"
-dest_files=[ "res://.import/LineEdit.svg-cf295e6e7b4e51f9456e687aa740dfb7.stex" ]
+source_file="res://assets/Icons/LineEdit.svg"
+dest_files=[ "res://.import/LineEdit.svg-ec1b5076e2603585e73103e95c58d4b0.stex" ]
 
 [params]
 

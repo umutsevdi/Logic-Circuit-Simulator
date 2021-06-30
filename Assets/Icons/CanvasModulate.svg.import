@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CanvasModulate.svg-b87e4d82d8c918a2c16fc16274a28777.stex"
+path="res://.import/CanvasModulate.svg-404d39f7738b8de6d2101d15a911006e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/CanvasModulate.svg"
-dest_files=[ "res://.import/CanvasModulate.svg-b87e4d82d8c918a2c16fc16274a28777.stex" ]
+source_file="res://assets/Icons/CanvasModulate.svg"
+dest_files=[ "res://.import/CanvasModulate.svg-404d39f7738b8de6d2101d15a911006e.stex" ]
 
 [params]
 

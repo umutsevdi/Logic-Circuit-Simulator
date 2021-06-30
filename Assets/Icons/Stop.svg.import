@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Stop.svg-0ec47ceeabe82b8c8446cf08fec61e76.stex"
+path="res://.import/Stop.svg-447ab14c90afbe6436e7be9c3ffb96ac.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Stop.svg"
-dest_files=[ "res://.import/Stop.svg-0ec47ceeabe82b8c8446cf08fec61e76.stex" ]
+source_file="res://assets/Icons/Stop.svg"
+dest_files=[ "res://.import/Stop.svg-447ab14c90afbe6436e7be9c3ffb96ac.stex" ]
 
 [params]
 

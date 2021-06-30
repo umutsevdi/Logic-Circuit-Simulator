@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ArrayMesh.svg-f398acaf6d65ca98a3f1210f9d7c6902.stex"
+path="res://.import/ArrayMesh.svg-c94644736167a2201b1bf44641491e1f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ArrayMesh.svg"
-dest_files=[ "res://.import/ArrayMesh.svg-f398acaf6d65ca98a3f1210f9d7c6902.stex" ]
+source_file="res://assets/Icons/ArrayMesh.svg"
+dest_files=[ "res://.import/ArrayMesh.svg-c94644736167a2201b1bf44641491e1f.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KeyXform.svg-e9d77d0d876276be8f464dd4161c0b19.stex"
+path="res://.import/KeyXform.svg-ed9ea1d32d4a74cf0f13d8e1000f5df5.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/KeyXform.svg"
-dest_files=[ "res://.import/KeyXform.svg-e9d77d0d876276be8f464dd4161c0b19.stex" ]
+source_file="res://assets/Icons/KeyXform.svg"
+dest_files=[ "res://.import/KeyXform.svg-ed9ea1d32d4a74cf0f13d8e1000f5df5.stex" ]
 
 [params]
 

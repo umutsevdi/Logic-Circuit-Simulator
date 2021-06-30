@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://assets/Icons/new/GuiSliderGrabberHl.svg" type="Texture" id=1]
+[ext_resource path="res://assets/Icons/new/off.png" type="Texture" id=2]
+[ext_resource path="res://assets/Icons/new/on.png" type="Texture" id=3]
+[ext_resource path="res://assets/Icons/new/on_disabled.png" type="Texture" id=4]
+[ext_resource path="res://assets/themes/textbutton_hover.tres" type="StyleBox" id=5]
+[ext_resource path="res://gates/var.gd" type="Script" id=6]
+
+[node name="var" type="GraphNode"]
+margin_right = 100.0
+margin_bottom = 64.0
+mouse_filter = 1
+custom_icons/port = ExtResource( 1 )
+title = "value"
+slot/0/left_enabled = false
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = true
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = 16.0
+margin_top = 24.0
+margin_right = 84.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 50, 40 )
+focus_mode = 0
+custom_icons/off = ExtResource( 2 )
+custom_icons/on_disabled = ExtResource( 4 )
+custom_icons/on = ExtResource( 3 )
+custom_icons/off_disabled = ExtResource( 4 )
+custom_styles/hover = ExtResource( 5 )
+custom_styles/hover_pressed = ExtResource( 5 )
+enabled_focus_mode = 0
+align = 1
+[connection signal="toggled" from="CheckButton" to="." method="_on_CheckButton_toggled"]

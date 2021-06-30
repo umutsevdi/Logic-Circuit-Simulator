@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CapsuleShape2D.svg-c1749113f6801a3e0b3d2f0214a9b3f1.stex"
+path="res://.import/CapsuleShape2D.svg-f7f921491aeb68129fe83205645368cf.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/CapsuleShape2D.svg"
-dest_files=[ "res://.import/CapsuleShape2D.svg-c1749113f6801a3e0b3d2f0214a9b3f1.stex" ]
+source_file="res://assets/Icons/CapsuleShape2D.svg"
+dest_files=[ "res://.import/CapsuleShape2D.svg-f7f921491aeb68129fe83205645368cf.stex" ]
 
 [params]
 

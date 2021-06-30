@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CollisionPolygon3D.svg-bc55bf31325c879df9069c90e9952983.stex"
+path="res://.import/CollisionPolygon3D.svg-745b3d5f8e79448996b43faedacfe38a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/CollisionPolygon3D.svg"
-dest_files=[ "res://.import/CollisionPolygon3D.svg-bc55bf31325c879df9069c90e9952983.stex" ]
+source_file="res://assets/Icons/CollisionPolygon3D.svg"
+dest_files=[ "res://.import/CollisionPolygon3D.svg-745b3d5f8e79448996b43faedacfe38a.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AudioBusMute.svg-9ed86f4fa236b8550be18256c1800a51.stex"
+path="res://.import/AudioBusMute.svg-7c54631affdfa9e1f3fae8b8fb3c5d06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/AudioBusMute.svg"
-dest_files=[ "res://.import/AudioBusMute.svg-9ed86f4fa236b8550be18256c1800a51.stex" ]
+source_file="res://assets/Icons/AudioBusMute.svg"
+dest_files=[ "res://.import/AudioBusMute.svg-7c54631affdfa9e1f3fae8b8fb3c5d06.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AspectRatioContainer.svg-e269e03ec8d728e19bb09af63cc21c5e.stex"
+path="res://.import/AspectRatioContainer.svg-506045df8799a029eaa03f18051e7483.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/AspectRatioContainer.svg"
-dest_files=[ "res://.import/AspectRatioContainer.svg-e269e03ec8d728e19bb09af63cc21c5e.stex" ]
+source_file="res://assets/Icons/AspectRatioContainer.svg"
+dest_files=[ "res://.import/AspectRatioContainer.svg-506045df8799a029eaa03f18051e7483.stex" ]
 
 [params]
 

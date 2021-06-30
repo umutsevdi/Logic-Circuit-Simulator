@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CameraEffects.svg-0561ebb91e9caeb1a319486ab89e31ec.stex"
+path="res://.import/CameraEffects.svg-06b82fcf4f50ce6da85a955b33d21a00.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/CameraEffects.svg"
-dest_files=[ "res://.import/CameraEffects.svg-0561ebb91e9caeb1a319486ab89e31ec.stex" ]
+source_file="res://assets/Icons/CameraEffects.svg"
+dest_files=[ "res://.import/CameraEffects.svg-06b82fcf4f50ce6da85a955b33d21a00.stex" ]
 
 [params]
 

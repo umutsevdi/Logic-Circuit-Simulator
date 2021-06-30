@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AudioBusSolo.svg-57d70d02f398bcc7de3e92f27c4ce25e.stex"
+path="res://.import/AudioBusSolo.svg-9f2a18637de9ea9de048aa26a8c513b6.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/AudioBusSolo.svg"
-dest_files=[ "res://.import/AudioBusSolo.svg-57d70d02f398bcc7de3e92f27c4ce25e.stex" ]
+source_file="res://assets/Icons/AudioBusSolo.svg"
+dest_files=[ "res://.import/AudioBusSolo.svg-9f2a18637de9ea9de048aa26a8c513b6.stex" ]
 
 [params]
 

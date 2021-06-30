@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/JoyButton.svg-21361b75f9a50c614fb205251829de3f.stex"
+path="res://.import/JoyButton.svg-91d69507302d73004502a60388100e68.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/JoyButton.svg"
-dest_files=[ "res://.import/JoyButton.svg-21361b75f9a50c614fb205251829de3f.stex" ]
+source_file="res://assets/Icons/JoyButton.svg"
+dest_files=[ "res://.import/JoyButton.svg-91d69507302d73004502a60388100e68.stex" ]
 
 [params]
 

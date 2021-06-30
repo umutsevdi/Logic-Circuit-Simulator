@@ -1,0 +1,59 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://assets/Icons/GuiSliderGrabberHl.svg" type="Texture" id=1]
+[ext_resource path="res://assets/gates/nor.png" type="Texture" id=2]
+[ext_resource path="res://assets/gates/gate_default.tres" type="StyleBox" id=4]
+[ext_resource path="res://assets/gates/gate_active.tres" type="StyleBox" id=5]
+
+[node name="NOR" type="GraphNode"]
+margin_right = 122.0
+margin_bottom = 132.0
+mouse_filter = 1
+custom_icons/port = ExtResource( 1 )
+custom_styles/frame = ExtResource( 4 )
+custom_styles/selectedframe = ExtResource( 5 )
+slot/0/left_enabled = true
+slot/0/left_type = 0
+slot/0/left_color = Color( 1, 1, 1, 1 )
+slot/0/right_enabled = false
+slot/0/right_type = 0
+slot/0/right_color = Color( 1, 1, 1, 1 )
+slot/1/left_enabled = false
+slot/1/left_type = 0
+slot/1/left_color = Color( 1, 1, 1, 1 )
+slot/1/right_enabled = true
+slot/1/right_type = 0
+slot/1/right_color = Color( 1, 1, 1, 1 )
+slot/2/left_enabled = true
+slot/2/left_type = 0
+slot/2/left_color = Color( 1, 1, 1, 1 )
+slot/2/right_enabled = false
+slot/2/right_type = 0
+slot/2/right_color = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+margin_left = 15.0
+margin_right = 140.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+show_behind_parent = true
+margin_left = 15.0
+margin_top = 21.0
+margin_right = 140.0
+margin_bottom = 111.0
+rect_min_size = Vector2( 125, 90 )
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 5
+
+[node name="Control2" type="Control" parent="."]
+margin_left = 15.0
+margin_top = 112.0
+margin_right = 140.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 0, 20 )

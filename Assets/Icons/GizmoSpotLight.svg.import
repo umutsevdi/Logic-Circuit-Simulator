@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GizmoSpotLight.svg-9048e0406598e49dd144a31e494c2d4d.stex"
+path="res://.import/GizmoSpotLight.svg-650b0f1d9018f4858e6184b2cbc7bab1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GizmoSpotLight.svg"
-dest_files=[ "res://.import/GizmoSpotLight.svg-9048e0406598e49dd144a31e494c2d4d.stex" ]
+source_file="res://assets/Icons/GizmoSpotLight.svg"
+dest_files=[ "res://.import/GizmoSpotLight.svg-650b0f1d9018f4858e6184b2cbc7bab1.stex" ]
 
 [params]
 

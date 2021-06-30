@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PackedByteArray.svg-ca820f5a94c398602215a97a8b8d63a8.stex"
+path="res://.import/PackedByteArray.svg-efbe9f269ad1bc2ccdce3614fafdacec.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/PackedByteArray.svg"
-dest_files=[ "res://.import/PackedByteArray.svg-ca820f5a94c398602215a97a8b8d63a8.stex" ]
+source_file="res://assets/Icons/PackedByteArray.svg"
+dest_files=[ "res://.import/PackedByteArray.svg-efbe9f269ad1bc2ccdce3614fafdacec.stex" ]
 
 [params]
 

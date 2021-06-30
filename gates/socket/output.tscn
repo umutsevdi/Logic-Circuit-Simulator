@@ -1,0 +1,63 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/themes/on.tres" type="StyleBox" id=1]
+[ext_resource path="res://assets/themes/off.tres" type="StyleBox" id=2]
+[ext_resource path="res://gates/socket/output.gd" type="Script" id=3]
+
+[node name="output" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = -1496.0
+margin_bottom = -860.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 40, 40 )
+rect_pivot_offset = Vector2( 20, 20 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="on" type="Panel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 20, 20 )
+custom_styles/panel = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="off" type="Panel" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 20, 20 )
+custom_styles/panel = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 40, 40 )
+rect_pivot_offset = Vector2( 20, 20 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 40.0
+margin_right = 120.0
+margin_bottom = 40.0
+rect_pivot_offset = Vector2( 40, 20 )
+text = "temp value"
+align = 1
+valign = 1
+clip_text = true
+uppercase = true
+max_lines_visible = 1
+[connection signal="mouse_entered" from="Button" to="." method="_on_Button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_Button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

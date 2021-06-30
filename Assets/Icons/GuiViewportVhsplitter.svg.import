@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiViewportVhsplitter.svg-859b8e104b0561ade05b995e2d3e912a.stex"
+path="res://.import/GuiViewportVhsplitter.svg-7291fa45416c6754d3f2104efaaa3f5a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiViewportVhsplitter.svg"
-dest_files=[ "res://.import/GuiViewportVhsplitter.svg-859b8e104b0561ade05b995e2d3e912a.stex" ]
+source_file="res://assets/Icons/GuiViewportVhsplitter.svg"
+dest_files=[ "res://.import/GuiViewportVhsplitter.svg-7291fa45416c6754d3f2104efaaa3f5a.stex" ]
 
 [params]
 

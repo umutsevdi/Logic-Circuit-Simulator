@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Blend.svg-4b12e8c6ee7b6aecbfa9bb3c8969f878.stex"
+path="res://.import/Blend.svg-955c942ae65aa909e9c2872f20b30046.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Blend.svg"
-dest_files=[ "res://.import/Blend.svg-4b12e8c6ee7b6aecbfa9bb3c8969f878.stex" ]
+source_file="res://assets/Icons/Blend.svg"
+dest_files=[ "res://.import/Blend.svg-955c942ae65aa909e9c2872f20b30046.stex" ]
 
 [params]
 

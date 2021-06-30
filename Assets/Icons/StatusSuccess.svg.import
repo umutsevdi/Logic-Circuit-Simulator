@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/StatusSuccess.svg-ab8146ed1cec04cc15a96b7cce54d59f.stex"
+path="res://.import/StatusSuccess.svg-2c5516b4980fade1ccdcecbbc103a126.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/StatusSuccess.svg"
-dest_files=[ "res://.import/StatusSuccess.svg-ab8146ed1cec04cc15a96b7cce54d59f.stex" ]
+source_file="res://assets/Icons/StatusSuccess.svg"
+dest_files=[ "res://.import/StatusSuccess.svg-2c5516b4980fade1ccdcecbbc103a126.stex" ]
 
 [params]
 

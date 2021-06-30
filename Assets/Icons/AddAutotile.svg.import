@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/AddAutotile.svg-91e478e1a799490f9a46018c947823e0.stex"
+path="res://.import/AddAutotile.svg-bac08e69749316cfb1ef0da162125faa.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/AddAutotile.svg"
-dest_files=[ "res://.import/AddAutotile.svg-91e478e1a799490f9a46018c947823e0.stex" ]
+source_file="res://assets/Icons/AddAutotile.svg"
+dest_files=[ "res://.import/AddAutotile.svg-bac08e69749316cfb1ef0da162125faa.stex" ]
 
 [params]
 

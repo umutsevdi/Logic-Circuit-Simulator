@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BoneAttachment3D.svg-3c1ef99fa4e19cd40ba58c64f5e64cb6.stex"
+path="res://.import/BoneAttachment3D.svg-811fd5421d85dea8b4ba2365305a8ef1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/BoneAttachment3D.svg"
-dest_files=[ "res://.import/BoneAttachment3D.svg-3c1ef99fa4e19cd40ba58c64f5e64cb6.stex" ]
+source_file="res://assets/Icons/BoneAttachment3D.svg"
+dest_files=[ "res://.import/BoneAttachment3D.svg-811fd5421d85dea8b4ba2365305a8ef1.stex" ]
 
 [params]
 

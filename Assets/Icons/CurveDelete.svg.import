@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/CurveDelete.svg-80753246d1de78ea1f6142d77a172701.stex"
+path="res://.import/CurveDelete.svg-290ffc0fba0e99dc6d89ce63d391755f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/CurveDelete.svg"
-dest_files=[ "res://.import/CurveDelete.svg-80753246d1de78ea1f6142d77a172701.stex" ]
+source_file="res://assets/Icons/CurveDelete.svg"
+dest_files=[ "res://.import/CurveDelete.svg-290ffc0fba0e99dc6d89ce63d391755f.stex" ]
 
 [params]
 

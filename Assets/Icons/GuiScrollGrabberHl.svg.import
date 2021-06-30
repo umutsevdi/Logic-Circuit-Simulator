@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiScrollGrabberHl.svg-f50613ee5464c25750d4eda5efacdfbb.stex"
+path="res://.import/GuiScrollGrabberHl.svg-ec1c4dcf8d55bb5699acd28461d5fdea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiScrollGrabberHl.svg"
-dest_files=[ "res://.import/GuiScrollGrabberHl.svg-f50613ee5464c25750d4eda5efacdfbb.stex" ]
+source_file="res://assets/Icons/GuiScrollGrabberHl.svg"
+dest_files=[ "res://.import/GuiScrollGrabberHl.svg-ec1c4dcf8d55bb5699acd28461d5fdea.stex" ]
 
 [params]
 

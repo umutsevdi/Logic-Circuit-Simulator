@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/NinePatchRect.svg-b6aeed6bf538a8b8fb1676324827a99a.stex"
+path="res://.import/NinePatchRect.svg-6ee38bd0535858621ff0b8c72ae13064.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/NinePatchRect.svg"
-dest_files=[ "res://.import/NinePatchRect.svg-b6aeed6bf538a8b8fb1676324827a99a.stex" ]
+source_file="res://assets/Icons/NinePatchRect.svg"
+dest_files=[ "res://.import/NinePatchRect.svg-6ee38bd0535858621ff0b8c72ae13064.stex" ]
 
 [params]
 

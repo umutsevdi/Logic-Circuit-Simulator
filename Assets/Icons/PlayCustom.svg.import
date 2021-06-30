@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlayCustom.svg-220a670323010f5c4decd8427015e3c7.stex"
+path="res://.import/PlayCustom.svg-9cb5b616823f6f546ebfa2d36c279066.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/PlayCustom.svg"
-dest_files=[ "res://.import/PlayCustom.svg-220a670323010f5c4decd8427015e3c7.stex" ]
+source_file="res://assets/Icons/PlayCustom.svg"
+dest_files=[ "res://.import/PlayCustom.svg-9cb5b616823f6f546ebfa2d36c279066.stex" ]
 
 [params]
 

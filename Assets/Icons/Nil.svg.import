@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Nil.svg-00856635bc00dfb853ef043786384565.stex"
+path="res://.import/Nil.svg-f4d5a8b0247714f88c370404e4b32deb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Nil.svg"
-dest_files=[ "res://.import/Nil.svg-00856635bc00dfb853ef043786384565.stex" ]
+source_file="res://assets/Icons/Nil.svg"
+dest_files=[ "res://.import/Nil.svg-f4d5a8b0247714f88c370404e4b32deb.stex" ]
 
 [params]
 

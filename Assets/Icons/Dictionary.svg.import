@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Dictionary.svg-4d588ce8e53ec3d807c6ada868d4e99a.stex"
+path="res://.import/Dictionary.svg-e4d886518c251fb9f8ed226cc49db7c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/Dictionary.svg"
-dest_files=[ "res://.import/Dictionary.svg-4d588ce8e53ec3d807c6ada868d4e99a.stex" ]
+source_file="res://assets/Icons/Dictionary.svg"
+dest_files=[ "res://.import/Dictionary.svg-e4d886518c251fb9f8ed226cc49db7c8.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ColorPick.svg-8eac81cbc35f24017d1eaf136902e737.stex"
+path="res://.import/ColorPick.svg-c22d865ccd737123bf32db2f366e40c8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ColorPick.svg"
-dest_files=[ "res://.import/ColorPick.svg-8eac81cbc35f24017d1eaf136902e737.stex" ]
+source_file="res://assets/Icons/ColorPick.svg"
+dest_files=[ "res://.import/ColorPick.svg-c22d865ccd737123bf32db2f366e40c8.stex" ]
 
 [params]
 

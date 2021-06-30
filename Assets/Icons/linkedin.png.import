@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/linkedin.png-06148ce2f180a0a9b1ac2d9e14757928.stex"
+path="res://.import/linkedin.png-e374bea5cbdc0e333e5cccff4de37d75.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/linkedin.png"
-dest_files=[ "res://.import/linkedin.png-06148ce2f180a0a9b1ac2d9e14757928.stex" ]
+source_file="res://assets/Icons/linkedin.png"
+dest_files=[ "res://.import/linkedin.png-e374bea5cbdc0e333e5cccff4de37d75.stex" ]
 
 [params]
 

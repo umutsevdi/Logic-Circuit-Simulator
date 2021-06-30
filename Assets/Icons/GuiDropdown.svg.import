@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiDropdown.svg-f1870ed00b2dbc61b06b31cea15ba215.stex"
+path="res://.import/GuiDropdown.svg-92a222a9a390875e1ace38d7fc61405a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiDropdown.svg"
-dest_files=[ "res://.import/GuiDropdown.svg-f1870ed00b2dbc61b06b31cea15ba215.stex" ]
+source_file="res://assets/Icons/GuiDropdown.svg"
+dest_files=[ "res://.import/GuiDropdown.svg-92a222a9a390875e1ace38d7fc61405a.stex" ]
 
 [params]
 

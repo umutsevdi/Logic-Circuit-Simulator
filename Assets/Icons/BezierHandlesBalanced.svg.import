@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BezierHandlesBalanced.svg-e4744bcccb716972f31724ed54699d05.stex"
+path="res://.import/BezierHandlesBalanced.svg-66ee6406043cd0cb0e14b92d1778b08f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/BezierHandlesBalanced.svg"
-dest_files=[ "res://.import/BezierHandlesBalanced.svg-e4744bcccb716972f31724ed54699d05.stex" ]
+source_file="res://assets/Icons/BezierHandlesBalanced.svg"
+dest_files=[ "res://.import/BezierHandlesBalanced.svg-66ee6406043cd0cb0e14b92d1778b08f.stex" ]
 
 [params]
 

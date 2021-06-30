@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GuiVTick.svg-2613251ef829f5a5360b26eae717faa1.stex"
+path="res://.import/GuiVTick.svg-90ed204e9ce91f81469ec66e25893c50.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/GuiVTick.svg"
-dest_files=[ "res://.import/GuiVTick.svg-2613251ef829f5a5360b26eae717faa1.stex" ]
+source_file="res://assets/Icons/GuiVTick.svg"
+dest_files=[ "res://.import/GuiVTick.svg-90ed204e9ce91f81469ec66e25893c50.stex" ]
 
 [params]
 

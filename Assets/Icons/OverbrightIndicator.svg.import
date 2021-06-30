@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/OverbrightIndicator.svg-5bd8b7025e6c10665de5748d1bb45050.stex"
+path="res://.import/OverbrightIndicator.svg-486cc5c0275d8c3808c0c2d41845dc02.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/OverbrightIndicator.svg"
-dest_files=[ "res://.import/OverbrightIndicator.svg-5bd8b7025e6c10665de5748d1bb45050.stex" ]
+source_file="res://assets/Icons/OverbrightIndicator.svg"
+dest_files=[ "res://.import/OverbrightIndicator.svg-486cc5c0275d8c3808c0c2d41845dc02.stex" ]
 
 [params]
 

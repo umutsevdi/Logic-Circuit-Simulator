@@ -1,0 +1,144 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/Icons/GuiScrollArrowLeft.svg" type="Texture" id=1]
+[ext_resource path="res://gates/socket/output.tscn" type="PackedScene" id=2]
+[ext_resource path="res://gates/calculators/variable.gd" type="Script" id=3]
+[ext_resource path="res://assets/Icons/GuiScrollArrowRight.svg" type="Texture" id=4]
+[ext_resource path="res://assets/themes/variable.tres" type="StyleBox" id=5]
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.470588, 0.470588, 0.470588, 0.501961 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_detail = 20
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.470588, 0.470588, 0.470588, 0.705882 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_detail = 20
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.470588, 0.470588, 0.470588, 0 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+corner_detail = 20
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.231373, 0.219608, 0.25098, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+corner_detail = 20
+expand_margin_right = 25.0
+anti_aliasing_size = 2
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.784314, 0.980392, 0.392157, 1 )
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+corner_radius_top_left = 64
+corner_radius_top_right = 64
+corner_radius_bottom_right = 64
+corner_radius_bottom_left = 64
+corner_detail = 20
+expand_margin_right = 25.0
+anti_aliasing_size = 2
+
+[node name="var" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="VAR" type="Button" parent="."]
+margin_top = 5.0
+margin_right = 90.0
+margin_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 90, 40 )
+rect_pivot_offset = Vector2( 50, 50 )
+focus_mode = 0
+custom_styles/hover = SubResource( 8 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/normal = SubResource( 7 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.0588235, 0.0196078, 0.196078, 1 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+clip_text = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="output" type="VBoxContainer" parent="."]
+margin_left = 70.0
+margin_right = 110.0
+margin_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 40, 50 )
+rect_pivot_offset = Vector2( 20, 25 )
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="output" parent="output" instance=ExtResource( 2 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 40.0
+margin_bottom = 45.0
+
+[node name="CheckButton" type="CheckButton" parent="."]
+margin_left = -30.0
+margin_top = 5.0
+margin_right = 20.0
+margin_bottom = 45.0
+grow_horizontal = 2
+grow_vertical = 2
+rect_min_size = Vector2( 50, 40 )
+focus_mode = 0
+custom_icons/off = ExtResource( 1 )
+custom_icons/on = ExtResource( 4 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/normal = ExtResource( 5 )
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="button_down" from="VAR" to="." method="_on_button_down"]
+[connection signal="button_up" from="VAR" to="." method="_on_button_up"]
+[connection signal="toggled" from="CheckButton" to="." method="_on_CheckButton_toggled"]

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/HeightMapShape3D.svg-732775e57bf3536c8f0cba5a084e0b66.stex"
+path="res://.import/HeightMapShape3D.svg-783954ae4ffa416e090e17237453e149.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/HeightMapShape3D.svg"
-dest_files=[ "res://.import/HeightMapShape3D.svg-732775e57bf3536c8f0cba5a084e0b66.stex" ]
+source_file="res://assets/Icons/HeightMapShape3D.svg"
+dest_files=[ "res://.import/HeightMapShape3D.svg-783954ae4ffa416e090e17237453e149.stex" ]
 
 [params]
 

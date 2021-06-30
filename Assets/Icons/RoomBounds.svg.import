@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/RoomBounds.svg-1a90cf467ed457e25e72424485e030ca.stex"
+path="res://.import/RoomBounds.svg-2f48869d581493ed501516296d49d790.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/RoomBounds.svg"
-dest_files=[ "res://.import/RoomBounds.svg-1a90cf467ed457e25e72424485e030ca.stex" ]
+source_file="res://assets/Icons/RoomBounds.svg"
+dest_files=[ "res://.import/RoomBounds.svg-2f48869d581493ed501516296d49d790.stex" ]
 
 [params]
 

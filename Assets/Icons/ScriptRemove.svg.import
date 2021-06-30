@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ScriptRemove.svg-e845c02b7f48e25d202418e8d1c5e324.stex"
+path="res://.import/ScriptRemove.svg-648c484a049ff70908286c0c4c6d1f25.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Icons/ScriptRemove.svg"
-dest_files=[ "res://.import/ScriptRemove.svg-e845c02b7f48e25d202418e8d1c5e324.stex" ]
+source_file="res://assets/Icons/ScriptRemove.svg"
+dest_files=[ "res://.import/ScriptRemove.svg-648c484a049ff70908286c0c4c6d1f25.stex" ]
 
 [params]
 
