@@ -15,7 +15,7 @@
   
   <h3 align="center">Logic Circuit Simulator</h3>
   
-  <a href="https://umuts.itch.io/logic-circuit-simulator">
+  <a href="https://umutsevdi.itch.io/logic-circuit-simulator">
     <p align="center">Project Page</p>
   </a>
   <p align="center">A free Logic Circuit Simulator built in Godot Engine by Umutcan Sevdi.</p>
@@ -45,11 +45,11 @@ Logic Circuit Simulator was built in Godot Engine.
 
 ### Installation
 #### Browser Mode : 
-1. To use the application on your browser visit: [Use on Browser](https://umuts.itch.io/logic-circuit-simulator).
+1. To use the application on your browser visit: [Use on Browser](https://umutsevdi.itch.io/logic-circuit-simulator).
 2. During the browser mode you can use almost every feature of the simulator. However upon refreshing the page all of the saved files will be lost.
 #### Application : 
 1. Downloaded application provides all features.
-2. To download visit this link : [Download](https://umuts.itch.io/logic-circuit-simulator/purchase)
+2. To download visit this link : [Download](https://umutsevdi.itch.io/logic-circuit-simulator/purchase)
 #### Source Code :
 1. You can download the source code. It's free to use.
 2. To clone the repository :
@@ -80,7 +80,7 @@ Distributed under the  GNU General Public License. See `LICENSE` for more inform
 <!-- CONTACT -->
 ## Contact
 * Project Link: [https://github.com/umutsevdi/Logic-Circuit-Simulator](https://github.com/umutsevdi/Logic-Circuit-Simulator)
-* itch.io Link: [https://umuts.itch.io/logic-circuit-simulator](https://umuts.itch.io/logic-circuit-simulator)
+* itch.io Link: [https://umutsevdi.itch.io/logic-circuit-simulator](https://umutsevdi.itch.io/logic-circuit-simulator)
 
 
 
