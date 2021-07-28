@@ -18,7 +18,7 @@
   <a href="https://umutsevdi.itch.io/logic-circuit-simulator">
     <p align="center">Project Page</p>
   </a>
-  <p align="center">A free Logic Circuit Simulator built in Godot Engine by Umutcan Sevdi.</p>
+  <p align="center">A free and open-source Logic Circuit Simulator.</p>
   
 </p>
 
