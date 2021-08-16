@@ -9,7 +9,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/Logic Circuit Simulator">
+  <a href="https://github.com/umutsevdi/Logic-Circuit-Simulator">
     <img src="https://raw.githubusercontent.com/umutsevdi/Logic-Circuit-Simulator/main/icon.png" alt="Logo" width="80" height="80">
   </a>
   
